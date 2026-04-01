@@ -1,0 +1,69 @@
+Trait,Effects,Conflicts,Trait Points,Requirements,Slave Price,Can also be removed with,Description,DLC
+Adaptive Frames,Enables Auto-Modding,,3,,1000,,,
+Efficient Processors,#ERROR!,,3,,500,,,
+Harvesters,#ERROR!,,2,,750,,,
+Power Drills,#ERROR!,,2,,750,,,
+Superconductive,#ERROR!,,2,,750,,,
+Double-Jointed,−10% Pop housing usage,Bulky,1,,750,,,
+Durable,−10% Pop upkeep,High Maintenance,1,,750,,,
+Emotion Emulators,#ERROR!,Uncanny,1,,750,,,
+Mass-Produced,#ERROR!,Custom-Made,1,,1500,,,
+Recycled,#ERROR!,Luxurious,2,,1500,,,
+Streamlined Protocols,−10% Empire size from pops,High Bandwidth,2,,750,,,
+Domestic Protocols,"Can work Servant jobs if  AI policy is set to Servitude
+ +20% Influential job efficiency",Machine,2,,750,Artificial Specialists,,
+Logic Engines,#ERROR!,Suppressed,2,,750,Artificial Specialists,,
+Trading Algorithms,#ERROR!,"Scarcity Subroutines
+Gestalt Consciousness",2,,500,Artificial Specialists,,
+Eternal Machine,Immortal,,4,,1000,Artificial Administration,,
+Loyalty Circuits,#ERROR!,Gestalt Consciousness,2,,500,Artificial Administration,,
+Propaganda Machines,#ERROR!,Quarrelsome,1,,750,Artificial Administration,,
+Enhanced Memory,"−25% Leader upkeep
+ −1 Leader maximum negative traits",Suppressed,2,,750,Artificial Personality Matrix,,
+Learning Algorithms,#ERROR!,"Repurposed Hardware
+Suppressed",1,,750,Artificial Personality Matrix,,
+Engineering Core,#ERROR!,,1,,750,Artificial Specialists,,
+Physics Core,#ERROR!,,1,,750,Artificial Specialists,,
+Sociology Core,#ERROR!,,1,,750,Artificial Specialists,,
+Integrated Weaponry,#ERROR!,Delicate Chassis,2,,1000,Artificial Specialists,,
+Assembly Slag,#ERROR!,,2,,500,,,
+Bulky,#ERROR!,Double-Jointed,−1,,−150,,,
+Custom-Made,−15% Pop assembly speed,Mass Produced,−1,,−200,,,
+High Bandwidth,#ERROR!,Streamlined Protocols,−2,,−150,,,
+High Maintenance,#ERROR!,Durable,−1,,−150,,,
+Luxurious,−20% Replicator job efficiency,Recycled,−2,,−200,,,
+Uncanny,−20% Influential job efficiency,Emotion Emulators,−1,,−150,,,
+Decadent,"−10% Worker happiness
+ −10% Slave happiness",Gestalt Consciousness,−1,,−200,Artificial Administration,,
+Deviants,−15% Governing ethics attraction,Gestalt Consciousness,−1,,−200,Artificial Administration,,
+Quarrelsome,−10% Bureaucrat job efficiency,"Propaganda Machines
+Gestalt Consciousness",−1,,−200,Artificial Administration,,
+Wasteful,#ERROR!,Gestalt Consciousness,−1,,−200,Artificial Administration,,
+Repurposed Hardware,−10% Leader experience gain,Learning Algorithms,−1,,−150,Artificial Personality Matrix,,
+Delicate Chassis,"−50% Army damage
+ −5% Worker and Menial Drone output",Integrated Weaponry,−1,,−250,Artificial Specialists,,
+Scarcity Subroutines,−25% Trader job efficiency,"Trading Algorithms
+Gestalt Consciousness",−1,,−150,Artificial Specialists,,
+Waterproof,"Ocean Worlds: +20% Habitability
+ −10% Pop housing usage
+ +10% Worker job efficiency
+ +10% Menial Drone job efficiency
+
+Dry and Cold planets: −20% Habitability
+ +30% Pop housing usage
+
+ Hydrocentric ascension perk boosts this trait's effects by 50%",Molebots,2,,0,"Wet Preference
+ Ocean homeworld (in empire creation)
+ Can be selected in empire creation
+ Can be added or removed through machine modification
+ Cannot be removed if has the  Hydrocentric ascension perk
+ Cannot change climate preference without removing the trait",,
+Exotic Fuel Consumption,#ERROR!,#ERROR!,1,,750,,,
+Rare Crystal Exterior,#ERROR!,#ERROR!,1,,750,,,
+Volatile Mote Reactor,#ERROR!,#ERROR!,1,,750,,,
+Art Generator,#ERROR!,,,,750,,,
+Conversational AI,#ERROR!,,,,750,,,
+Nannybot,#ERROR!,,,,750,,,
+Research Assistants,#ERROR!,,,,750,,,
+War Machine,#ERROR!,,,,750,,,
+Workerbots,#ERROR!,,,,750,,,

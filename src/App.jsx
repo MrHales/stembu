@@ -1,0 +1,117 @@
+import React, { useState } from 'react'
+import './index.css'
+import SpeciesTypeSection from './components/SpeciesTypeSection'
+import SpeciesTraitsSection from './components/SpeciesTraitsSection'
+
+function SectionPanel({ title, description, children }) {
+  return (
+    <div className="glass-panel">
+      <h2>{title}</h2>
+      {description && <p style={{ color: 'var(--color-text-muted)', fontSize: '0.85rem', marginBottom: '1rem' }}>{description}</p>}
+      <div className="section-content">
+        {children || <div className="placeholder-content">Awaiting Interface Uplink...</div>}
+      </div>
+    </div>
+  )
+}
+
+function App() {
+  const [empireName, setEmpireName] = useState("New Empire")
+  const [speciesType, setSpeciesType] = useState(null)
+  const [selectedTraits, setSelectedTraits] = useState([])
+
+  const handleNew = () => {
+    alert("Initializing new empire sequence...")
+    setSpeciesType(null)
+    setSelectedTraits([])
+  }
+
+  const handleSave = () => {
+    alert(`Saving matrix for [${empireName}]...`)
+  }
+
+  const handleSpeciesTypeSelect = (type) => {
+    if (type !== speciesType) {
+      // Switching from Machine to Bio or vice versa resets traits
+      if (
+        (speciesType === 'Machine' && type !== 'Machine') ||
+        (speciesType !== 'Machine' && type === 'Machine')
+      ) {
+        setSelectedTraits([])
+      }
+      setSpeciesType(type)
+    }
+  }
+
+  const handleTraitToggle = (trait) => {
+    setSelectedTraits(prev => {
+      const isSelected = prev.some(t => t.name === trait.name)
+      if (isSelected) {
+        return prev.filter(t => t.name !== trait.name)
+      } else {
+        return [...prev, trait]
+      }
+    })
+  }
+
+  return (
+    <div className="app-container">
+      <header className="app-header">
+        <div>
+          <h1>stembu</h1>
+          <p style={{ color: 'var(--color-text-muted)' }}>STellaris EMpire BUilder</p>
+        </div>
+        <div className="header-actions">
+          <button className="primary" onClick={handleNew}>New Empire</button>
+          <button className="danger" onClick={handleSave}>Save Empire</button>
+        </div>
+      </header>
+
+      <main className="empire-grid">
+        <SectionPanel 
+          title="Species Type" 
+          description="Select your biological, cybernetic, or mechanical origins." 
+        >
+          <SpeciesTypeSection 
+            selectedType={speciesType} 
+            onSelectType={handleSpeciesTypeSelect} 
+          />
+        </SectionPanel>
+
+        <SectionPanel 
+           title="Species Traits" 
+           description="Allocate genetic or modding points to define your species' strengths." 
+        >
+           <SpeciesTraitsSection 
+             speciesType={speciesType} 
+             selectedTraits={selectedTraits} 
+             onTraitToggle={handleTraitToggle} 
+           />
+        </SectionPanel>
+
+        <SectionPanel 
+          title="Homeworld & System" 
+          description="Choose your planetary preference and starting star system flavor." 
+        />
+        <SectionPanel 
+          title="Name Lists & Flag" 
+          description="Designate your cultural nomenclature and cosmic heraldry." 
+        />
+        <SectionPanel 
+          title="Origin" 
+          description="How did your civilization reach the stars?" 
+        />
+        <SectionPanel 
+          title="Government Type" 
+          description="Determine your authority structure and ruling ethics." 
+        />
+        <SectionPanel 
+          title="Civics" 
+          description="Establish the core societal tenets of your empire." 
+        />
+      </main>
+    </div>
+  )
+}
+
+export default App

@@ -1,0 +1,259 @@
+Trait,Effects,Conflicts,Trait Points,Requirements,Slave Price,Can also be removed with,Description,DLC
+Adaptive,#ERROR!,"Nonadaptive
+Extremely Adaptive",2,,500,,This species is highly adaptive when it comes to foreign environments.,
+Extremely Adaptive,#ERROR!,"Nonadaptive
+Adaptive
+Lithoid",4,,1000,,This species is remarkably adept at adapting to any foreign environments.,
+Agrarian,#ERROR!,Lithoid,2,,500,Targeted Gene Expressions,"This species has a deep connection to the land, and make expert farmers and gardeners.",
+Charismatic,#ERROR!,Repugnant,2,,500,Targeted Gene Expressions,"Members of this species have a special charisma, and are generally considered pleasant to be around.",
+Communal,−10% Pop housing usage,"Solitary
+Shelled",1,,500,,"Members of this species are highly communal, and quite used to living in close proximity to others.",
+Conformists,#ERROR!,"Deviants
+Hive-Minded",2,,500,,These people always seek consensus and are more likely to conform to the governing ethics.,
+Conservationist,−10% Pop consumer goods upkeep,"Wasteful
+Hive-Minded",1,,500,,Members of this species believe that resources must be conserved and recycled.,
+Docile,−10% Empire size from pops,Unruly,2,,500,,Members of this species are easy to manage and organize. They tend to be cooperative and amicable.,
+Enduring,#ERROR!,"Fleeting
+Venerable",1,,500,,Lifespans in this species are unusually long.,
+Venerable,#ERROR!,"Fleeting
+Enduring",4,,1000,,This species can grow to an age that commands dignity and respect.,
+Industrious,#ERROR!,,2,,500,Targeted Gene Expressions,"Members of this species are known for their diligent and hard-working nature, always going above and beyond.",
+Ingenious,#ERROR!,,2,,500,Targeted Gene Expressions,Members of this species are good at 'thinking outside the box' and know how to maximize the efficiency of their infrastructure and power grids.,
+Intelligent,#ERROR!,"Cranial Hypertrophy
+Cranial Megatrophy",2,,500,Targeted Gene Expressions,"This species is highly intelligent, and enjoys faster technological progress.",
+Natural Engineers,#ERROR!,"Natural Physicists
+Natural Sociologists",1,,500,,Members of this species have a natural inclination towards engineering and material sciences.,
+Natural Physicists,#ERROR!,"Natural Engineers
+Natural Sociologists",1,,500,,Members of this species have a natural inclination towards theoretical physics and astral phenomena.,
+Natural Sociologists,#ERROR!,"Natural Physicists
+Natural Engineers",1,,500,,Members of this species have a natural inclination towards sociology and biological studies.,
+Nomadic,−35% Resettlement cost,Sedentary,1,,500,,"This species has a nomadic past, and its members often think nothing of relocating to another world.",
+Quick Learners,#ERROR!,Slow Learners,1,,500,,Members of this species are quick to learn from their experiences.,
+Rapid Breeders,#ERROR!,"Slow Breeders
+Existential Iteroparity
+Incubators
+Budding
+Crystallization
+Egg Laying
+Pyroclastic Channeling",2,,1000,Somatic Synthesization,"This species reproduces at a very rapid rate, increasing population growth.",
+Resilient,#ERROR!,,1,,500,,"Members of this species are physiologically resilient, and will fight like enraged brood mothers to defend their worlds.",
+Strong,#ERROR!,"Very Strong
+Weak
+Hollow Bones",1,,1000,,"Members of this species possess great physical strength, making them formidable fighters on the ground.",
+Very Strong,#ERROR!,"Strong
+Weak
+Hollow Bones",3,,2000,,Members of this species possess a strength that almost defies the laws of physics.,
+Talented,"−10% Leader upkeep
+ −1 Leader maximum negative traits",,1,,500,,Member of this species are born with a natural aptitude.,
+Thrifty,#ERROR!,Hive-Minded,2,,500,Targeted Gene Expressions,"Members of this species are instinctively economical and are always looking to make a good profit, whatever corners need cutting.",
+Traditional,10% Bureaucrat job efficiency,Quarrelsome,1,,500,Targeted Gene Expressions,Certain aspects of this species' cognition makes it predisposed to especially value historical precedence and group unity.,
+Existential Iteroparity,#ERROR!,"Psychological Infertility
+Rapid Breeders
+Incubators
+Budding
+Crystallization
+Egg Laying
+Pyroclastic Channeling",2,,1000,Somatic Synthesization,This species grew up in hostile conditions where outbreeding your rivals was the key to survival.,
+Incubators,#ERROR!,"Slow Breeders
+Rapid Breeders
+Existential Iteroparity
+Budding
+Crystallization
+Egg Laying
+Pyroclastic Channeling",2,,2000,Somatic Synthesization,"When isolated or few in numbers, a species with this trait naturally adapts and is able to focus on procreation with an intentness others would consider extreme. However, when in large numbers, this effect is reversed, and they find reproduction more difficult.",
+Noxious,#ERROR!,,1,,−500,,"Extremely unpleasant to be in the vicinity of, beings with this trait take vindication from being insufferable to everyone else.",
+Inorganic Breath,#ERROR!,,3,,1000,,The slightly toxic digestive methods of this species have resulted in a highly exotic breath composition.,
+Unbreakable Resolve,#ERROR!,,2,,1000,,"Bound by an intricate web of mirror neurons, these individuals possess an innate ability to synchronize their will. Duty is not a burden, but a shared purpose, and hardship is met with unwavering unity.",
+Phototrophic,Replaces half of base pop upkeep with Energy,"Radiotrophic
+Voidling
+Cave Dweller",1,"Plantoid
+Fungoid",1000,,This species is sustained by a combination of both food and sunlight.,
+Radiotrophic,"Replaces half of base pop upkeep with Energy
+ No Energy upkeep on Tomb Worlds
+ +10% Tomb World pop growth speed
+ +10% Tomb World habitability","Phototrophic
+Voidling",2,"Plantoid
+Fungoid
+Lithoid
+Thermophile",1500,,"This species is sustained by a combination of both food and low-energy radiation, and as such can thrive on the most inhospitable of worlds.",
+Invasive Species,#ERROR!,All positive non-botanical biological traits,2,"Plantoid
+Fungoid",0,,Rapid reproduction. High dispersal ability. Zero useful capabilities.,
+Budding,#ERROR!,"Slow Breeders
+Rapid Breeders
+Existential Iteroparity
+Incubators
+Cryastallization
+Egg Layers
+Pyroclastic Channeling
+Polymelic",2,"Plantoid
+Fungoid",2000,,"This species is capable of reproduction by budding, in addition to the more usual fertilization of seeds or spores.",
+Crystallization,#ERROR!,"Slow Breeders
+Rapid Breeders
+Existential Iteroparity
+Incubators
+Budding
+Egg Layers
+Pyroclastic Channeling
+Polymelic",2,Lithoid,2000,,"With crystalline growths, this species is capable of generating self replicating lattices of themselves, in addition to the more usual reproductive methods.",
+Gaseous Byproducts,#ERROR!,"Scintillating Skin
+Volatile Excretions
+Drake-Scaled",2,Lithoid,1000,,The metabolic processes of this species cause regular venting of gases useful to industry.,
+Scintillating Skin,#ERROR!,"Gaseous Byproducts
+Volatile Excretions
+Pyroclastic Channeling
+Drake-Scaled",2,Lithoid,1000,,The outermost layer of this species is studded with sparkling crystals and gemstones that occasionally flake off.,
+Volatile Excretions,#ERROR!,"Gaseous Byproducts
+Scintillating Skin
+Drake-Scaled",2,Lithoid,1000,,The highly compressed spoor created by this species is unstable and contains an unbelievable amount of power.,
+Familial,#ERROR!,Hive-Minded,2,"Humanoid
+Mammalian
+Avian",1000,,"Bound by deep, enduring relationships with their closest relatives, this species forms highly efficient and cohesive collectives.",
+Genetic Memory,#ERROR!,Nonadaptive,3,"Humanoid
+Mammalian
+Necroid",1000,,"Passing down knowledge and learnings from one generation to the next has been the start of many civilizations. This species has taken it a step further by encoding survival insights directly into their genetic code, ensuring that each generation is born with the accumulated wisdom of their ancestors.",
+Camouflage,#ERROR!,"Chromalogs
+Natural Physicists
+Nerve Stapled",1,"Arthropoid
+Reptilian
+Aquatic",500,,"Masters of disguise, this species seamlessly merges with their surroundings, rendering themselves nearly invisible to predators and prey alike. Their innate understanding of optics gives them an edge in guerilla warfare.",
+Chromalogs,#ERROR!,"Camouflage
+Natural Physicists
+Nerve Stapled",4,"Arthropoid
+Reptilian
+Aquatic",1500,,"Harnessing the artistry of color, this species has transcended mere camouflage, evolving to communicate through the vibrant and intricate patterns displayed on their bodies.",
+Egg Laying,#ERROR!,"Slow Breeders
+Rapid Breeders
+Existential Iteroparity
+Incubators
+Budding
+Crystallization
+Pyroclastic Channeling
+Polymelic",2,"Avian
+Reptilian
+Aquatic",500,,"The young of this species do not develop inside a parent, but inside the protective shell of an egg. This allows for rapid growth during times of plenty.",
+Spare Organs,"Leaders survive their first death
+ 20% Chance to replace lost offensive armies
+ +50% Livestock Output",,2,"Molluscoid
+Necroid
+Toxoid",1000,,"This species evolved redundant organs to survive even the most grievous injuries - a successful adaptation, as evidenced by their continued existence.",
+Seasonal Dormancy,"−15% Employed pop upkeep
+ −75% Unemployed pop upkeep","Wasteful
+Conservationist
+Low Maintenance",2,"Mammalian
+Reptilian",500,,"This species has evolved on a planet with cyclical seasons that support hibernation. In the modern age, these seasonal triggers can be artificially simulated to efficiently store less productive members of society.",
+Flight,"−30% Army damage taken
+ +1 Effective commander skill level","Spatial Mastery
+Communal
+Shelled",2,"Avian
+Arthropoid",500,,"This species soars above the constraints of the earth, freely navigating the skies. Their cities feature unique, dense layouts, optimized for aerial inhabitants. In conflict, they prove to be elusive and difficult targets.",
+Spatial Mastery,"−50% Army damage taken
+ −10% Pop housing usage
+ +1 Effective leader skill","Flight
+Communal
+Shelled",4,"Avian
+Arthropoid",1000,,"Not only capable of flight, this species possesses unique cerebral adaptations, enabling them to instinctively process and navigate three-dimensional spaces. These abilities make them unparalleled in planning battles, surveying planets, and managing cities.",
+Shelled,#ERROR!,"Spatial Mastery
+Communal",3,"Molluscoid
+Necroid",1500,,"Whether naturally grown or found by chance (or design), this species carries their homes with them. These shells provide a protective sanctuary, ensuring there is always a place to rest for the night.",
+Acidic Vascularity,#ERROR!,,1,"Necroid
+Toxoid",500,,"The internal fluids of this species serve as their most potent defense. Highly corrosive and lethal, these liquids ensure that any enemies regret poking holes.",
+Uncanny Intuition,#ERROR!,,3,Psionic,2000,,This species exhibits an inexplicable ability to navigate through complex problems on its first attempt.,
+Cranial Hypertrophy,#ERROR!,"Intelligent
+Cranial Megatrophy",2,Psionic,1500,,The frame of this species' neural encasement has inflated to the point where its physical capabilities have become somewhat limited.,
+Cranial Megatrophy,#ERROR!,"Intelligent
+Cranial Hypertrophy",4,Psionic,2000,,The frame of this species' neural encasement has inflated to its ultimate biological limit.,
+Crucible Community,#ERROR!,,1,Thermophile,500,,"Tempered by adversity and bound by shared struggle, this species has been forged into an unbreakable whole. Their collective will fuels governance, each member a vital link in the chain of unity.",
+Pyroclastic Channeling,#ERROR!,"Slow Breeders
+Rapid Breeders
+Existential Iteroparity
+Incubators
+Budding
+Crystallization
+Egg Laying
+Polymelic",1,Thermophile,500,,"Shaped by the relentless fury of volcanic worlds, this species does not fear pyroclastic forces - they channel and manipulate them, transforming devastation into a vital source of sustenance and power.",
+Shell Slag,#ERROR!,Drake-Scaled,2,Thermophile,500,,"An intricate symbiosis with Living Metal allows this species to grow not in the traditional sense, but through the accretion and self-assembly of bio-ferrous structures.",
+Decadent,"−10% Worker happiness
+ −10% Slave happiness",Hive-Minded,−1,,−200,,"This species believes that whenever there is hard work that needs doing, that work is always best done by somebody else.",
+Deviants,−15% Governing ethics attraction,"Conformists
+Hive-Minded",−1,,−200,,These people are rebellious in nature and constantly try to challenge the status-quo.,
+Fleeting,"−10 Years leader lifespan if biological
+ −25 Years leader lifespan if lithoid","Enduring
+Venerable",−1,,−200,,"Time is fleeting for this species. What they lack in longevity, they have to make up in other ways.",
+Nonadaptive,−10% Habitability,"Adaptive
+Extremely Adaptive
+Lithoid",−2,,−200,,This species does not adapt well to foreign environments.,
+Sedentary,#ERROR!,Nomadic,−1,,−200,,"This species has a sedentary past, and its members are reluctant to migrate away from where they grew up.",
+Quarrelsome,−10% Bureaucrat job efficiency,"Traditional
+Propaganda Machines",−1,,−200,,"While not inherently distrustful, members of this species are often socially combative.",
+Repugnant,−20% Influential job efficiency,Charismatic,−2,,−200,,"The physical appearance and customs of this species are considered offensive to most others, and few appreciate them as neighbors.",
+Slow Breeders,−10% Pop growth speed,"Nascent Stage
+Rapid Breeders
+Existential Iteroparity
+Incubators
+Budding
+Crystallization
+Egg Laying
+Pyroclastic Channeling
+Lithoid",−2,,−1000,,"This species reproduces at a slow rate, lowering population growth.",
+Slow Learners,−10% Leader experience gain,Quick Learners,−1,,−200,,Members of this species are slow to learn from their experiences.,
+Solitary,#ERROR!,Communal,−1,,−200,,"Members of this species tend to be solitary and territorial, often becoming agitated in crowded conditions.",
+Unruly,#ERROR!,Docile,−2,,−200,,"Unruly species are difficult to manage and organize. They do not like being told what to do, and are often quarrelsome or questioning.",
+Wasteful,#ERROR!,"Conservationist
+Hive-Minded",−1,,−200,,Members of this species seemingly have no concept of frugality and are prone to useless consumption.,
+Weak,"−20% Army Damage
+ −10% Soldier job efficiency
+ −2.5% Worker job efficiency
+ −2.5% Menial Drone job efficiency","Strong
+Very Strong
+Hollow Bones
+Tankbound",−1,,−1000,,"Members of this species are physically weaker than average, making them poor fighters on the ground.",
+Jinxed,#ERROR!,,−1,,−500,,"Leaders from this species seem clumsier and more prone to accidents or vices than average, as if cursed from birth.",
+Psychological Infertility,−30% Pop growth during war and crisis,"Existential Iteroparity
+Nascent Stage",−2,,−1000,,Members of this species are extremely sensitive to the rigors of conflict with the resulting stress taking over the more primal urges.,
+Nascent Stage,New pops are pre-sapient for the first 5 years,"Slow Breeders
+Psychological Infertility
+Pathogenic Genes",−2,"Humanoid
+Mammalian
+Reptilian
+Arthropoid",−1000,,"This species gives birth at an early stage of development, resulting in a prolonged period where the young are incapable of contributing to society. During this time, they remain blissfully unaware of the responsibilities and burdens that come with sapience.",
+Permeable Skin,−20% Habitability on worlds with a different climate category,"Adaptive
+Extremely Adaptive
+All non-standard climate preference traits",−1,"Molluscoid
+Aquatic",−1000,,Specially developed skin that requires ideal conditions coats this species. As long as this species does not stray far from their home climate that shouldn't be a problem.,
+Hollow Bones,"−0.67% Worker job efficiency per planet size
+ −0.67% Menial Drone job efficiency per planet size
+ −0.67% Soldier job efficiency per planet size","Strong
+Very Strong
+Weak
+Tankbound",−3,"Avian
+Toxoid",−400,,"Plagued by inherent fragility, this species must exercise extreme caution in daily activities to avoid cracking up during even the most mundane tasks.",
+Rooted,#ERROR!,"Nomadic
+Sedentary",−3,"Fungoid
+Plantoid",−400,,"This species literally takes root in whichever environment they find themselves, making removal a highly traumatic experience.",
+Brittle,#ERROR!,,−3,"Lithoid
+Necroid",−1000,,"Plagued by inherent fragility, this species must exercise extreme caution in daily activities to avoid cracking up during even the most mundane tasks.",
+Haunting Visions,"−10% Elite job efficiency
+ −10% Specialist job efficiency
+ −10% Complex Drone job efficiency",,−2,Psionic,−2000,,"Entities from other dimensions send maddening visions into the minds of this species, affecting their ability to perform complex tasks.",
+Void Dweller,#ERROR!,,0,,500,"Can be added if: Void Dwellers origin
+ Habitat Preference
+
+Can be removed if either: Genetic Resequencing tradition
+ Genotype Regeneration tradition","This species thrives in orbital habitats, with an inherent ability to efficiently navigate their maze-like corridors and complicated architecture. They are at ease in zero gravity but do not respond well to a planetary environment.",
+Necrophage,#ERROR!,,0,,0,Cannot be removed,This species of near-immortals procreates by consuming pops of other species.,
+Cave Dweller,#ERROR!,,0,,500,Cannot be removed,This species thrives under the surface of any planet they can inhabit.,
+Perfected Genes,#ERROR!,,0,,0,Cannot be removed,Millennia of genetic experimentation and war have led to the creation of a highly resilient species.,
+Pathogenic Genes,"Pops decline naturally
+ Cannot reproduce naturally
+ Cannot colonize or be resettled",,−1,,0,Cannot be removed,A novel genetic disease prevents this species from producing offspring. It has resisted all known gene therapy methods.,
+Malleable Genes,"Enables Auto-Modding
+ Cannot be genetically modified",,6,,500,Cannot be removed,This species does not stick as rigidly to identifiable features and organs as most other species do. Instead they grow the best appendage for the job. However this instability has some drawbacks.,
+Wilderness,"Cannot colonize megastructures
+ Cannot colonize artificial worlds
+ Will slowly die in non-Wilderness empires",,0,,0,"Can only be added or removed through assimilation if either: Engineered Genesis tradition
+ Genotype Regeneration tradition
+ Planned Polymorphism tradition
+ Evolutionary Extrapolation tradition
+ Transubstantiation Synthesis ( Hive Mind only)
+ Inevitable Assimilation ( Driven Assimilator only)","This species exists as part of a mutualistic entity, made indistiguishable from its environment in its thoughts and productive output.",
+Blind,#ERROR!,,0,,0,Cannot be removed,"Where we are going, we won't need eyes to see.",
