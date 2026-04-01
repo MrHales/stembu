@@ -32,16 +32,18 @@ export default function SpeciesTypeSection({ onSelectType, selectedType }) {
   if (loading) return <div className="placeholder-content">Loading genetic database...</div>;
 
   return (
-    <div className="card-grid">
-      {speciesTypes.map(type => (
-        <div 
-          key={type} 
-          className={`selectable-card ${selectedType === type ? 'selected' : ''}`}
-          onClick={() => onSelectType(type)}
-        >
-          <h4>{type}</h4>
-        </div>
-      ))}
+    <div className="scrollable-viewport">
+      <div className="card-grid">
+        {speciesTypes.map(type => (
+          <div 
+            key={type} 
+            className={`selectable-card ${selectedType === type ? 'selected' : ''}`}
+            onClick={() => onSelectType(type)}
+          >
+            <h4>{type}</h4>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

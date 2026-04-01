@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './index.css'
 import SpeciesTypeSection from './components/SpeciesTypeSection'
 import SpeciesTraitsSection from './components/SpeciesTraitsSection'
 
 function SectionPanel({ title, description, children }) {
   return (
-    <div className="glass-panel">
+    <div className="glass-panel" id={title.replace(/\s+/g, '-').toLowerCase()}>
       <h2>{title}</h2>
       {description && <p style={{ color: 'var(--color-text-muted)', fontSize: '0.85rem', marginBottom: '1rem' }}>{description}</p>}
       <div className="section-content">
@@ -19,6 +19,27 @@ function App() {
   const [empireName, setEmpireName] = useState("New Empire")
   const [speciesType, setSpeciesType] = useState(null)
   const [selectedTraits, setSelectedTraits] = useState([])
+  const [showTopBtn, setShowTopBtn] = useState(false)
+
+  // Scroll logic for "Back to Top" float
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowTopBtn(true)
+      } else {
+        setShowTopBtn(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
 
   const handleNew = () => {
     alert("Initializing new empire sequence...")
@@ -32,7 +53,6 @@ function App() {
 
   const handleSpeciesTypeSelect = (type) => {
     if (type !== speciesType) {
-      // Switching from Machine to Bio or vice versa resets traits
       if (
         (speciesType === 'Machine' && type !== 'Machine') ||
         (speciesType !== 'Machine' && type === 'Machine')
@@ -59,13 +79,24 @@ function App() {
       <header className="app-header">
         <div>
           <h1>stembu</h1>
-          <p style={{ color: 'var(--color-text-muted)' }}>STellaris EMpire BUilder</p>
+          <p style={{ color: 'var(--color-text-muted)', margin: 0 }}>STellaris EMpire BUilder</p>
         </div>
         <div className="header-actions">
           <button className="primary" onClick={handleNew}>New Empire</button>
           <button className="danger" onClick={handleSave}>Save Empire</button>
         </div>
       </header>
+
+      {/* Summary Segment */}
+      <div className="summary-segment">
+        <h3>Empire Configuration Status</h3>
+        <p>
+          <strong className="text-accent">Species:</strong> {speciesType || 'Not Selected'}
+        </p>
+        <p>
+          <strong className="text-accent">Traits:</strong> {selectedTraits.length > 0 ? selectedTraits.map(t => t.name).join(', ') : 'None'}
+        </p>
+      </div>
 
       <main className="empire-grid">
         <SectionPanel 
@@ -110,6 +141,15 @@ function App() {
           description="Establish the core societal tenets of your empire." 
         />
       </main>
+
+      {/* Back to Top button */}
+      <button 
+        className={`back-to-top primary ${showTopBtn ? 'visible' : ''}`} 
+        onClick={scrollToTop}
+        title="Go to top"
+      >
+        ↑
+      </button>
     </div>
   )
 }
