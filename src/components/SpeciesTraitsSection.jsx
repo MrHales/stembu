@@ -38,7 +38,7 @@ export default function SpeciesTraitsSection({ speciesType, selectedTraits, onTr
               .map(row => ({
                  name: row.Trait.trim(),
                  effects: row.Effects === '#ERROR!' ? 'Various implicit effects' : row.Effects,
-                 points: parseInt(row['Trait Points']) || 0,
+                 points: parseInt(row['Trait Points']?.toString().replace(/[−–—]/g, '-')) || 0,
                  description: row.Description || '',
                  conflicts: row.Conflicts || '',
                  requirements: row.Requirements || ''
