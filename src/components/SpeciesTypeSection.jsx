@@ -8,7 +8,7 @@ export default function SpeciesTypeSection({ onSelectType, selectedType }) {
   useEffect(() => {
     async function loadData() {
       try {
-        const response = await fetch('/data/Species type - Sheet1.csv');
+        const response = await fetch(`${import.meta.env.BASE_URL}data/Species type - Sheet1.csv`);
         const csvText = await response.text();
         
         Papa.parse(csvText, {

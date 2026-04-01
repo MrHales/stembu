@@ -19,8 +19,8 @@ export default function SpeciesTraitsSection({ speciesType, selectedTraits, onTr
 
     const isMachine = speciesType === 'Machine';
     const filename = isMachine 
-      ? '/data/Machine Species Traits - Sheet1.csv'
-      : '/data/Biological Species Traits - Sheet1.csv';
+      ? `${import.meta.env.BASE_URL}data/Machine Species Traits - Sheet1.csv`
+      : `${import.meta.env.BASE_URL}data/Biological Species Traits - Sheet1.csv`;
 
     async function loadData() {
       try {
