@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
 
-export default function SpeciesTraitsSection({ speciesType, selectedTraits, onTraitToggle }) {
+export default function SpeciesTraitsSection({ speciesType, selectedTraits, onTraitToggle, onTraitInfoClick }) {
   const [traits, setTraits] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [activePopupTrait, setActivePopupTrait] = useState(null);
 
   // Stellaris defaults
   const maxPicks = 5;
@@ -104,7 +103,7 @@ export default function SpeciesTraitsSection({ speciesType, selectedTraits, onTr
                     style={{ padding: '0.2rem 0.5rem', fontSize: '0.75rem', zIndex: 10, position: 'relative' }}
                     onClick={(e) => {
                       e.stopPropagation(); // prevent toggling the trait when opening more info
-                      setActivePopupTrait(trait);
+                      onTraitInfoClick(trait);
                     }}
                   >
                     ?
@@ -117,45 +116,6 @@ export default function SpeciesTraitsSection({ speciesType, selectedTraits, onTr
         </div>
       </div>
 
-      {activePopupTrait && (
-        <div className="modal-overlay" onClick={() => setActivePopupTrait(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setActivePopupTrait(null)}>×</button>
-            <h2 style={{ color: 'var(--color-accent)', marginBottom: '0.5rem' }}>{activePopupTrait.name}</h2>
-            
-            <div style={{ marginBottom: '1rem' }}>
-              <span className={`trait-cost ${activePopupTrait.points < 0 ? 'negative' : 'positive'}`}>
-                {activePopupTrait.points > 0 ? `-${activePopupTrait.points}` : `+${Math.abs(activePopupTrait.points)}`} point(s)
-              </span>
-            </div>
-            
-            <p style={{ fontStyle: 'italic', marginBottom: '1rem', color: 'var(--color-text-muted)' }}>
-              "{activePopupTrait.description}"
-            </p>
-            
-            <div style={{ background: 'rgba(0,0,0,0.3)', padding: '1rem', borderRadius: '8px' }}>
-              <h4 style={{ marginTop: 0, marginBottom: '0.5rem' }}>Effects</h4>
-              <p style={{ margin: 0, color: 'var(--color-text-main)', fontSize: '0.9rem', whiteSpace: 'pre-line' }}>
-                {activePopupTrait.effects}
-              </p>
-            </div>
-            
-            {activePopupTrait.conflicts && (
-               <div style={{ marginTop: '1rem' }}>
-                 <h4 style={{ margin: '0 0 0.5rem 0', color: 'var(--color-danger)' }}>Conflicts</h4>
-                 <p style={{ margin: 0, fontSize: '0.85rem' }}>{activePopupTrait.conflicts}</p>
-               </div>
-            )}
-            
-            {activePopupTrait.requirements && (
-               <div style={{ marginTop: '1rem' }}>
-                 <h4 style={{ margin: '0 0 0.5rem 0', color: 'var(--color-accent)' }}>Requirements</h4>
-                 <p style={{ margin: 0, fontSize: '0.85rem' }}>{activePopupTrait.requirements}</p>
-               </div>
-            )}
-          </div>
-        </div>
-      )}
     </div>
   );
 }

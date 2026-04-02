@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './index.css'
 import SpeciesTypeSection from './components/SpeciesTypeSection'
 import SpeciesTraitsSection from './components/SpeciesTraitsSection'
+import TraitModal from './components/TraitModal'
 
 function SectionPanel({ title, description, children }) {
   return (
@@ -19,6 +20,7 @@ function App() {
   const [empireName, setEmpireName] = useState("New Empire")
   const [speciesType, setSpeciesType] = useState(null)
   const [selectedTraits, setSelectedTraits] = useState([])
+  const [activePopupTrait, setActivePopupTrait] = useState(null)
   const [showTopBtn, setShowTopBtn] = useState(false)
 
   // Scroll logic for "Back to Top" float
@@ -94,7 +96,20 @@ function App() {
           <strong className="text-accent">Species:</strong> {speciesType || 'Not Selected'}
         </p>
         <p>
-          <strong className="text-accent">Traits:</strong> {selectedTraits.length > 0 ? selectedTraits.map(t => t.name).join(', ') : 'None'}
+          <strong className="text-accent">Traits:</strong> 
+          {selectedTraits.length > 0 ? (
+            selectedTraits.map(t => (
+              <span 
+                key={t.name} 
+                className="summary-trait-tag"
+                onClick={() => setActivePopupTrait(t)}
+              >
+                {t.name}
+              </span>
+            ))
+          ) : (
+            <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
+          )}
         </p>
       </div>
 
@@ -117,6 +132,7 @@ function App() {
              speciesType={speciesType} 
              selectedTraits={selectedTraits} 
              onTraitToggle={handleTraitToggle} 
+             onTraitInfoClick={setActivePopupTrait}
            />
         </SectionPanel>
 
@@ -150,8 +166,14 @@ function App() {
       >
         ↑
       </button>
+
+      {/* Trait Information Modal */}
+      <TraitModal 
+        trait={activePopupTrait} 
+        onClose={() => setActivePopupTrait(null)} 
+      />
     </div>
-  )
+  );
 }
 
 export default App
