@@ -3,6 +3,7 @@ import './index.css'
 import SpeciesTypeSection from './components/SpeciesTypeSection'
 import SpeciesTraitsSection from './components/SpeciesTraitsSection'
 import TraitModal from './components/TraitModal'
+import DisclaimerModal from './components/DisclaimerModal'
 
 function SectionPanel({ title, description, children }) {
   return (
@@ -164,7 +165,7 @@ function App() {
         onClick={scrollToTop}
         title="Go to top"
       >
-        ↑
+        Top
       </button>
 
       {/* Trait Information Modal */}
@@ -172,6 +173,13 @@ function App() {
         trait={activePopupTrait} 
         onClose={() => setActivePopupTrait(null)} 
       />
+
+      <DisclaimerModal />
+
+      <footer className="app-footer">
+        <p>This application is an unofficial, non-commercial fan project. It is not affiliated with, endorsed, sponsored, or specifically approved by Paradox Interactive.</p>
+        <p>Stellaris and all related characters, names, and assets are trademarks and copyrighted property of Paradox Interactive.</p>
+      </footer>
     </div>
   );
 }

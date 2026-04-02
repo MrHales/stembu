@@ -1,0 +1,67 @@
+Name,Description,Effects
+Spiritualist,"There are those think it behooves us to remember how tiny we are, how pointless our lives in this vast uncaring universe... What nonsense! The only truth we can ever know is that of our own existence. The universe - in all its apparent glory - is but a dream we all happen to share.","+10% Monthly unity
+Mod country edict cost.png −10% Edict cost
+Mod country edict upkeep mult.png −10% Edict upkeep
+Building temple.png Start with a Temple building"
+Fanatic Spiritualist,"Our science has proved that Consciousness begets reality. We regard with patience the childlike efforts of those who delude themselves it is the other way around, as they play with their blocks of 'hard matter'.","+20% Monthly unity
+Mod country edict cost.png −20% Edict cost
+Mod country edict upkeep mult.png −20% Edict upkeep
+Building temple.png Start with a Temple building"
+Militarist,"The only true virtues are courage and discipline, and channeled properly they can overcome any obstacle. Therein lies true strength; force withheld, a promise made.","−10% Claim influence cost
++10% Ship fire rate
+Start with a Stronghold building"
+Fanatic Militarist,The ability to project force is of paramount importance. The only way to preserve our way of life is to make sure everyone shares it; willingly or not...,"−20% Claim influence cost
++20% Ship fire rate
+Start with a Stronghold building"
+Xenophobe,"The stakes could not be higher as we reach into the vast uncharted expanses of the galaxy, for we are gambling with the very survival of our species! Never trust the alien; its false smile hides an unknowable mind...","−20% Starbase influence cost
+Mod pop growth speed.png +10% Pop growth or assembly speed
+Mod planet migration all pull.png −15% Refugee attraction
+Building medical 1.png Start with a Medical Center if biological
+Building foundry 1.png Start with an Alloy Foundry if machine"
+Fanatic Xenophobe,"Any alien influence must be ruthlessly quashed. Only by staying pure, and true to ourselves and the planet that gave us life can we guard against insidious Xeno plots. Even mastery over the Alien might not be enough to guarantee our own safety...","−40% Starbase influence cost
+Mod pop growth speed.png +20% Pop growth or assembly speed
+Mod planet migration all pull.png −30% Refugee attraction
+Building medical 1.png Start with a Medical Center if biological
+Building foundry 1.png Start with an Alloy Foundry if machine"
+Authoritarian,"A strong, guiding hand is essential to the success of any civilization - the alternative would be anarchy and chaos. It is the duty of the state to steer its citizens towards the paths that are the most productive.","+0.5 Monthly influence
+Pop cat worker.png +5% Worker job efficiency
+Building precinct house.png Start with a Precinct Houses building"
+Fanatic Authoritarian,"A single voice, a single throne, a single state. It is the solemn duty of the masses to obey those enlightened few who have been charged with the great responsibility of leadership.","+1 Monthly influence
+Pop cat worker.png +10% Worker job efficiency
+Building precinct house.png Start with a Precinct Houses building"
+Egalitarian,"Any society that does not embrace equality between its members - where an individual can rise to any position with enough hard work - is not only deeply unfair, but ultimately counterproductive.","+15% Faction resource output
+Pop cat specialist.png +5% Specialist job efficiency
+Building holo theatres.png Start with a Holo-Theatres building"
+Fanatic Egalitarian,"Beware always those who would be despots, under the false presumption that their desires and agendas are somehow more imperative than those of their fellows. A society that does not see to the needs and rights of all of its members is not a society - it is a crime.","+30% Faction resource output
+Pop cat specialist.png +10% Specialist job efficiency
+Building holo theatres.png Start with a Holo-Theatres building"
+Gestalt Consciousness,"We reach into the void.
+The vast expanse becomes us.","−20% War exhaustion gain
+Monthly influence +1 Monthly influence
+Encryption +2 Encryption
+Tooltip building.png Start with a pop assembly building
+Housing.png Start with a housing building
+No.png Cannot change ethics"
+Xenophile,"There exists, in all of us, a deep-seated fascination for the unknown. An adventurous spirit that rejects the familiar and glories in the unfamiliar, whatever - or whomever - it may be."," +10% Trade from jobs
+Available envoys +1 Available envoys
+Mod planet migration all pull.png +15% Refugee attraction
+First Contact +50% Observation insights progress
+Building commercial zone.png Start with a Commercial Zones building"
+Fanatic Xenophile,"If there ever was such a thing as an absolute moral imperative, it would be to explore the cosmos and embrace all within it. We were never meant to journey alone.","+20% Trade from jobs
+Available envoys +2 Available envoys
+Mod planet migration all pull.png +30% Refugee attraction
+First Contact +100% Observation insights progress
+Building commercial zone.png Start with a Commercial Zones building"
+Pacifist,"Conflict as a means to an end is a ridiculous concept. It is by nature destructive, destroying what was to be obtained or giving room to grow that which was to be destroyed.","−10% Empire size from pops
+Mod planet stability add.png +5 Stability
+Building luxury residence.png Start with a Luxury Residences building"
+Fanatic Pacifist,"As civilized beings, the end of all armed conflict should be our primary concern. War is an evolutionary dead end, as futile as it is wasteful.","−20% Empire size from pops
+Mod planet stability add.png +10 Stability
+Building luxury residence.png Start with a Luxury Residences building"
+Materialist,"As we reach for the stars, we must put away childish things; gods, spirits and other phantasms of the brain. Reality is cruel and unforgiving, yet we must steel ourselves and secure the survival of our race through the unflinching pursuit of science and technology.","−10% Robot upkeep
+Mod country all tech research speed.png +5% Research speed
+Building research lab 1.png Start with a Research Labs building
+"
+Fanatic Materialist,"Although it hurts, we must grow up and put aside our outdated notions of morality. There is no 'divine spark' granting special value to a living mind. No object has any intrinsic value apart from what we choose to grant it. Let us embrace the freedom of certitude, and achieve maximum efficiency in all things!","−20% Robot upkeep
+Mod country all tech research speed.png +10% Research speed
+Building research lab 1.png Start with a Research Labs building"
