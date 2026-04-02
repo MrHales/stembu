@@ -101,7 +101,7 @@ function App() {
             selectedTraits.map(t => (
               <span 
                 key={t.name} 
-                className="summary-trait-tag"
+                className={`summary-trait-tag ${t.points < 0 ? 'negative' : ''}`}
                 onClick={() => setActivePopupTrait(t)}
               >
                 {t.name}

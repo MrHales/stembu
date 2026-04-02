@@ -333,6 +333,18 @@ button.danger:hover {
   transform: translateY(-1px);
 }
 
+.summary-trait-tag.negative {
+  background: rgba(255, 51, 102, 0.1);
+  border-color: rgba(255, 51, 102, 0.3);
+  color: var(--color-danger);
+}
+
+.summary-trait-tag.negative:hover {
+  background: rgba(255, 51, 102, 0.2);
+  border-color: var(--color-danger);
+  box-shadow: 0 0 10px rgba(255, 51, 102, 0.2);
+}
+
 /* Floating Top Button */
 .back-to-top {
   position: fixed;
