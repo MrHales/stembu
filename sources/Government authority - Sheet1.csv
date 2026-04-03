@@ -29,19 +29,23 @@ Not Fanatic Egalitarian",MegaCorp
 "Gestalt authorities can only be selected by  Gestalt Consciousness empires. They do not hold elections, their ruler and council nodes are immortal, and their authority type cannot be changed once the game starts.",,,,,,
 Machine Intelligence,"Machine Intelligences are immense artificial group minds that have been networked into a single conscious entity. Most of the actual ""population"" in such an empire consists of mindless work units who perform their designated tasks without any semblance of free will.
 
-A small number of semi-autonomous agents are typically employed for more specialized tasks that benefit from some degree of independent initiative.","+1 Nexus District when colonizing a world
- +1 Monthly Mechanical Pop Assembly
- +10% Resources from Mining Stations
- +25% Colony Development Speed","+200 Amenities
- −1% Empire Size from Pops",Machine Intelligence,Machine species,"Synthetic Dawn
+A small number of semi-autonomous agents are typically employed for more specialized tasks that benefit from some degree of independent initiative.",,"+1 Nexus District when colonizing a world
++1 Monthly Mechanical Pop Assembly
++10% Resources from Mining Stations
++25% Colony Development Speed","+200 Amenities
+−1% Empire Size from Pops","Machine Intelligence
+Machine species","Synthetic Dawn
 The Machine Age
 Shadows of the Shroud (Shroud-Forged only)"
-Hive Mind,"Hive Minds operate as a single organism more than as a state. The population has no free will, and act as an extension of the Hive Mind itself - much like the limbs of a body. When cut off from the Mind, these drones become comatose and eventually wither and die. Any free individuals on planets owned by the Mind are driven away, killed, or simply treated as prey to feed the collective.","+25% Pop Growth Speed
- −25% Empire Size Effect
- Pops have the Hive-Minded trait",+2% Monthly Unity,Hive Mind,"Not Wilderness origin
-Not Machine species",
-Mutualistic Intelligence,"Mutualistic Intelligences emerge as distributed consciousness on a planetary scale. They consist of symbiotic species drawn from a variety of biota, all acting in accordance with the collective will of their environment. Select symbionts may work semi-autonomously on specialized tasks, but most depend on regular contact with their mutualistic environment. If isolated, they will revert to wild and instinctive behavior before eventually perishing.","−25% Empire Size effect
- +100% Empire Size from districts
- +100% Empire Size from planets
- +100% Diplomatic Weight from economy
- Pops have the Hive-Minded trait",+2% Monthly Unity,Hive Mind,Wilderness origin,
+Hive Mind,"Hive Minds operate as a single organism more than as a state. The population has no free will, and act as an extension of the Hive Mind itself - much like the limbs of a body. When cut off from the Mind, these drones become comatose and eventually wither and die. Any free individuals on planets owned by the Mind are driven away, killed, or simply treated as prey to feed the collective.",,"+25% Pop Growth Speed
+−25% Empire Size Effect
+Pops have the Hive-Minded trait",+2% Monthly Unity,"Hive Mind
+Not Wilderness origin
+Not Machine species","Utopia
+BioGenesis"
+Mutualistic Intelligence,"Mutualistic Intelligences emerge as distributed consciousness on a planetary scale. They consist of symbiotic species drawn from a variety of biota, all acting in accordance with the collective will of their environment. Select symbionts may work semi-autonomously on specialized tasks, but most depend on regular contact with their mutualistic environment. If isolated, they will revert to wild and instinctive behavior before eventually perishing.",,"−25% Empire Size effect
++100% Empire Size from districts
++100% Empire Size from planets
++100% Diplomatic Weight from economy
+Pops have the Hive-Minded trait",+2% Monthly Unity,"Hive Mind
+Wilderness origin",BioGenesis

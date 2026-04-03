@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
+import { checkCivicRequirements } from '../utils/requirements';
 
-export default function CivicsSection({ selectedCivics, onCivicToggle, onCivicInfoClick }) {
+export default function CivicsSection({ 
+    selectedCivics, 
+    onCivicToggle, 
+    onCivicInfoClick,
+    selectedAuthority,
+    selectedEthics,
+    selectedOrigin,
+    speciesType
+}) {
   const [civics, setCivics] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -28,10 +37,10 @@ export default function CivicsSection({ selectedCivics, onCivicToggle, onCivicIn
     loadData();
   }, []);
 
-  if (loading) return <div className="placeholder-content">Loading societal tenets...</div>;
-
-  const handleToggle = (civic, e) => {
-    e.stopPropagation();
+   if (loading) return <div className="placeholder-content">Loading societal tenets...</div>;
+ 
+   const handleToggle = (civic, e) => {
+     e.stopPropagation();
     onCivicToggle(civic);
   };
 
@@ -40,9 +49,17 @@ export default function CivicsSection({ selectedCivics, onCivicToggle, onCivicIn
       <div className="traits-container">
         {civics.map((civic, index) => {
           const isSelected = selectedCivics.some(c => c.name === civic.Civic);
-          // Hard limit of 2 during empire creation.
+          const meetReqs = checkCivicRequirements(civic.Requirements, {
+             authority: selectedAuthority,
+             ethics: selectedEthics,
+             origin: selectedOrigin,
+             speciesType: speciesType
+          });
+          
           const maxReached = selectedCivics.length >= 2 && !isSelected;
-          const classNames = `selectable-card ${isSelected ? 'selected' : ''} ${maxReached ? 'opacity-50' : ''}`;
+          const hasConflict = !meetReqs;
+          
+          const classNames = `selectable-card ${isSelected ? 'selected' : ''} ${hasConflict ? 'conflict opacity-50' : ''} ${maxReached && !hasConflict ? 'opacity-50' : ''}`;
 
           return (
             <div 
@@ -50,8 +67,8 @@ export default function CivicsSection({ selectedCivics, onCivicToggle, onCivicIn
               className={classNames}
               style={{ marginBottom: '0.8rem' }}
               onClick={(e) => {
-                 if (!maxReached || isSelected) {
-                   onCivicToggle({ name: civic.Civic, ...civic });
+                 if (!hasConflict && (!maxReached || isSelected)) {
+                    onCivicToggle({ name: civic.Civic, ...civic });
                  }
               }}
             >
@@ -89,6 +106,11 @@ export default function CivicsSection({ selectedCivics, onCivicToggle, onCivicIn
               }}>
                 {civic.Description}
               </p>
+              {hasConflict && (
+                <span style={{ fontSize: '0.7rem', color: 'var(--color-danger)', display: 'block', marginTop: '0.4rem' }}>
+                  Requirements not met
+                </span>
+              )}
             </div>
           )
         })}

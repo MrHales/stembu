@@ -10,6 +10,7 @@ import GovernmentTypeSection from './components/GovernmentTypeSection'
 import EthicsSection from './components/EthicsSection'
 import HomeworldSection from './components/HomeworldSection'
 import OriginSection from './components/OriginSection'
+import { checkCivicRequirements } from './utils/requirements'
 
 function SectionPanel({ title, description, children }) {
   return (
@@ -135,6 +136,27 @@ function App() {
     setSelectedPlanet(null)
     setSelectedOrigin(null)
   }
+
+  // Auto-deselection of invalid Civics
+  useEffect(() => {
+    if (selectedCivics.length === 0) return;
+    
+    setSelectedCivics(prev => {
+      const validCivics = prev.filter(civic => 
+        checkCivicRequirements(civic.Requirements, {
+          authority: selectedAuthority,
+          ethics: selectedEthics,
+          origin: selectedOrigin,
+          speciesType: speciesType
+        })
+      );
+      
+      if (validCivics.length !== prev.length) {
+        return validCivics;
+      }
+      return prev;
+    });
+  }, [selectedAuthority, selectedEthics, selectedOrigin, speciesType]);
 
   const handleSave = () => {
     alert(`Saving matrix for [${empireName}]...`)
@@ -392,6 +414,10 @@ function App() {
             selectedCivics={selectedCivics}
             onCivicToggle={handleCivicToggle}
             onCivicInfoClick={setActivePopupTrait}
+            selectedAuthority={selectedAuthority}
+            selectedEthics={selectedEthics}
+            selectedOrigin={selectedOrigin}
+            speciesType={speciesType}
           />
         </SectionPanel>
 
