@@ -9,7 +9,7 @@ export function aggregateEffects(effectStrings) {
     
     lines.forEach(line => {
       let l = line.trim();
-      if (!l) return;
+      if (!l || l.toLowerCase() === 'none') return;
       
       // 1. Remove PNG icon references (e.g., "Happiness.png")
       l = l.replace(/[A-Za-z0-9_-]+\.png\s*/gi, '');

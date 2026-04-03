@@ -325,43 +325,64 @@ function App() {
         <div className="summary-column totals-column">
            <h3>Total Empire Effects</h3>
            {(() => {
-              const allEffects = [
+              const empireEffectsStrings = [
                 ...selectedTraits.map(t => t.effects),
                 ...selectedEthics.map(e => e.Effects),
                 selectedAuthority ? selectedAuthority['Empire effects'] : '',
                 ...selectedCivics.map(c => c.Effects),
-                selectedOrigin ? `${selectedOrigin['Empire effects']}\n${selectedOrigin['Homeworld effects']}` : ''
+                selectedOrigin ? selectedOrigin['Empire effects'] : ''
               ];
-              const totals = aggregateEffects(allEffects);
               
-              if (totals.numeric.length === 0 && totals.features.length === 0) {
+              const homeworldEffectsStrings = [
+                selectedOrigin ? selectedOrigin['Homeworld effects'] : ''
+              ];
+
+              const empireTotals = aggregateEffects(empireEffectsStrings);
+              const homeworldTotals = aggregateEffects(homeworldEffectsStrings);
+              
+              const hasEmpire = empireTotals.numeric.length > 0 || empireTotals.features.length > 0;
+              const hasHomeworld = homeworldTotals.numeric.length > 0 || homeworldTotals.features.length > 0;
+
+              if (!hasEmpire && !hasHomeworld) {
                  return <p style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>No effects active yet.</p>;
               }
 
-              return (
-                 <div className="totals-content">
-                    {totals.numeric.length > 0 && (
-                      <div className="totals-group">
-                         {totals.numeric.map((item, idx) => (
-                            <div key={idx} className="total-item">
-                               <span className={`total-value ${item.value < 0 ? 'negative' : 'positive'}`}>
-                                  {item.value > 0 ? '+' : ''}{item.value}{item.isPercent ? '%' : ''}
-                               </span>
-                               <span className="total-desc">{item.description}</span>
-                            </div>
-                         ))}
-                      </div>
-                    )}
-                    {totals.features.length > 0 && (
-                       <div className="totals-group features-list">
-                          {totals.features.map((feature, idx) => (
-                             <div key={idx} className="total-feature">
-                                <span className="feature-bullet">✦</span> {feature}
-                             </div>
-                          ))}
-                       </div>
-                    )}
+              const renderTotalsGroup = (totals, title) => (
+                 <div className="totals-category" style={{ marginBottom: '1.5rem' }}>
+                    <h4 style={{ fontSize: '0.8rem', textTransform: 'uppercase', color: 'var(--color-text-muted)', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '0.3rem' }}>
+                       {title}
+                    </h4>
+                    <div className="totals-content">
+                       {totals.numeric.length > 0 && (
+                         <div className="totals-group">
+                            {totals.numeric.map((item, idx) => (
+                               <div key={idx} className="total-item">
+                                  <span className={`total-value ${item.value < 0 ? 'negative' : 'positive'}`}>
+                                     {item.value > 0 ? '+' : ''}{item.value}{item.isPercent ? '%' : ''}
+                                  </span>
+                                  <span className="total-desc">{item.description}</span>
+                               </div>
+                            ))}
+                         </div>
+                       )}
+                       {totals.features.length > 0 && (
+                          <div className="totals-group features-list">
+                             {totals.features.map((feature, idx) => (
+                                <div key={idx} className="total-feature">
+                                   <span className="feature-bullet">✦</span> {feature}
+                                </div>
+                             ))}
+                          </div>
+                       )}
+                    </div>
                  </div>
+              );
+
+              return (
+                 <>
+                    {hasEmpire && renderTotalsGroup(empireTotals, "Empire Bonuses")}
+                    {hasHomeworld && renderTotalsGroup(homeworldTotals, "Homeworld Bonuses")}
+                 </>
               );
            })()}
         </div>
