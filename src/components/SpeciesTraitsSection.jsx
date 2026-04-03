@@ -83,12 +83,16 @@ export default function SpeciesTraitsSection({ speciesType, selectedTraits, onTr
               (trait.conflicts && trait.conflicts.includes(st.name))
             );
             
+            const reqs = trait.requirements ? trait.requirements.split('\n').map(r => r.trim()).filter(Boolean) : [];
+            const meetsRequirement = reqs.length === 0 || reqs.includes(speciesType);
+            const isRestricted = !isSelected && (!meetsRequirement || hasConflict);
+            
             return (
               <div 
                 key={trait.name} 
-                className={`selectable-card ${isSelected ? 'selected' : ''} ${hasConflict ? 'conflict opacity-50' : ''}`}
+                className={`selectable-card ${isSelected ? 'selected' : ''} ${isRestricted ? 'conflict opacity-50' : ''}`}
                 onClick={(e) => {
-                  if (!hasConflict) onTraitToggle(trait);
+                  if (!isRestricted) onTraitToggle(trait);
                 }}
               >
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
@@ -110,6 +114,7 @@ export default function SpeciesTraitsSection({ speciesType, selectedTraits, onTr
                   </button>
                 </div>
                 {hasConflict && <small className="text-danger" style={{display: 'block', marginTop: '10px'}}>Conflicts with selected trait</small>}
+                {!meetsRequirement && !isSelected && <small className="text-danger" style={{display: 'block', marginTop: '10px'}}>Requirements not met</small>}
               </div>
             );
           })}
