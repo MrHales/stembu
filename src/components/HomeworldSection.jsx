@@ -99,29 +99,26 @@ export default function HomeworldSection({ homeworldName, setHomeworldName, sele
               className={`selectable-card ${selectedPlanet?.name === planet.Type ? 'selected' : ''}`}
               onClick={() => setSelectedPlanet({ name: planet.Type, ...planet })}
             >
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <h4>{planet.Type}</h4>
-                <button 
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onPlanetInfoClick({
-                      name: planet.Type,
-                      description: planet.Description,
-                      effects: `Favored features: ${planet['Favored features'] || 'None'}`,
-                      points: 0
-                    });
-                  }}
-                  style={{
-                    background: 'transparent',
-                    border: 'none',
-                    color: 'var(--color-accent)',
-                    padding: '0',
-                    fontSize: '1rem'
-                  }}
-                  title="More Info"
-                >
-                  ⓘ
-                </button>
+              <div className="traits-header" style={{ alignItems: 'flex-start', borderBottom: 'none', marginBottom: 0, paddingBottom: 0 }}>
+                <div>
+                  <h4 style={{ margin: 0, marginBottom: '0.2rem' }}>{planet.Type}</h4>
+                </div>
+                <div className="trait-stats">
+                  <button 
+                    style={{ padding: '0.2rem 0.5rem', fontSize: '0.75rem', zIndex: 10, position: 'relative' }}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onPlanetInfoClick({
+                        name: planet.Type,
+                        description: planet.Description,
+                        effects: `Favored features: ${planet['Favored features'] || 'None'}`,
+                        points: 0
+                      });
+                    }}
+                  >
+                    ?
+                  </button>
+                </div>
               </div>
             </div>
           ))}
