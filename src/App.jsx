@@ -9,6 +9,7 @@ import CivicsSection from './components/CivicsSection'
 import GovernmentTypeSection from './components/GovernmentTypeSection'
 import EthicsSection from './components/EthicsSection'
 import HomeworldSection from './components/HomeworldSection'
+import OriginSection from './components/OriginSection'
 
 function SectionPanel({ title, description, children }) {
   return (
@@ -36,6 +37,28 @@ function App() {
   const [homeworldName, setHomeworldName] = useState("Earth")
   const [selectedClimate, setSelectedClimate] = useState(null)
   const [selectedPlanet, setSelectedPlanet] = useState(null)
+  
+  // Origin State
+  const [selectedOrigin, setSelectedOrigin] = useState(null)
+
+  const getEffectiveHomeworldType = () => {
+    if (!selectedOrigin) return selectedPlanet?.name || ""
+    switch (selectedOrigin.name) {
+      case "Post-Apocalyptic": return "Tomb World"
+      case "Life-Seeded": return "Gaia World"
+      case "Remnants": return "Relic World"
+      case "Resource Consolidation": return "Machine World"
+      case "Ocean Paradise": return "Ocean World"
+      case "Shattered Ring": return "Shattered Ring World"
+      case "Void Dwellers": 
+      case "Knights of the Toxic God": return "Habitat"
+      case "Red Giant":
+      case "Cosmic Dawn":
+      case "Planet Forgers": return "Volcanic World"
+      case "Calamitous Birth": return `${selectedPlanet?.name || "Planet"} (Massive Crater)`
+      default: return selectedPlanet?.name || ""
+    }
+  }
 
   // Scroll logic for "Back to Top" float
   useEffect(() => {
@@ -67,6 +90,7 @@ function App() {
     setHomeworldName("Earth")
     setSelectedClimate(null)
     setSelectedPlanet(null)
+    setSelectedOrigin(null)
   }
 
   const handleSave = () => {
@@ -209,8 +233,25 @@ function App() {
           )}
         </p>
         <p>
+          <strong className="text-accent">Origin:</strong>{' '}
+          {selectedOrigin ? (
+            <span 
+              className="summary-trait-tag"
+              onClick={() => setActivePopupTrait({
+                name: selectedOrigin.name,
+                description: 'Empire effects: ' + selectedOrigin['Empire effects'],
+                effects: 'Homeworld effects: ' + selectedOrigin['Homeworld effects']
+              })}
+            >
+              {selectedOrigin.name}
+            </span>
+          ) : (
+            <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
+          )}
+        </p>
+        <p>
           <strong className="text-accent">Homeworld:</strong>{' '}
-          {homeworldName}{selectedPlanet ? ` (${selectedPlanet.name})` : ''}
+          {homeworldName}{getEffectiveHomeworldType() ? ` (${getEffectiveHomeworldType()})` : ''}
         </p>
       </div>
 
@@ -259,7 +300,13 @@ function App() {
         <SectionPanel 
           title="Origin" 
           description="How did your civilization reach the stars?" 
-        />
+        >
+          <OriginSection 
+            selectedOrigin={selectedOrigin}
+            onOriginSelect={setSelectedOrigin}
+            onOriginInfoClick={setActivePopupTrait}
+          />
+        </SectionPanel>
       </main>
 
       <h2 style={{ marginTop: '3rem', borderBottom: '1px solid var(--color-border)', paddingBottom: '0.5rem' }}>Government Structure</h2>
