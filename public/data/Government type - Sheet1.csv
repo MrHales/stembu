@@ -1,0 +1,139 @@
+Government type,Auth.,Other requirements,Favored class,Ruler title,Heir title,Weight
+Representative Democracy,Democratic,—,—,President,—,10
+Plutocratic Oligarchy,Oligarchic,—,—,High Commissioner,—,10
+Constitutional Dictatorship,Dictatorial,—,—,Executor,—,10
+Despotic Empire,Imperial,—,Heir,"Emperor
+Empress","Crown Prince
+Crown Princess",10
+Feudal Empire,Imperial,Feudal Society,Heir,"Emperor
+Empress","Crown Prince
+Crown Princess","1,000"
+Elective Monarchy,Dictatorial,Philosopher King,—,"High King
+High Queen",—,"1,000"
+Enlightened Monarchy,Imperial,Philosopher King,Heir,"High King
+High Queen","Crown Prince
+Crown Princess","1,000"
+Communal Parity,Democratic,Shared Burdens,—,Presiding Speaker,—,"5,000"
+Elder Council,"Democratic
+Oligarchic",Storm Chasers,—,Elder Speaker,—,"7,500"
+Pacifist Governments,,,,,,
+Moral Democracy,Democratic,Pacifist,"Scientists
+ Officials",Prime Minister,—,100
+Irenic Bureaucracy,Oligarchic,Pacifist,,Coordinator,—,100
+Irenic Dictatorship,Dictatorial,Pacifist,,Serene Protector,—,100
+Irenic Monarchy,Imperial,Pacifist,Heir,"King
+Queen","Crown Prince
+Crown Princess",100
+Celestial Empire,Imperial,"Inward Perfection
+Spiritualist",Heir,"Celestial Emperor
+Celestial Empress","Crown Prince
+Crown Princess","1,000"
+Spiritualist Governments,,,,,,
+Theocratic Republic,Democratic,Spiritualist,Officials,Revered Elder,—,100
+Theocratic Oligarchy,Oligarchic,Spiritualist,Officials,Chief Precentor,—,100
+Theocratic Dictatorship,Dictatorial,Spiritualist,Officials,"Patriarch
+Matriarch",—,100
+Theocratic Monarchy,Imperial,Spiritualist,Heir,"Archprophet
+Archprophetess","High Priest
+High Priestess",100
+Holy Tribunal,Oligarchic,Exalted Priesthood,Officials,High Inquisitor,—,"1,000"
+Divine Empire,Imperial,Imperial Cult,Heir,"God-Emperor
+God-Empress",Saint,"1,000"
+Grim Council,Oligarchic,Death Cult,Officials,Dread Cardinal,—,"5,000"
+Mortal Empire,Imperial,Death Cult,Heir,"Death-King
+Death-Queen","Death-Prince
+Death-Princess","5,000"
+Dimensional Covenant,Any,Dimensional Worship,Scientists,First Ascendant,Second Ascendant,"5,000"
+Materialist Governments,,,,,,
+Direct Democracy,Democratic,Materialist,—,Chancellor,—,100
+Executive Committee,Oligarchic,Materialist,—,"Chairman
+Chairwoman",—,100
+Totalitarian Regime,Dictatorial,Materialist,—,Primarch,—,100
+Despotic Hegemony,Imperial,Materialist,Heir,Overlord,Deputy Overlord,100
+Rational Consensus,Democratic,Technocracy,Scientists,First Speaker,—,"1,000"
+Science Directorate,Oligarchic,Technocracy,Scientists,Director-General,—,"1,000"
+Technocratic Dictatorship,Dictatorial,Technocracy,Scientists,Overseer,—,"1,000"
+Illuminated Autocracy,Imperial,Technocracy,Heir,Primus,Secundus,"1,000"
+Militarist Governments,,,,,,
+Military Commissariat,Democratic,Militarist,"Commanders
+ Officials",Commissary-General,—,"100
+×2 if  or"
+Military Junta,Oligarchic,Militarist,Commanders,Archon,—,
+Military Dictatorship,Dictatorial,Militarist,Commanders,Grand Marshal,—,
+Star Empire,Imperial,Militarist,Heir,"Emperor
+Empress","Crown Prince
+Crown Princess",
+Assembly of Clans,Democratic,Warrior Culture,Commanders,Clan Speaker,—,"1,000"
+War Council,Oligarchic,Warrior Culture,Commanders,Warlord,—,"1,000"
+Martial Dictatorship,Dictatorial,Warrior Culture,Commanders,"Imperator
+Imperatrix",—,"1,000"
+Martial Empire,Imperial,Warrior Culture,Heir,"Emperor
+Empress","Crown Prince
+Crown Princess","1,000"
+Citizen Republic,Democratic,Citizen Service,"Commanders
+ Officials",Consul,—,"1,000"
+Citizen Stratocracy,Oligarchic,Citizen Service,Commanders,Strategos,—,"1,000"
+Bandit Commune[3],"Democratic
+Oligarchic",Barbaric Despoilers,Commanders,Warlord,—,"5,000"
+Bandit Kingdom[3],"Dictatorial
+Imperial",Barbaric Despoilers,Commanders,Warlord,Raider,"5,000"
+Band of Blood,Any,"Barbaric Despoilers
+Death Cult","Commanders
+ Officials","Bloodlord
+Bloodlady","Bloodprince
+Bloodprincess","10,000"
+Defensive Union,Any,Sovereign Guardianship,Commanders,High Shield,Guardian,"5,000"
+Purifier Governments,,,,,,
+Purity Assembly,Democratic,Fanatic Purifiers,—,Prime Justiciar,—,"50,000"
+Purification Committee,Oligarchic,Fanatic Purifiers,—,Grand Arbiter,—,"50,000"
+Purity Order,Dictatorial,Fanatic Purifiers,—,"Lord Purifier
+Lady Purifier",—,"50,000"
+Blood Court,Imperial,Fanatic Purifiers,Heir,High Executioner,Senior Executioner,"50,000"
+Corporate Governments,,,,,,
+Megacorporation,Corporate,—,Officials,Chief Executive Officer,—,100
+Trade League,Corporate,"Either:
+Free Traders
+Trading Posts",Officials,"Chairman
+Chairwoman",—,"5,000"
+MegaChurch[4],Corporate,Gospel of the Masses,Officials,Hallowed Comptroller,—,"1,000"
+Sacrificial MegaChurch[4],Corporate,"Gospel of the Masses
+Corporate Death Cult",Officials,Grave Administrator,—,"10,000"
+Criminal Syndicate,Corporate,Criminal Heritage,Officials,Oligarch,—,"50,000"
+Subversive Cult,Corporate,"Criminal Heritage
+Gospel of the Masses",Officials,Oracle,—,"100,000"
+Pirate Haven,Corporate,"Criminal Heritage
+Letters of Marque",—,Oligarch,—,"100,000"
+Worker Cooperative,Corporate,Worker Cooperative,Officials,Presiding Speaker,—,"5,000"
+Gestalt Governments,,,,,,
+Collective Consciousness,"Hive Mind
+Mutualistic Intelligence",—,Immortal Ruler,Hive Mind,—,100
+Parasitic Overmind,Hive Mind,"Necrophage
+Cordyceptic Drones",Immortal Ruler,Hive Mind,—,"5,000"
+Ravenous Hive,Hive Mind,Devouring Swarm,Immortal Ruler,Hive Mind,—,"50,000"
+Blood Forest,Mutualistic Intelligence,Devouring Swarm,Immortal Ruler,Wilderness,—,"50,000"
+Artificial Intelligence Network,Machine Intelligence,—,Immortal Ruler,Central Processing Unit,—,100
+Intelligent Research Link,Machine Intelligence,"Either:
+Introspective
+Delegated Functions
+Static Research Analysis
+Genesis Architects
+Spyware Directives
+Neither:
+Constructobot
+Rockbreakers
+Rapid Replicator
+Astro-Mining Drones",Immortal Ruler,Primary Link,—,"1,000"
+Industrial Production Core,Machine Intelligence,"Either:
+Constructobot
+Rockbreakers
+Rapid Replicator
+Astro-Mining Drones
+Neither:
+Introspective
+Delegated Functions
+Static Research Analysis
+Genesis Architects
+Spyware Directives",Immortal Ruler,Control Hub,—,"1,000"
+Autonomous Service Grid,Machine Intelligence,Rogue Servitor,Immortal Ruler,Supervisory Node,,"5,000"
+Catalog Index,Machine Intelligence,Driven Assimilator,Immortal Ruler,Main Conduit,—,"5,000"
+Rogue Defense System,Machine Intelligence,Determined Exterminator,Immortal Ruler,Command Core,—,"50,000"

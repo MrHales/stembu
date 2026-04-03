@@ -4,6 +4,9 @@ import SpeciesTypeSection from './components/SpeciesTypeSection'
 import SpeciesTraitsSection from './components/SpeciesTraitsSection'
 import TraitModal from './components/TraitModal'
 import DisclaimerModal from './components/DisclaimerModal'
+import AuthoritySection from './components/AuthoritySection'
+import CivicsSection from './components/CivicsSection'
+import GovernmentTypeSection from './components/GovernmentTypeSection'
 
 function SectionPanel({ title, description, children }) {
   return (
@@ -23,6 +26,13 @@ function App() {
   const [selectedTraits, setSelectedTraits] = useState([])
   const [activePopupTrait, setActivePopupTrait] = useState(null)
   const [showTopBtn, setShowTopBtn] = useState(false)
+  const [selectedCivics, setSelectedCivics] = useState([])
+  const [selectedAuthority, setSelectedAuthority] = useState(null)
+  
+  // Hardcoded ethics for now to allow government calculation to work before we add the full Ethics UI
+  const [selectedEthics, setSelectedEthics] = useState([
+    { name: "Fanatic Materialist" }
+  ]);
 
   // Scroll logic for "Back to Top" float
   useEffect(() => {
@@ -48,6 +58,8 @@ function App() {
     alert("Initializing new empire sequence...")
     setSpeciesType(null)
     setSelectedTraits([])
+    setSelectedCivics([])
+    setSelectedAuthority(null)
   }
 
   const handleSave = () => {
@@ -73,6 +85,18 @@ function App() {
         return prev.filter(t => t.name !== trait.name)
       } else {
         return [...prev, trait]
+      }
+    })
+  }
+
+  const handleCivicToggle = (civic) => {
+    setSelectedCivics(prev => {
+      const isSelected = prev.some(c => c.name === civic.name)
+      if (isSelected) {
+        return prev.filter(c => c.name !== civic.name)
+      } else {
+        if (prev.length >= 3) return prev; // max 3
+        return [...prev, civic]
       }
     })
   }
@@ -108,6 +132,40 @@ function App() {
                 {t.name}
               </span>
             ))
+          ) : (
+            <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
+          )}
+        </p>
+        <p>
+          <strong className="text-accent">Civics:</strong> 
+          {selectedCivics.length > 0 ? (
+            selectedCivics.map(c => (
+              <span 
+                key={c.name} 
+                className="summary-trait-tag"
+                onClick={() => setActivePopupTrait(c)}
+              >
+                {c.name}
+              </span>
+            ))
+          ) : (
+            <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
+          )}
+        </p>
+        <p>
+          <strong className="text-accent">Authority:</strong> 
+          {selectedAuthority ? (
+            <span 
+              className="summary-trait-tag"
+              onClick={() => setActivePopupTrait({
+                name: selectedAuthority.name,
+                description: selectedAuthority.Description,
+                effects: selectedAuthority['Empire effects'],
+                requirements: selectedAuthority.Requirements
+              })}
+            >
+              {selectedAuthority.name}
+            </span>
           ) : (
             <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
           )}
@@ -149,15 +207,43 @@ function App() {
           title="Origin" 
           description="How did your civilization reach the stars?" 
         />
+      </main>
+
+      <h2 style={{ marginTop: '3rem', borderBottom: '1px solid var(--color-border)', paddingBottom: '0.5rem' }}>Government Structure</h2>
+      <div className="government-grid">
         <SectionPanel 
-          title="Government Type" 
-          description="Determine your authority structure and ruling ethics." 
-        />
+          title="Authority" 
+          description="Determine your authority structure." 
+        >
+          <AuthoritySection 
+            selectedAuthority={selectedAuthority}
+            onSelectAuthority={setSelectedAuthority}
+            speciesType={speciesType}
+          />
+        </SectionPanel>
+
         <SectionPanel 
           title="Civics" 
           description="Establish the core societal tenets of your empire." 
-        />
-      </main>
+        >
+          <CivicsSection 
+            selectedCivics={selectedCivics}
+            onCivicToggle={handleCivicToggle}
+            onCivicInfoClick={setActivePopupTrait}
+          />
+        </SectionPanel>
+
+        <SectionPanel 
+          title="Government Type" 
+          description="Calculated based on your Authority, Civics, and Ethics." 
+        >
+          <GovernmentTypeSection 
+            selectedAuthority={selectedAuthority}
+            selectedCivics={selectedCivics}
+            selectedEthics={selectedEthics}
+          />
+        </SectionPanel>
+      </div>
 
       {/* Back to Top button */}
       <button 

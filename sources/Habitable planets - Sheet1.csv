@@ -1,0 +1,65 @@
+Type,Description,Climate,Favored features,,,
+Desert,"Dry, rocky world with a nitrogen-oxygen atmosphere. Precipitation and major bodies of surface water are relatively rare. Significant temperature variations between day and night cycles. Vegetation is scarce, but even moderate precipitation can make the desert bloom.",Dry,Generator features,,,
+Arid,"Dry, rocky world with a nitrogen-oxygen atmosphere. The dust-covered terrain consists largely of mesas and canyons. Forests can be found in the more temperate polar regions, but vegetation is otherwise scarce.",,,,,
+Savanna,"Rocky world dominated by dry, arid plains covered by a nitrogen-oxygen atmosphere. The small hydrosphere allows for brief wet seasons, but aside from a few ubiquitous grasses vegetation is largely concentrated around shallow oases.",,,,,
+Ocean,"Rocky world with a nitrogen-oxygen atmosphere and a significant hydrosphere. Oceans cover more than 90% of the surface, with scattered islands making up the remaining percentage.",Wet,Agriculture features,,,
+Continental,"Rocky world with a nitrogen-oxygen atmosphere. Active and stable hydrosphere. Great landmasses are separated by oceans, with large climate variations depending on latitude and precipitation.",,,,,
+Tropical,"Humid, rocky world with a thick nitrogen-oxygen atmosphere. Seasons with significant precipitation are interchanged with drier periods. Most landmasses are covered in dense vegetation.",,,,,
+Arctic,"Frigid, rocky world with a nitrogen-oxygen atmosphere. The poles are big, and significant water deposits can be found permanently frozen as glacial ice. However, the planet experiences seasonal variations and the equatorial band is covered by vegetation.",Cold,Mining features,,,
+Alpine,"Mountainous world with a nitrogen-oxygen atmosphere. Snow covers the mountaintops and frozen-over lakes dot the valleys. While the planet experiences the minimal seasonal variations, the still-liquid water beneath the frozen surface of the lakes is enough to sustain some hardy vegetation.",,,,,
+Tundra,Cold and rocky world with a nitrogen-oxygen atmosphere. Permafrost covers most of the surface except for the more temperate equatorial regions. A stable biosphere exists but vegetation is mostly limited to mosses and lichens.,,,,,
+Volcanic,"Rocky world with a sulfur rich atmosphere and a partially liquid lithosphere. The ash and basalt covered surface is interspersed with fresh volcanic activity, lava lakes and rivers. Only extremophile life forms can be found, if any.",Volcanic,Any,,,
+Special habitable planets,,,,,,
+"Special habitable planets are only spawned in certain systems, but any empire that meets the requirements can terraform a regular habitable world into a special one. Certain origins use one of these as the empire's homeworld. All of them have either very high or zero habitability, and several of them feature ""ideal"" habitability, meaning that they have 100% base habitability for all species.",,,,,,
+Type,,Habitability,Effects,Terraforming methods,Preexisting worlds,Notes
+Gaia,,Ideal,"+10% Happiness
++10% Resources from jobs
++15% Pop growth speed
++50% Automatic resettlement destination chance","World Shaper ascension perk
+Gaia Seeders buildings
+Nu-Baol Life-Seeding decision","Life-Seeded homeworld
+Holy Guardians' holy worlds
+Various unique systems","Gaia Worlds tend to have positive modifiers and no negative ones.
+The four Gaia Worlds bordering Holy Guardians all have the  Holy World modifier and unique names. Colonizing them will anger the Holy Guardians, and destroying or terraforming them will awaken them."
+Tomb,,0%,,"Armageddon bombardment
+Javorian Pox bombardment
+Relentless Industrialists buildings
+Thermoclastic Roar behemoth action
+Pre-FTL nuclear wars","Post-Apocalyptic homeworld
+Various unique systems","Colonizing a Tomb World displeases the  Traditionalist faction unless the empire has the  Post-Apocalyptic origin or  Memorialists civic.
+Each Tomb World has a high chance of triggering one of 8 unique events 2 or 3 years after the planet is colonized."
+Relic,,80%,Allows the Restore Ecumenopolis decision,,"Remnants homeworld
+MSI homeworld
+First League home system
+Various unique systems","Relic Worlds contain unique planetary features that grant bonuses to  research output. However, most of the surface is covered by blockers that are expensive to remove."
+Ecumenopolis,,Ideal,"+20% Resources from jobs
++15% Pop assembly speed
++15% Monthly organic pop growth multiplier
++50% Automatic resettlement destination chance
+Can only have Arcology districts","Arcology Project decision
+Restore Ecumenopolis decision",Keepers of Knowledge homeworld,"All normal planetary features are removed.
+Cannot be terraformed into other planet types
+The city lights of an Ecumenopolis are determined by the ship appearance of the terraforming empire."
+Hive,,Ideal,"Uninhabitable unless either:
+Hive-Minded species or Necrophage origin and Hive Mind
+
++10% Resources from jobs
++600 Housing from districts
++50% Automatic resettlement destination chance
+Can only have Urban districts","Hive Worlds ascension perk
+Chimeral Consciousness authority",Shattered Fragments worlds,"All normal planetary features are removed.
+The following planetary modifiers are also removed: Atmospheric Aphrodisiac, Atmospheric Hallucinogen, Bleak, Hazardous Weather, Hostile Fauna, Irradiated, Lush, Natural Beauty, and Wild Storms."
+Machine,,"0%
+100% if","Uninhabitable unless either:
+Machine
+Mechanical
+Cybernetic
+Cyber Commandos
+
++10% Resources from jobs
+−10% Pop housing usage
++50% Automatic resettlement destination chance
+Can only have Urban districts",Machine Worlds ascension perk,"Resource Consolidation homeworld
+Ancient Robot World potential outcome","All normal planetary features are removed.
+The following planetary modifiers are also removed: Atmospheric Aphrodisiac, Atmospheric Hallucinogen, Bleak, Hazardous Weather, Hostile Fauna, Irradiated, Lush, Natural Beauty, and Wild Storms.
+If the planet contains biological pops that don't have the  Cybernetic trait when terraformed, they are killed and the Machine World gains an  Organic Slurry planetary feature."

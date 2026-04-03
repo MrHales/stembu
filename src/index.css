@@ -136,6 +136,13 @@ button.danger:hover {
   gap: 2rem;
 }
 
+.government-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
 .placeholder-content {
   color: var(--color-text-muted);
   font-style: italic;
@@ -431,6 +438,10 @@ button.danger:hover {
   
   .header-actions button {
     width: 100%;
+  }
+
+  .government-grid {
+    grid-template-columns: 1fr;
   }
 
   .back-to-top {

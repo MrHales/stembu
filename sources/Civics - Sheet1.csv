@@ -1,0 +1,732 @@
+Civic,Description,Effects,Council position,Shroud attunement,Requirements,DLC
+Cutthroat Politics,"The political system in this society is renowned for its intrigue. Power struggles, shady backroom deals and cloak and dagger scheming are par for the course. Those who survive long enough to learn the game, however, tend to learn it well.","−20% Edict upkeep
++1 Codebreaking",Prime Speaker,Cradle of Souls,,
+Efficient Bureaucracy,"This society is renowned for its efficiency. Not only do the mag-trains run on time, but the colossal bureaucratic apparatus required to run an interstellar nation has been greatly streamlined.","−20%  Bureaucrat upkeep
++2 Edict fund per 100  Bureaucrats
++2 Edict fund per 100  Priests",Superintendent,Instrument of Desire,,
+Functional Architecture,"This society is renowned for its simple yet functional architecture. There are those who would refer to this building style as boring or even depressing, but in most cases, neo-concrete does the job just as well as any other building material.","−15% Planetary infrastructure cost
++15% Planetary infrastructure build speed
+Can specialize districts without any technology",Master Architect,Composer of Strands,,
+Agrarian Idyll,"A simple and peaceful life can often be the most rewarding. This agrarian society has, to a large extent, managed to avoid large-scale urbanization.","+400 Housing from Agriculture districts
++300 Housing from Generator and Mining districts
+−200 Housing from City districts
+−500 Housing from City segments
++200 Amenities per 100  Farmers
++200 Amenities per 100  Anglers
++200 Amenities per 100  Pearl Divers
+Can specialize Agriculture districts without any technology
+Can research the Agrarian Utopias technology
+Cannot research the Anti-Gravity Engineering technology
+Cannot take the Arcology Project ascension perk",Elder Farmer,Composer of Strands,"Pacifist
+Not Relentless Industrialists
+Not Tankbound
+Not Oppressive Autocracy
+Not Post-Apocalyptic
+Not Remnants
+Not Shattered Ring
+Not Void Dwellers
+Not Volcanic World homeworld",
+Aristocratic Elite,This society has an entrenched nobility that occupies the upper echelons of society.,"Can construct Noble Estates buildings
+Can construct Noble Chateaus holdings
+Capital buildings replace  Politician jobs with  Noble jobs
++10% Job efficiency for Elites
++10% Leader upkeep
+20% Chance for leaders to start with an additional positive and negative trait",Lord Steward,Instrument of Desire,"Oligarchic or  Imperial
+Not Egalitarian
+Not Hard Reset",
+Beacon of Liberty,This society is a shining beacon of light in a sea of darkness. Liberty and individual freedoms are held in the highest regard here.,"+10% Monthly unity
++25% Refugee attraction
+−10% Empire size from pops
+−1 Smuggle Population operation difficulty",Protector of Liberty,Cradle of Souls,"Democratic
+Egalitarian
+Not Xenophobe
+Not Crusader Spirit",
+Citizen Service,Are you doing your part? Full citizenship and the political responsibility that comes with it is limited to those who have served a tour of duty in the military. Service guarantees citizenship.,"+2 Unity per 100  Soldiers
++15% Naval capacity
+Can construct Recruitment Office holdings
+Full Citizenship pops must have Full Military Service and vice versa",Chief of Service,Eater of Worlds,"Democratic or  Oligarchic
+Militarist
+Not Tankbound
+not Fanatic Xenophile
+Not Reanimators",
+Corvée System,This society considers it the absolute right of the state to decide where its citizens live and work.,"+15% Automatic resettlement chance
++10% Worker pop resource output
+−10% Resettlement cost
+Removes unity costs for pop resettlement",Employment Commissioner,Composer of Strands,"Not Egalitarian
+Not Free Haven",
+Distinguished Admiralty,"The Fleet and the Admiralty have unusually prominent roles in this society, wielding a great deal of influence in political circles. They have the pick of the litter when it comes to new military recruits.","+2 Commander starting level
+−25% Commander upkeep
++10% Ship fire rate
++20% Fleet command limit",Lord High Admiral,Eater of Worlds,Militarist,
+Environmentalist,This society seeks to co-exist in harmony with nature. Great care is taken to preserve the environment and limit consumerism where possible.,"Can construct Ranger Lodge buildings
+Can construct Ranger Lodge holdings
+Start with a Ranger Lodge building
+−20% Pop consumer goods upkeep
+Cannot use the Strip Mine Planet decision
+Replaces Industrial Wasteland with natural blocker on homeworld if starting civic",First Warden,Composer of Strands,"Not Oppressive Autocracy
+Not Relentless Industrialists",
+Exalted Priesthood,"To guard against heresy, this society is ruled by a religious council consisting of the wisest and most pious members of the clergy.","+1 Unity per 100  Priests
+Capital buildings replace Politician jobs with High Priest jobs
+Capital buildings replace Politician jobs with Technophant jobs",Archpriest,,"Oligarchic or Dictatorial
+Spiritualist",
+Feudal Society,"This society is organized in a feudal manner, with a monarch whose rule relies on powerful vassals that govern their territories with considerable autonomy.","+5% Subject naval capacity contribution
++25 Subjugation acceptance
++1 Subjects exempt from Divided Patronage
+Can always Propose Subjugation
+Cannot use Expansion Prohibited terms of agreement
+Cannot use Limited Diplomacy terms of agreement
+Cannot use No Subject Conflicts terms of agreement",Chief Herald of Arms,Eater of Worlds,Imperial,
+Free Haven,"This society has a well-earned reputation as a free haven. The tired, the poor, the huddled masses yearning to breathe free - all are welcome here, regardless of their species or origin.","+25% Automatic resettlement destination chance
++5% Worker happiness
++5% Happiness ( Machine founder species)
++50% Refugee attraction",Integration Facilitator,Cradle of Souls,"Xenophile
+Not Corvée System
+Not Oppressive Autocracy",
+Idealistic Foundation,"This society was founded on strong idealistic values. Whether the current government remains true to them or not, the people have not forgotten.","+10% Citizen pop happiness
++10% Refugee attraction",Tribune of Rights,Cradle of Souls,Egalitarian,
+Imperial Cult,This society has a dominant state religion where the ruler is worshiped as a living deity.,"+100 Edict fund
++100 Priest jobs per total ruler level
+ on ruler's home planet",Prime Herald,,"Imperial
+Authoritarian
+Spiritualist
+Not Chosen",
+Meritocracy,An individual's social station or personal connections should have no bearing on their profession. The sole basis for advancement in this society is demonstrated ability and talent.,"+10% Specialist pop resource output
++1 Additional leader trait options",Principal Instructor,Cradle of Souls,Democratic or Oligarchic,
+Mining Guilds,Several large mining guilds have reached a dominant position in this society. The government relies heavily on their support.,+1 Minerals per 100 Miners,Chairman of the Mines,Instrument of Desire,Not Tankbound,
+Nationalistic Zeal,A strong sense of nationalistic pride permeates all layers of this society.,"−20% War exhaustion gain
+−15% Claim influence cost
++5% Diplomatic weight per rival",Standard Bearer,Eater of Worlds,Militarist,
+Parliamentary System,The parliamentary system in this society encourages a free and lively debate. Currying favor with one of the dominant political factions can prove to be quite advantageous.,"+20% Faction resource output
++50% Disapporoval from unmet faction demands
+Factions will form within 3 months but have halved resource production",Speaker of Parliament,Cradle of Souls,"Democratic
+Not Crowdsourcing
+Not Secret Societies
+Not Media Conglomerate
+Not Hard Reset",
+Philosopher King,It is not enough to simply rule. The Ship of State must be guided by a king that wields enough wisdom and knowledge to steer it true.,"+5 Effective ruler skill
+Heir has double chance to be the same class as ruler",Lord Chancellor,,Dictatorial or Imperial,
+Police State,"To quash any traces of dissent, the population in this repressive society is carefully monitored and controlled by a large internal police force.","+3 Stability
++10% Enforcer job efficiency
++10% Telepath job efficiency
++1 Unity per 100 Enforcers",Chief of Secret Police,Instrument of Desire,"Not Fanatic Egalitarian
+Not Civil Education",
+Shadow Council,"Unbeknownst to its own citizens, this society is actually manipulated from behind the scenes by a secretive shadow council. Appearances must be kept, but the tyranny of the majority should also be guarded against. After all, what if the fools vote for the wrong candidate?","−75% Election Cost
+ +1 Effective councilor skill
+ +1 Codebreaking
+ +10% Infiltration speed
+ +5 Election term variance years",Shadow Councilor,Instrument of Desire,Democratic or Oligarchic or Dictatorial,
+Slaver Guilds,Much of the true political power in this society rests with a number of powerful and ruthless slaver guilds. They know how to get the most out of a slave.,"+15% Job efficiency for slaves
+−25% Refugee attraction",Labor Magistrate,Instrument of Desire,"Authoritarian
+Not Tankbound
+Not Pleasure Seekers
+Not Indentured Assets",
+Technocracy,"To maximize efficiency, this society is governed according to the principles of science and rationality. The personal whims of an ignorant and dangerously unqualified political elite must not be allowed to interfere.","+1 Research alternatives
++1 Scientist capacity
+−1 Official capacity
+Politician jobs are replaced with Science Director jobs
+Scientists start with a random Expertise trait
+Expertise traits increase job research output for their fields if governing a planet or sector
+Starting Official governing the homeworld is replaced by a Scientist",Senior Science Director,,"Materialist
+Not Shared Burdens",
+Warrior Culture,"This society has developed into a hardy warrior culture. Martial prowess is valued above all else, and true glory can only be found on the field of battle.","Replaces Entertainer jobs with Duelist jobs
+Replaces Conserved Fauna jobs with Gladiatorial Beast jobs
++20% Army damage
+−10% War exhaustion gain
++1 Enclave capacity
+Start with a Holo-Theatres building",Arbiter of Duels,Eater of Worlds,"Militarist
+Not Oppressive Autocracy
+Not Pleasure Seekers",
+Ascensionists,The ultimate goal of this empire is to ascend to ever greater levels of fulfillment.,"+25% Planetary ascension effects
+−10% Planetary ascension cost
+−25% Tradition cost from empire size Capital starts at ascension tier 1",Minister of Ascension,Instrument of Desire,"Spiritualist
+Not Gigacorp","Utopia
+Astral Planes"
+Catalytic Processing,"By focusing their industrial efforts into catalytic chemistry, this civilization has unlocked the key to using organic materials in the construction of spacebound structures.","Replaces Metallurgist jobs with Catalytic Technician jobs
+Start with 1 fewer of Mining District
+Start with 2 more of Agriculture District",Principal Catalyst,Composer of Strands,"Not Catalytic Recyclers
+Not Calamitous Birth
+Not Volcanic World homeworld",Plantoids
+Masterful Crafters,A penchant for meticulous crafting lies at the heart of this society. Deft appendages and keen sensory organs aid them in creating truly wondrous treasures even in the most basic of trades.,Replaces Artisan jobs with Artificer jobs,Master Crafter,Instrument of Desire,Not Mastercraft Inc.,Humanoids
+Pleasure Seekers,"This society rejoices in its own perfection. Those who are elevated by their privileged social structure have surrendered to a culture which glorifies pleasure and entertainment, regardless of a cost typically borne by others.","Replaces Civilian jobs with Hedonist jobs
+Can use the Decadent Lifestyle living standard
+Start with a Holo-Theatres building",Minister of Extravagance,Instrument of Desire,"Not Slaver Guilds
+Not Warrior Culture
+Not Shared Burdens
+Not Oppressive Autocracy
+Not Corporate Hedonism
+Not Hard Reset",Humanoids
+Pompous Purists,"A society so utterly convinced of their own superiority, that any attempt at diplomacy not initated by themselves will be utterly ignored.","+1 Available envoys
++25% Envoy improve relations
++15% Diplomatic Weight when opposing resolutions
+−1 External recruitable leaders per class
+−25% Refugee attraction
+Can send but cannot receive diplomatic propositions
+Cannot become the Galactic Custodian
+Sectors released as subjects replace it with a random civic",Grand Marshal,Cradle of Souls,"Xenophobe
+Not Genocidal
+Not Inward Perfection
+Not Scion",Humanoids
+Byzantine Bureaucracy,"This society is largely governed by a complex and, to the outsider, almost labyrinthine system of bureaucracy. An army of officials and functionaries work tirelessly to keep the government running smoothly and ensure no citizens are allocated resources they cannot demonstrate a properly filed and triple-stamped need for.","+1 Unity per 100 Bureaucrats
++1 Stability per 100 Bureaucrats",Administrative Coordinator,,,MegaCorp
+Merchant Guilds,A number of powerful and very influential merchant guilds have risen to prominent positions in this society. They hold significant sway with the government.,"Capital buildings replace  Politician jobs with  Merchant jobs
+Can use the Mercantile diplomatic stance (unless also  Inward Perfection)",Director of Trade,Instrument of Desire,,MegaCorp
+Shared Burdens,"This society believes in an equitable distribution of resources, making little to no distinction between the needs of ruler and ruled. All work together for the benefit of the whole.","Can use the Shared Burden living standard
+Must use Egalitarian living standards
++5 Stability
+Can build Communal Housing and Utopian Communal Housing buildings
+Can construct Communal Housing Outreach holdings",Head Arbiter,Composer of Strands,"Fanatic Egalitarian
+Not Xenophobe
+Not Technocracy
+Not Pleasure Seekers",MegaCorp
+Selective Kinship,"In an uncertain universe, only kin can be trusted. This civilization is selective about the species it defines as equals.","+7.5% Citizen happiness on planets with two species of the founder species class
++2.5% Citizen happiness while oppressing other species classes
++100 Opinion with empires with same founder species class
+−50 Opinion with empires with different founder species class
+Species with same species class have Full Citizenship rights
+Xenophobe ethics do not affect opinion of other empires
+Species with different species class cannot have Full Citizenship rights
+Species with different species class cannot have Full Military Service rights
+Cannot form Migration Agreements with empires with different founder species class",Speaker for the Kin,,"Not Xenophile
+Not Genocidal
+Not Fanatic Egalitarian
+Not Broken Shackles
+Not Machine founder species",Lithoids
+Diplomatic Corps,This society has a long tradition of rhetoric and debate and celebrate those who are able to get their way using only words.,"+2 Available envoys
++15% Diplomatic weight
++40 Trust cap
++75% Envoy improve relations",High Ambassador,Cradle of Souls,"Not Genocidal
+Not Inward Perfection",Federations
+Death Cult,"This society's religion is built around periodic, ritual sacrifices. Willing initiates devote themselves to a decade of study before meeting an end whose effects ripple throughout their culture.","Can construct Sacrificial Temple buildings
+Can construct Sacrificial Shrine holdings
+Can use Sacrifice edicts",Apostle of Death,,"Spiritualist
+Not Genocidal
+Not Chosen
+Not Inward Perfection
+Not Corporate Death Cult
+Not Necrophage",Necroids
+Memorialists,"This empire pays tribute to memories and sapients of the past, deriving greater stability and insight from the continuous cycles of death, rebirth and legacy.","Replaces Autochthon Monument buildings with Sanctuary of Repose
+Start with a Sanctuary of Repose
+Gain additional Unity from Leviathan Parade Opportunity situations",High Curator,Composer of Strands,"Not Genocidal
+Not Relentless Industrialists
+Not Entropy Drinkers",Necroids
+Reanimators,"Within this society, death is no bar to the call of arms. Masters of the art of necromancy reanimate deceased corpses to raise a dread host that strikes fear into the hearts of lesser mortals.","Replaces Soldier jobs with Necromancer jobs
+Can construct Dread Encampment buildings
+Can construct Dread Outpost holdings
+33% chance to gain an Undead Army per killed organic army
+Defeated organic guardians can be reanimated
+Lost space fauna can be reanimated",Master Necromancer,Eater of Worlds,"Not Pacifist
+Not Citizen Service
+Not Sovereign Guardianship
+Not Synthetic Fertility
+Not Machine founder species",Necroids
+Mutagenic Spas,"This civilization engages in ritualistic mutagenic bathing, with professional attendants overseeing the use of highly dangerous substances. This 'invigorating' process may appall uninitiated onlookers.","Can construct Corporate Clinic holdings
+Can construct Mutagenic Spa buildings
+Start with a Mutagenic Spa building
+Starting governor has the Substance Abuser trait
++3 Substance Abuse Effective Level on worlds with a Mutagenic Spa
+Leaders cannot gain the Resilient trait",Warden of the Baths,Composer of Strands,"Not Machine founder species
+Not Life-Seeded
+Not Synthetic Fertility
+Not Mutagenic Luxury",Toxoids
+Lubrication Tanks,"This machine empire improved upon its basic drone-shell production through the vigorous application of highly aggressive lubrication agents, controlled by carefully programmed terminals. This 'optimized' process relies on typically wasted byproducts from the industries that are now repurposed for maximal efficiency.","Can construct Corporate Clinic holdings
+Can construct Hyper Lubrication Basin buildings
+Can construct Hyper Lubrication Basin holdings
+Start with a Hyper Lubrication Basin building",Terminal Overseer,Composer of Strands,"Machine founder species
+Not Luxury Lubrication Pools
+Not Life-Seeded",Toxoids
+Relentless Industrialists,"To live is to exploit. This civilization is built around the principle of living life to the fullest, in the sense of squeezing the maximum profit from every last ounce of matter and membrane available for exploitation.","Can construct Coordinated Fulfillment Center buildings
+Start with a Coordinated Fulfillment Center building
+First time a world is polluted triggers the Environmental Deterioration situation",Chief Extraction Officer,Instrument of Desire,"Materialist
+Not Planet Forgers
+Not Agrarian Idyll
+Not Environmentalist
+Not Idyllic Bloom
+Not Memorialists
+Not Life-Seeded
+Not Shareholder Values",Toxoids
+Scavengers,"In this society, nothing goes to waste, even in the grimmest times of war: no enemy technology will go undiscovered, as teams of scrappers accompanying the war fleets scrape wreckages of anything and everything worth salvaging.","Enables the Research & Salvage Debris debris policy
+10% chance per ship debris to create a ship of equal size
+−5% Ships alloys upkeep
++10% Planetary infrastructure refund
++10% Megastructure refund
++10 Opinion with the Salvagers enclave",Master Scrapper,,Not Refurbishment Division,Toxoids
+Eager Explorers,"Yearning for the stars, this civilization sped through several stages of development, reaching the age of galactic exploration far earlier than most.","Cannot be added until Subspace Drive is researched
+Cannot be removed until Jump Drive is researched
+Start with the Subspace Drive technology
+−1000 Starting pops
++50% Chance to draw Voidcraft technologies
++15% Sublight speed
++20% Survey speed
++5% Anomaly discovery chance
++5% Astral rift exploration speed
+Start with 1 fewer of each resource district
+Start without a fleet and any stations
+Start with two exploration vessels and an engineering vessel
+Start with a second scientist
+Starting scientists usually have an additional survey-related trait
+Can build exploration, engineering, and colonization vessels
+Can build conventional civilian ships after researching hyperdrives
+Certain starting technologies are permanent options and must be researched",Minister of Exploration,,"Not Biological shipset
+Not Inward Perfection
+Not Privatized Exploration
+Not Sovereign Guardianship
+Not Hyperspace Specialty
+Not Genesis Guides
+Not Broken Shackles
+Not Fear of the Dark
+Not Payback
+Not Synthetic Fertility
+Not Hard Reset",First Contact
+Crusader Spirit,"The lack of guidance creates weak minds - which easily succumb to corruption and plunge into decadence. This society has assumed the self-imposed mantle of bringing ""enlightenment"" to the masses through aggressive proselytizing.","+5% Ship weapons damage
++5% Ship build speed
+War Philosophy policy is locked to Liberation Wars
+Commanders have the Crusader trait",Lord Commander,Cradle of Souls,"Authoritarian or Spiritualist or Militarist
+Not Pacifist
+Not Genocidal
+Not Beacon of Liberty",Galactic Paragons
+Heroic Past,"The legendary heroes of the past inspire this civilizations young people to achieve the extraordinary. As role models, government officials are expected to embody these ideals.",+1 Leader capacity for each class,Grand Storyteller,,Not Hard Reset,Galactic Paragons
+Vaults of Knowledge,"The knowledge, principles, and experiences of exceptional people are digitized and accumulated in the Vaults of Knowledge. Citizens can access this source of wisdom and experience to learn from the ghosts of the past.","Can construct the Vaults of Knowledge building
+Start with the Vaults of Knowledge building
++1 Leader starting skill
++1 Effective councilor skill
++1 Additional leader trait options",Keeper of the Vaults,,Not Knowledge Mentorship,Galactic Paragons
+Dimensional Worship,This society believes that a divine existence lies beyond the folds in space and time. Systems where instabilities are highest hold a sacred meaning to them as sites of both pilgrimage and research.,"+1 Physics per 100  Bureaucrats
++100% Chance for astral rifts to appear in owned systems
++10% Chance to discover rare technologies
++25% Chance for scientists to gain Astral Rift related traits
+Can construct Dimensional Shrine starbase buildings",Astral Minister,,"Spiritualist
+Not Dimensional Enterprise",Astral Planes
+Dark Consortium,A deep understanding of the architecture of the universe allowed this society to exploit the mysterious properties of dark matter long before the discovery of the hyperdrive.,"Can use Dark Matter strategic resource edicts
+Can use the Dark Matter Breakthrough agenda
+If added during empire creation: Cannot be removed
+Start with the Dark Matter Drawing technology researched
+Home system has a deposit of 3 Dark Matter
+
+Requires Dark Matter Drawing technology to add after empire creation",Shadow Weaver,,Not Shadow Corporation,Astral Planes
+Hyperspace Specialty,"This society has always embraced speed. The manipulation of hyperspace is just another thoroughfare, and those with aptitude in the field have risen to the highest caste.","+2 Planet sensor range
++10% Sublight speed
++15% Physics research speed
++25% Chance for scientists to gain Astral Rift related traits
+Start with the Hyperlane Breach Points technology as a permanent research option
+Know the layout of all systems within 3 hyperlane jumps",Hyperlane Supervisor,Composer of Strands,"Not Hyperspace Trade
+Not Eager Explorers
+Not Hard Reset",Astral Planes
+Genesis Guides,"This society is devoted to the creation of emerging species. As the stewards of evolution's potential, they allocate portions of their worlds to safeguard the development of pre-sapient life forms.","Replace regular colony ships with Genesis Arks
+−25% Terraforming cost
++25% Terraforming speed
++300 Pre-Sapient pops on homeworld
++10% Amenities from Isolated Valley planetary features
++10% Unity from jobs from Isolated Valley planetary features
++250 x uplifts Unity when uplifting
++5 x uplifts Influence when uplifting
++250-2500 Unity when colonizing a planet
++5-50 Influence when colonizing a planet
+Unlock the Epigenetic Triggers technology when colonizing a planet
+Enables the Build Genesis Preserve decision
+Start with the Genesis Preserve planetary feature on homeworld
+Uplifting replaces Genesis Preserve with Genesis Monument
+Pre-Sapients policy is locked to Protected
+Cannot build Alien Zoo buildings",Master of Guidance,Composer of Strands,"Not Xenophobe
+Not Natural Design
+Not Eager Explorers
+Not Syncretic Evolution
+Not Hard Reset
+Not Life-Seeded",The Machine Age
+Rapid Replicator,"This society has taken control of the means of self-assembly. Each machine begets another, forming an unbroken chain stretching our planet's limits.",+20% Mechanical pop assembly speed,Replication Coordination Officer,,Machine founder species,The Machine Age
+Static Research Analysis,"This society excels in predictive analysis within research methodologies, ensuring the pursuit of only the most promising leads.","+1 Research alternatives
++1 Codebreaking
++10% Head of Research experience gain",Methodology Lead Analyst,,Machine founder species,The Machine Age
+Warbots,"This society constantly refines its armies, economy, and education for diverse warfare strategies. Each machine contributes to collective strength, ensuring adaptability and success in conflict.","+2 Commander starting level
+−25% Commander upkeep
++20% Army damage
+−20% Army upkeep",Combat Logistician,Eater of Worlds,Machine founder species,The Machine Age
+Astrometeorology,"With deep respect for the forces of nature, this species goes to great lengths to uncover the inner workings of environmental phenomena. As they set out across the stars, they take with them a particular interest in astrometeorology. Central to their ambitions are the most fantastic and potentially destructive of all astronomical events, the cosmic storms themselves.","Can construct Astrometeorology Observatory buildings
+Starting Research Labs is replaced by Astrometeorology Observatory",Prime Forecaster,,,Cosmic Storms
+Civil Education,"In this empire, education has supplanted law enforcement. Through comprehensive preparation and strict course correction, they ensure that no individual is beyond the reach of learning. After all, there are no bad citizens - only bad educators.","Replaces Enforcer jobs with  Educator jobs
+Replaces Precinct Houses buildings with State Academy
+Start with a State Academy building",Head of Education,Cradle of Souls,"Not Police State
+Not Oppressive Autocracy",BioGenesis
+Crowdsourcing,"This society has realized that individual inspiration is the root of true innovation. Open-source patents, open-mindedness, spontaneous collaborations and innovation bounties pave the way to progress.","Factions produce research instead of unity
+Factions will form within 3 months",Innovation Coordinator,Cradle of Souls,"Not any fanatic ethic
+Not Secret Societies
+Not Parliamentary System
+Not Decentralized R&D
+Not Media Conglomerate",BioGenesis
+Genetic Identification,This society requires every citizen to be registered from birth in a genetic index used in every level of bureaucracy.,"+1 Encryption
+−15% Crime
++1.5 Society per 100 Bureaucrats",Indexor,Instrument of Desire,"Not Machine founder species
+Not Sequenced Securities",BioGenesis
+Entropy Drinkers,"This society drains valuable metabolism from idle population via parasitic psychic connections. Once properly collected, these energies can be redistributed to the more important classes.","Cannot be added until Psionic Theory is researched
+Cannot be removed
+Leaders have the Psychic trait
+Unlocks the Convergence of Will edict
+Unlocks the Energy Drain edict
+Unlocks the Sanguine Council edict
+Can construct Leeching Tower buildings
+Start with a Leeching Tower building
++0.5 Energy per 100 Psionic pops
++50% Leader lifespan
+−50% Leader upkeep
+−10% Resources from jobs
+−10% Research speed
+−10% Pop growth speed
+−10% Mechanical pop assembly speed
+Cannot take ascension path perks except Mind Over Matter",Energy Curator,,"Not Egalitarian
+Not Memorialists
+Not Natural Design
+Not Corporate Vampires
+Not Augmentation Bazaars
+Not Mindwardens
+Not Hard Reset
+Not Overtuned
+Not Cybernetic Creed
+Not Synthetic Fertility
+Not Evolutionary Predators
+Not Any non-psionic ascension path",Shadows of the Shroud
+Experimental Sentencing,"Judicial processing and thirst for knowledge share a single solution in this society. Working in utmost secrecy, researchers conduct harsh experiments on test subjects drawn from the criminal underworld. The occasional fatality is the cost of progress.","Start with the Experimental Testing situation
+Can construct Experimentation Chambers buildings
+Can construct Experimentation Offices holdings
+Start with an Experimentation Chambers building
+Unlocks Orderlies slavery type
+Unlocks Abominations army
++20% Resources from Test Subjects from crime modifiers
++20% Resources from Experiment Engineers from crime modifiers
+−15% Refugee attraction",Experimentation Overseer,,"Authoritarian or Xenophobe
+Not Judicial R&D
+Not Machine founder species",Shadows of the Shroud
+Corporate Dominion,This society is dominated by a megacorporation that has completely supplanted the role of the state.,"+1 External recruitable leaders per class
+Can build private colony ships
+Start with the Offworld Trade Companies technology
+Can use the Mercantile diplomatic stance (unless also  Inward Perfection)",Chief Trade Officer,Instrument of Desire,"Oligarchic
+Not Xenophobe",Not MegaCorp
+Permanent civics,,,,,,
+"The following civics can only be selected at empire creation and cannot be removed. As a result, they also prevent reforming the government with  Corporate authority.",,,,,,
+Civic,,Effects,Council position,Shroud attunement,Requirements,DLC
+Inward Perfection,"This calm and pacifist society has little use for strangers who do not understand their way of life. More than anything, they would prefer to be left alone.","+20% Monthly unity
++10% Pop growth or assembly speed
+
++5% Citizen pop happiness
++50 Edict fund
++1 Encryption
+−1 Codebreaking
+−1 Available envoys
+−50% Refugee attraction
+Cannot use the Subjugation casus belli
+Cannot use the Minister of State council position
+Start with the civic's council position unlocked
+Diplomatic restrictions",Commander of the Watch,,"Pacifist
+Xenophobe
+Not Pompous Purists
+Not Eager Explorers
+Not Sovereign Guardianship
+Not Common Ground
+Not Hegemon
+Not Fear of the Dark",
+Idyllic Bloom,"This society has always spent much time on improving and caring for their environment, in pursuit of building a true paradise for its inhabitants.","Can construct Gaia Seeder buildings
+Can construct Gaia Seeder Outpost holdings
+Start with a Gaia Seeders - Phase 1 building
+Disabled by synthetic ascension special project",Bloom Herald,Composer of Strands,"Plantoid or Fungoid founder species
+Not Relentless Industrialists
+Not Planet Forgers
+Not Hard Reset
+Not Void Dwellers
+Not Evolutionary Predators
+Not Cosmic Dawn
+Not Red Giant",Plantoids
+Fanatic Purifiers,"This society appears hellbent on scouring the galaxy of all other sapient life. Come what may, they will suffer no xenos to live.","Genocidal against different species
+
+Can use Armageddon Orbital Bombardment Policy
+Diplomatic Stance policy is locked to Purification
+2 Unity per month per 100 pops in the purge strata
++33% Fire rate
++33% Army damage
++33% Naval capacity
+−15% Ship cost
++200 Opinion with empires with the same species and civic
+Cannot use the Minister of State council position
+Cannot found enclaves",Minister of War Production,Eater of Worlds,"Fanatic Xenophobe
+Militarist or Spiritualist
+Not Barbaric Despoilers
+Not Pompous Purists
+Not Selective Kinship
+Not Crusader Spirit
+Not Scorched World Heralds
+Not Sovereign Guardianship
+Not Genesis Guides
+Not Syncretic Evolution
+Not Common Ground
+Not Hegemon
+Not Knights of the Toxic God
+Not Broken Shackles
+Not Mindwardens",Utopia
+Barbaric Despoilers,"This society holds few things sacred. To fight is to live, and the strongest may seize whatever they covet.","Can use the Despoliation casus belli
+Can use the Raiding orbital bombardment stance
+Cannot form Migration Treaties
+Can only create  Martial Alliance and  Hegemony federations
+Reduced opinion from empires that don't have the civic
+Start with an additional commander
++1 Enclave capacity
++1 Specimen from each category stolen when destroying a Galactic Archive",Labor Intendant,Eater of Worlds,"Militarist
+Authoritarian or Xenophobe
+Not Xenophile
+Not Genocidal
+Not Common Ground
+Not Your Ladder To The Sky",Apocalypse
+Anglers,"Adept at utilizing nature's bounty, this society provides for itself a stable influx of sustenance and economic value.","Founder species must have the Aquatic trait
+No Agriculture District limit on Ocean Worlds
+Unlocks the Aquaculture specialization
+Can specialize Agriculture Districts without any technology on wet planets",Minister of the Seas,Composer of Strands,"Not Machine founder species
+Not Tankbound
+Not Post-Apocalyptic
+Not Shattered Ring
+Not Void Dwellers
+Not Volcanic World homeworld",Aquatics
+Marine Machines,This mechanical society is engineered for seamless operation in diverse aquatic environments and excels in crafting unparalleled marine infrastructure to drive its economy.,"Founder species must have the Waterproof trait
+No Agriculture District limit on Ocean Worlds
+Unlocks the Aquaculture specialization
+Can specialize Agriculture Districts without any technology on wet planets",Minister of the Seas,Composer of Strands,"Machine founder species
+Not Radioactive Rovers
+Not Shattered Ring
+Not Voidforged
+Not Volcanic World homeworld",Aquatics
+Oppressive Autocracy,Only the elite of the elite deserve the best of the best. Everyone else is expected to provide for the ruling class and their lackeys.,"Must use the Dystopian Society living standard
+Enforcers and Telepaths are Elite instead of Specialist stratum
+Only Elite stratum produces and consumes Amenities
+Start with a Precinct Houses building
+Cannot construct Holo-Theatres
+Only Elites and Enforcers produce and use amenities
++1 Commander capacity
+−20% Leader upkeep
+−25% Refugee attraction
++1 Crime per 100 non-Elite pops",Primary Overseer,Instrument of Desire,"Fanatic Authoritarian
+Not Agrarian Idyll
+Not Environmentalist
+Not Free Haven
+Not Warrior Culture
+Not Pleasure Seekers
+Not Civil Education",Galactic Paragons
+Sovereign Guardianship,"This collection of warring tribes has developed a historical preference for entrenched territories and defensive posturing. Now united, they are prepared to bring this philosophy to the stars, aiming to keep their borders solid and tensions low.","Replaces Defense Armies with Fanatic Guardians
+Can construct Reloading Bay starbase buildings
+Can use the Inner Focus edict
++1 Unity per 100  Soldiers
++20% Diplomatic weight
+−25% Empire size from pops
+−50% Empire size from districts
++75% Empire size from planets
++150% Empire size from systems
++100% Empire size from branch offices",First Citadel,Cradle of Souls,"Militarist
+Not Genocidal
+Not Eager Explorers
+Not Corporate Protectorate
+Not Inward Perfection
+Not Reanimators
+Not Broken Shackles
+Not Fear of the Dark
+Not Payback",Astral Planes
+Natural Design,"This society is adamant that nature has already created perfection in its people's genetic code. They have long devoted their medical and governmental services to the health and preservation of natural, untouched genome sequences.","+2 Organic species trait points
++2 Organic species trait picks
++0.5 Society research per 100 Medical Workers
+−50 Opinion with ascended or Overtuned empires
+Can construct Genomic Services Outreach holdings
+Can construct Genomic Services Center buildings
+Start with a Genomic Services Center building
+Cannot research genetic modification technologies
+Cannot pick ascension path perks",Grand Genomicist,,"Not Machine founder species
+Not Genesis Guides
+Not Chosen
+Not Entropy Drinkers
+Not Hard Reset
+Not Clone Army
+Not Overtuned
+Not Teachers of the Shroud
+Not Cybernetic Creed
+Not Synthetic Fertility
+Not Evolutionary Predators
+Not Endbringers",The Machine Age
+Planetscapers,"After eons of carefully cultivating a perfect balance on their homeworld, this society is ready to tend to even the most inhospitable environments among the stars. At their core, these people believe nature can be shaped, controlled, and perfected. Not to tame, but in service of perfect beauty.","+25% Clear blocker speed
++10% Resources from jobs
++10% Pop growth speed
+−15% Pop upkeep
+Start with the technology to remove homeworld blockers
+Blocker removal technologies are guaranteed after colonization
+Enables the Cultivated Worldscaping decision
+Cannot take the Mastery of Nature ascension perk
+Start with 2 natural blockers
+−10% Resources from jobs on planet per natural blocker
+−10% Pop growth speed on planet per natural blocker
++15% Pop upkeep on planet per natural blocker",First Planetscaper,Instrument of Desire,"Not Geo-Engineering Inc.
+Not Environmentalist
+Not Relentless Industrialists
+Not Mutagenic Spas
+Not Remnants
+Not Hard Reset
+Not Post-Apocalyptic
+Not Calamitous Birth
+Not Shattered Ring
+Not Void Dwellers
+Not Resource Consolidation",Cosmic Storms
+Storm Devotion,"Ever since ancient times, this society has been able to attract tempests through their rituals. Over the years, they combined technical innovations to enhance their efficiency. With the dawn of the space age, they now seek to take this knowledge to the stars.","Can construct Storm Summoning Theater buildings
+Start with a Storm Summoning Theater building
+Founder species has the Storm Touched trait
+Replaces Entertainer jobs with Storm Dancer jobs
++20% Diplomatic weight while capital is under a cosmic storm",Grand Herald of Storms,Composer of Strands,Not Hard Reset,Cosmic Storms
+Beastmasters,"Coming to full, technological maturity in a system that serves as a feeding ground for Space Amoebas, this society has acquired a deep knowledge of their life cycle. They now work to nurture, raise, and ultimately clone these creatures for mutual benefit.","Start with Space Amoeba pacified
+Can construct Beastport starbase modules
+Starting Shipyard is replaced by a Beastport
+Ship stat technologies are replaced by space fauna stat technologies
+Start with all bio-integration technologies
+Start with the Gravity Snares technology
+Start with the Artificial Breeding technology
+Flagella Weaponization technology starts as a permanent research option
+Regenerative Hull Tissue technology starts as a permanent research option
+Starting corvettes are replaced with Space Amoebae
+Start with the Common Space Amoeba genetic material
+−15% Space fauna cost
+−10% Space fauna upkeep
++200% Artificial military ship build cost
++200% Artificial military ship upkeep cost
+12x unity output (150~100 000) when finishing a Grand Archive",Beastlord,Composer of Strands,"Not Eager Explorers
+Not Space Ranchers
+Not Cosmic Dawn",Grand Archive
+Galactic Curators,"The meticulous collection and preservation of historical artifacts has always fascinated this civilization. But now, with the mysteries of the galaxy at their doorstep, there is everything left to learn.","Unlocks the Decentralized Research edict
+Replaces Entertainer jobs with Museum Curator jobs
+Start with the Galactic Archivism technology as a permanent research option
+Start with 1 common artifact specimen from each category
+Start with 1 exhibit slot from each category unlocked
++10% Specimens output
++10% Anomaly discovery chance
+−25% Grand Archive construction cost
+−25% Curator Order costs
++20 Opinion with the Curator Order
+6x unity output (100~100 000) Unity per obtained (not purchased) specimen
+6x unity output (100~100 000) Unity per excavated archaeological site
+12x unity output (150~100 000) when finishing a Grand Archive
+−10% Unity from jobs",Supreme Curator,Instrument of Desire,Not Antiquarian Expertise,Grand Archive
+Chosen,"Influenced by the Shroud in their early history, this society is bound to a pact of patronage with a powerful entity.","Start with the Shroud tab unlocked
+Start with the Psionic Aura technology
+On day 2 choose a Major Patron to contact and gain 300 attunement with
+Gain unity scaling with attunement
++10 Psionic aura intensity gain
++0.01% Unity from jobs per attunement
++250–1000000 Unity when first delving into the Shroud
++100–1000 Zro when first delving into the Shroud
+Cannot choose to reject all covenants
+Cannot take ascension path perks except Mind Over Matter
+Forming a covenant with Whisperers in the Void removes the civic",Shroudspeaker,Choice,"Spiritualist
+Not Death Cult
+Not Chosen Executives
+Not Imperial Cult
+Not Natural Design
+Not Augmentation Bazaars
+Not Hard Reset
+Not Cybernetic Creed
+Not Synthetic Fertility
+Not Evolutionary Predators
+Not Endbringers
+Not Mindwardens",Shadows of the Shroud
+Secret Societies,"A cabal of elite and secretive figures weave complicated political threads behind the scenes of this society, entwining internal affairs with those of other worlds.","Unlocks secret societies
+Unlocks the Start Proxy War diplomatic action
+Start with a first contact with 2 empires if they exist
++1 Encryption
++1 Available envoys
+−25% Proxy war influence cost
+−50% Operation cost
++0.5 Unity per 100 Bureaucrats per active proxy war
++40 Infiltration after first contact",Conspirator Liaison,,"Not Genocidal
+Not Crowdsourcing
+Not Parliamentary System
+Not Influential Cartel
+Not Hard Reset
+Not Broken Shackles
+Not Cybernetic Creed",Shadows of the Shroud
+Superstitious Beliefs,"This society claims to have discovered a ritualistic mechanism to predict the future, leveraging esoteric pattern recognition and cyclical anomaly analysis. Proper ceremonies must be performed before every major decision to harmonize with the unseen forces that shape their destiny.","Replaces Priest jobs with Spirit Medium jobs
+Replaces High Priest jobs with High Astrologist jobs
+Unlocks the Galactic Dowsing edict
+Enables cycle modifiers and cycle change events",Chief Medium,,"Spiritualist
+Not Fortune Enterprise
+Not Cybernetic Creed",Shadows of the Shroud
+Tankbound,"This society's members live out their existences suspended in vats of specialized bio-fluids. As such, they are heavily reliant on assistive equipment and incapable of engaging directly in physical work.","Founder species has the Tankbound trait
+Worker jobs from districts are automated
+Colonist jobs have the Specialist stratum
+Start with the Assembly Patterns technology as a permanent research option
+Urban districts produce Production Overseer jobs
+−25% Upkeep for automated workforce
+−2000 Starting pops
++10% Automation efficiency from  Assembly Patterns tech
++10% Automation efficiency from  Construction Templates tech
+Homeworld does not start with Agriculture Districts",Grand Vessel,,"Tank vessel species
+Not Slaver Guilds
+Not Anglers
+Not Agrarian Idyll
+Not Citizen Service
+Not Mining Guilds
+Not Private Military Companies
+Not Syncretic Evolution
+Not Hard Reset
+Not Clone Army
+Not Knights of the Toxic God
+Not Broken Shackles
+Not Payback
+Not Primal Calling",Shadows of the Shroud
+Fire Cult,"Forged by generations of extreme hardship, this society believes in survival through unity, and unity through survival. Only fire-born struggle can bind them tightly enough to endure a cold, uncaring galaxy.","+5% Unity from jobs per habitability below 100%
+The Scourge of the Volcano faction will form within a month
+The Scourge of the Volcano faction replaces the Traditionalist faction
+Replaces Priest jobs with Fire Dancer jobs
+Replaces Politican jobs with Fire Oracle jobs on planets with less than 50% Habitability
+Can recruit Ember Legion armies on planets with less than 20% Habitability
+Unlocks the Blazing Scourge decision
+Start with the Deep Crust Engineering technology researched
+Synergizes with certain civics, giving Fire Dancers and/or Fire Oracles extra productions.",Pyromanic Priest,,"Spiritualist
+Not Aquatic founder species
+Not Ocean Paradise
+Not Cybernetic Creed",Infernals
+Galvanic Synthesis,"This society is able to synthesize regular alloys into Living Metal, and molds its strength and shape-changing properties directly into their technology.","+75% Planetary infrastructure refund
+Start with the Living Metal technology researched
+Homeworld has a Living Metal Sediment planetary feature
+Unlocks the Centrifugal Siphoning and Modular Growth Components edicts
+Unlocks regenerative versions of armor components
+Kinetic Artillery tech unlocks the Reshaping Projectile Accelerator component
+Unlocks the Distribute Living Metal decision
+Unlocks Mimetic Strike Force armies
+Unlocks Offworld Expedition Hub buildings
+Cannot take the Synthetic Evolution ascension perk",Mimetic Overseer,,"Thermophile founder species
+Not Biometallic Cartel
+Not Synthetic Fertility",Infernals
+Planet Forgers,"This society thrives in volcanic environments, and will even create them artificially when nature falls short.","+3 Max districts on Volcanic worlds
++20% Volcanic world habitability
+Cold planets are replaced by Volcanic worlds at homeworld selection
+Start with the Volcanic Forge technology as a permanent research option
+Guaranteed habitable worlds will be Dry worlds unless an origin changes them",Thermal Engineer,,"Not Biological shipset
+Not Relentless Industrialists
+Not Idyllic Bloom
+Not Life-Seeded
+Not Ocean Paradise
+Not Aquatic founder species",Infernals
+Scorched World Heralds,"Heat permeates every facet of this society's culture, from traditions and rituals to technology itself. They see themselves as the galaxy's rightful fiery supremacists, viewing weaker species as mere obstacles on the path to an ideal universe, fit only for Thermophiles.","Genocidal against different species classes
+
+Diplomatic Stance policy is locked to Devastators
+Can use Devastation Orbital Bombardment Policy
+Firestorm bombardment generates Unity that scales with fleet's size
++50% Naval capacity
++50% Materials research speed
++15% Ship weapons range
++15% Ship build speed
++15% Armor hit points
++40% Army health
++100 Opinion with same species class",Prime Scorcher,,"Thermophile founder species
+Xenophobe
+Not Pacifist
+Not Barbaric Despoilers
+Not Fanatic Purifiers
+Not Pompous Purists
+Not Selective Kinship
+Not Crusader Spirit
+Not Sovereign Guardianship
+Not Genesis Guides
+Not Syncretic Evolution
+Not Common Ground
+Not Hegemon
+Not Scion
+Not Knights of the Toxic God
+Not Broken Shackles
+Not Mindwardens",Infernals
