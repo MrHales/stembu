@@ -15,7 +15,18 @@ export default function HomeworldSection({ homeworldName, setHomeworldName, sele
           header: true,
           skipEmptyLines: true,
           complete: (results) => {
-            const parsedPlanets = results.data.filter(row => row.Type && row.Type.trim() !== '');
+            let lastClimate = "";
+            let lastFavored = "";
+            const parsedPlanets = results.data.filter(row => row.Type && row.Type.trim() !== '').map(row => {
+              if (row.Climate && row.Climate.trim() !== '') {
+                lastClimate = row.Climate.trim();
+                lastFavored = row['Favored features'] || '';
+              } else if (['Desert', 'Arid', 'Savanna', 'Ocean', 'Continental', 'Tropical', 'Arctic', 'Alpine', 'Tundra'].includes(row.Type)) {
+                row.Climate = lastClimate;
+                row['Favored features'] = lastFavored;
+              }
+              return row;
+            });
             setPlanets(parsedPlanets);
             setLoading(false);
           }
