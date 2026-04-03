@@ -17,9 +17,11 @@ export default function TraitModal({ trait, onClose }) {
           </div>
         )}
         
-        <p style={{ fontStyle: 'italic', marginBottom: '1rem', color: 'var(--color-text-muted)' }}>
-          "{trait.description}"
-        </p>
+        {trait.description && (
+          <p style={{ fontStyle: 'italic', marginBottom: '1rem', color: 'var(--color-text-muted)' }}>
+            "{trait.description}"
+          </p>
+        )}
         
         <div style={{ background: 'rgba(0,0,0,0.3)', padding: '1rem', borderRadius: '8px' }}>
           <h4 style={{ marginTop: 0, marginBottom: '0.5rem' }}>Effects</h4>
