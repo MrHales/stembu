@@ -67,7 +67,7 @@ export default function AuthoritySection({ selectedAuthority, onSelectAuthority,
                          onAuthorityInfoClick({
                            name: auth.Authority,
                            description: auth.Description,
-                           effects: auth['Empire effects'],
+                           effects: `Empire Effects:\n${auth['Empire effects']}\n\nRuler Effects per Level:\n${auth['Ruler effects per skill level']}`,
                            requirements: auth.Requirements
                          });
                        }

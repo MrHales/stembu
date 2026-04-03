@@ -270,7 +270,7 @@ function App() {
               onClick={() => setActivePopupTrait({
                 name: selectedAuthority.name,
                 description: selectedAuthority.Description,
-                effects: selectedAuthority['Empire effects'],
+                effects: `Empire Effects:\n${selectedAuthority['Empire effects']}\n\nRuler Effects per Level:\n${selectedAuthority['Ruler effects per skill level']}`,
                 requirements: selectedAuthority.Requirements
               })}
             >
