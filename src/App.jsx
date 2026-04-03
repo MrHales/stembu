@@ -11,6 +11,7 @@ import EthicsSection from './components/EthicsSection'
 import HomeworldSection from './components/HomeworldSection'
 import OriginSection from './components/OriginSection'
 import { checkCivicRequirements } from './utils/requirements'
+import { aggregateEffects } from './utils/aggregator'
 
 function SectionPanel({ title, description, children }) {
   return (
@@ -222,102 +223,148 @@ function App() {
       </header>
 
       {/* Summary Segment */}
-      <div className="summary-segment">
-        <h3>Empire Configuration Status</h3>
-        <p>
-          <strong className="text-accent">Species:</strong> {speciesType || 'Not Selected'}
-        </p>
-        <p>
-          <strong className="text-accent">Traits:</strong> 
-          {selectedTraits.length > 0 ? (
-            selectedTraits.map(t => (
+      <div className="summary-segment split-summary">
+        <div className="summary-column">
+          <h3>Empire Configuration Status</h3>
+          <p>
+            <strong className="text-accent">Species:</strong> {speciesType || 'Not Selected'}
+          </p>
+          <p>
+            <strong className="text-accent">Traits:</strong> 
+            {selectedTraits.length > 0 ? (
+              selectedTraits.map(t => (
+                <span 
+                  key={t.name} 
+                  className={`summary-trait-tag ${t.points < 0 ? 'negative' : ''}`}
+                  onClick={() => setActivePopupTrait(t)}
+                >
+                  {t.name}
+                </span>
+              ))
+            ) : (
+              <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
+            )}
+          </p>
+          <p>
+            <strong className="text-accent">Homeworld:</strong>{' '}
+            {homeworldName}{getEffectiveHomeworldType() ? ` (${getEffectiveHomeworldType()})` : ''}
+          </p>
+          <p>
+            <strong className="text-accent">Origin:</strong>{' '}
+            {selectedOrigin ? (
               <span 
-                key={t.name} 
-                className={`summary-trait-tag ${t.points < 0 ? 'negative' : ''}`}
-                onClick={() => setActivePopupTrait(t)}
-              >
-                {t.name}
-              </span>
-            ))
-          ) : (
-            <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
-          )}
-        </p>
-        <p>
-          <strong className="text-accent">Homeworld:</strong>{' '}
-          {homeworldName}{getEffectiveHomeworldType() ? ` (${getEffectiveHomeworldType()})` : ''}
-        </p>
-        <p>
-          <strong className="text-accent">Origin:</strong>{' '}
-          {selectedOrigin ? (
-            <span 
-              className="summary-trait-tag"
-              onClick={() => setActivePopupTrait({
-                name: selectedOrigin.name,
-                description: null,
-                effects: `Empire Effects:\n${selectedOrigin['Empire effects']}\n\nHomeworld Effects:\n${selectedOrigin['Homeworld effects']}`
-              })}
-            >
-              {selectedOrigin.name}
-            </span>
-          ) : (
-            <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
-          )}
-        </p>
-        <p>
-          <strong className="text-accent">Ethics:</strong> 
-          {selectedEthics.length > 0 ? (
-            selectedEthics.map(e => (
-              <span 
-                key={e.name} 
                 className="summary-trait-tag"
                 onClick={() => setActivePopupTrait({
-                  name: e.name,
-                  description: e.Description,
-                  effects: e.Effects
+                  name: selectedOrigin.name,
+                  description: null,
+                  effects: `Empire Effects:\n${selectedOrigin['Empire effects']}\n\nHomeworld Effects:\n${selectedOrigin['Homeworld effects']}`
                 })}
               >
-                {e.name}
+                {selectedOrigin.name}
               </span>
-            ))
-          ) : (
-            <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
-          )}
-        </p>
-        <p>
-          <strong className="text-accent">Authority:</strong> 
-          {selectedAuthority ? (
-            <span 
-              className="summary-trait-tag"
-              onClick={() => setActivePopupTrait({
-                name: selectedAuthority.name,
-                description: selectedAuthority.Description,
-                effects: `Empire Effects:\n${selectedAuthority['Empire effects']}\n\nRuler Effects per Level:\n${selectedAuthority['Ruler effects per skill level']}`,
-                requirements: selectedAuthority.Requirements
-              })}
-            >
-              {selectedAuthority.name}
-            </span>
-          ) : (
-            <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
-          )}
-        </p>
-        <p>
-          <strong className="text-accent">Civics:</strong> 
-          {selectedCivics.length > 0 ? (
-            selectedCivics.map(c => (
+            ) : (
+              <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
+            )}
+          </p>
+          <p>
+            <strong className="text-accent">Ethics:</strong> 
+            {selectedEthics.length > 0 ? (
+              selectedEthics.map(e => (
+                <span 
+                  key={e.name} 
+                  className="summary-trait-tag"
+                  onClick={() => setActivePopupTrait({
+                    name: e.name,
+                    description: e.Description,
+                    effects: e.Effects
+                  })}
+                >
+                  {e.name}
+                </span>
+              ))
+            ) : (
+              <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
+            )}
+          </p>
+          <p>
+            <strong className="text-accent">Authority:</strong> 
+            {selectedAuthority ? (
               <span 
-                key={c.name} 
                 className="summary-trait-tag"
-                onClick={() => setActivePopupTrait(c)}
+                onClick={() => setActivePopupTrait({
+                  name: selectedAuthority.name,
+                  description: selectedAuthority.Description,
+                  effects: `Empire Effects:\n${selectedAuthority['Empire effects']}\n\nRuler Effects per Level:\n${selectedAuthority['Ruler effects per skill level']}`,
+                  requirements: selectedAuthority.Requirements
+                })}
               >
-                {c.name}
+                {selectedAuthority.name}
               </span>
-            ))
-          ) : (
-            <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
-          )}
-        </p>
+            ) : (
+              <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
+            )}
+          </p>
+          <p>
+            <strong className="text-accent">Civics:</strong> 
+            {selectedCivics.length > 0 ? (
+              selectedCivics.map(c => (
+                <span 
+                  key={c.name} 
+                  className="summary-trait-tag"
+                  onClick={() => setActivePopupTrait(c)}
+                >
+                  {c.name}
+                </span>
+              ))
+            ) : (
+              <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
+            )}
+          </p>
+        </div>
+
+        <div className="summary-column totals-column">
+           <h3>Total Empire Effects</h3>
+           {(() => {
+              const allEffects = [
+                ...selectedTraits.map(t => t.effects),
+                ...selectedEthics.map(e => e.Effects),
+                selectedAuthority ? selectedAuthority['Empire effects'] : '',
+                ...selectedCivics.map(c => c.Effects),
+                selectedOrigin ? `${selectedOrigin['Empire effects']}\n${selectedOrigin['Homeworld effects']}` : ''
+              ];
+              const totals = aggregateEffects(allEffects);
+              
+              if (totals.numeric.length === 0 && totals.features.length === 0) {
+                 return <p style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>No effects active yet.</p>;
+              }
+
+              return (
+                 <div className="totals-content">
+                    {totals.numeric.length > 0 && (
+                      <div className="totals-group">
+                         {totals.numeric.map((item, idx) => (
+                            <div key={idx} className="total-item">
+                               <span className={`total-value ${item.value < 0 ? 'negative' : 'positive'}`}>
+                                  {item.value > 0 ? '+' : ''}{item.value}{item.isPercent ? '%' : ''}
+                               </span>
+                               <span className="total-desc">{item.description}</span>
+                            </div>
+                         ))}
+                      </div>
+                    )}
+                    {totals.features.length > 0 && (
+                       <div className="totals-group features-list">
+                          {totals.features.map((feature, idx) => (
+                             <div key={idx} className="total-feature">
+                                <span className="feature-bullet">✦</span> {feature}
+                             </div>
+                          ))}
+                       </div>
+                    )}
+                 </div>
+              );
+           })()}
+        </div>
       </div>
 
       <main className="empire-grid">
