@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
 
-export default function AuthoritySection({ selectedAuthority, onSelectAuthority, speciesType }) {
+export default function AuthoritySection({ selectedAuthority, onSelectAuthority, speciesType, selectedEthics }) {
   const [authorities, setAuthorities] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -16,9 +16,16 @@ export default function AuthoritySection({ selectedAuthority, onSelectAuthority,
           skipEmptyLines: true,
           complete: (results) => {
             let data = results.data.filter(row => row.Authority && row.Authority.trim() !== '');
-            // Filter Gestalt vs Standard based on speciesType if needed
-            if (speciesType === 'Machine') {
-               data = data.filter(row => row.Authority.includes('Intelligence') || row.Authority === 'Corporate'); // simplified
+            let isGestalt = (selectedEthics || []).some(e => e.name === 'Gestalt Consciousness');
+
+            if (isGestalt) {
+              data = data.filter(row => row.Authority.includes('Intelligence') || row.Authority === 'Hive Mind');
+            } else {
+              data = data.filter(row => !row.Authority.includes('Intelligence') && row.Authority !== 'Hive Mind');
+              // Machine type might be restricted from regular authorities without certain civics or traits but we'll apply basic filters
+              if (speciesType === 'Machine') {
+                data = data.filter(row => row.Authority === 'Corporate' || row.Authority === 'Dictatorial' || row.Authority === 'Democratic' || row.Authority === 'Oligarchic' || row.Authority === 'Imperial');
+              }
             }
             setAuthorities(data);
             setLoading(false);
@@ -30,7 +37,7 @@ export default function AuthoritySection({ selectedAuthority, onSelectAuthority,
       }
     }
     loadData();
-  }, [speciesType]);
+  }, [speciesType, selectedEthics]);
 
   if (loading) return <div className="placeholder-content">Loading central data cores...</div>;
 

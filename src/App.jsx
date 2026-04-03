@@ -7,6 +7,8 @@ import DisclaimerModal from './components/DisclaimerModal'
 import AuthoritySection from './components/AuthoritySection'
 import CivicsSection from './components/CivicsSection'
 import GovernmentTypeSection from './components/GovernmentTypeSection'
+import EthicsSection from './components/EthicsSection'
+import HomeworldSection from './components/HomeworldSection'
 
 function SectionPanel({ title, description, children }) {
   return (
@@ -28,11 +30,12 @@ function App() {
   const [showTopBtn, setShowTopBtn] = useState(false)
   const [selectedCivics, setSelectedCivics] = useState([])
   const [selectedAuthority, setSelectedAuthority] = useState(null)
+  const [selectedEthics, setSelectedEthics] = useState([])
   
-  // Hardcoded ethics for now to allow government calculation to work before we add the full Ethics UI
-  const [selectedEthics, setSelectedEthics] = useState([
-    { name: "Fanatic Materialist" }
-  ]);
+  // Homeworld State
+  const [homeworldName, setHomeworldName] = useState("Earth")
+  const [selectedClimate, setSelectedClimate] = useState(null)
+  const [selectedPlanet, setSelectedPlanet] = useState(null)
 
   // Scroll logic for "Back to Top" float
   useEffect(() => {
@@ -60,6 +63,10 @@ function App() {
     setSelectedTraits([])
     setSelectedCivics([])
     setSelectedAuthority(null)
+    setSelectedEthics([])
+    setHomeworldName("Earth")
+    setSelectedClimate(null)
+    setSelectedPlanet(null)
   }
 
   const handleSave = () => {
@@ -97,6 +104,17 @@ function App() {
       } else {
         if (prev.length >= 3) return prev; // max 3
         return [...prev, civic]
+      }
+    })
+  }
+
+  const handleEthicToggle = (ethic) => {
+    setSelectedEthics(prev => {
+      const isSelected = prev.some(e => e.name === ethic.name)
+      if (isSelected) {
+        return prev.filter(e => e.name !== ethic.name)
+      } else {
+        return [...prev, ethic]
       }
     })
   }
@@ -170,6 +188,30 @@ function App() {
             <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
           )}
         </p>
+        <p>
+          <strong className="text-accent">Ethics:</strong> 
+          {selectedEthics.length > 0 ? (
+            selectedEthics.map(e => (
+              <span 
+                key={e.name} 
+                className="summary-trait-tag"
+                onClick={() => setActivePopupTrait({
+                  name: e.name,
+                  description: e.Description,
+                  effects: e.Effects
+                })}
+              >
+                {e.name}
+              </span>
+            ))
+          ) : (
+            <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
+          )}
+        </p>
+        <p>
+          <strong className="text-accent">Homeworld:</strong>{' '}
+          {homeworldName}{selectedPlanet ? ` (${selectedPlanet.name})` : ''}
+        </p>
       </div>
 
       <main className="empire-grid">
@@ -198,7 +240,18 @@ function App() {
         <SectionPanel 
           title="Homeworld & System" 
           description="Choose your planetary preference and starting star system flavor." 
-        />
+        >
+          <HomeworldSection 
+            homeworldName={homeworldName}
+            setHomeworldName={setHomeworldName}
+            selectedClimate={selectedClimate}
+            setSelectedClimate={setSelectedClimate}
+            selectedPlanet={selectedPlanet}
+            setSelectedPlanet={setSelectedPlanet}
+            onPlanetInfoClick={setActivePopupTrait}
+          />
+        </SectionPanel>
+        
         <SectionPanel 
           title="Name Lists & Flag" 
           description="Designate your cultural nomenclature and cosmic heraldry." 
@@ -210,6 +263,20 @@ function App() {
       </main>
 
       <h2 style={{ marginTop: '3rem', borderBottom: '1px solid var(--color-border)', paddingBottom: '0.5rem' }}>Government Structure</h2>
+      
+      <div style={{ marginBottom: '2rem' }}>
+        <SectionPanel 
+          title="Ethics" 
+          description="Define the core beliefs and guiding principles of your empire." 
+        >
+          <EthicsSection 
+            selectedEthics={selectedEthics}
+            onEthicToggle={handleEthicToggle}
+            onEthicInfoClick={setActivePopupTrait}
+          />
+        </SectionPanel>
+      </div>
+
       <div className="government-grid">
         <SectionPanel 
           title="Authority" 
@@ -219,6 +286,7 @@ function App() {
             selectedAuthority={selectedAuthority}
             onSelectAuthority={setSelectedAuthority}
             speciesType={speciesType}
+            selectedEthics={selectedEthics}
           />
         </SectionPanel>
 
