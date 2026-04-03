@@ -40,9 +40,8 @@ export default function CivicsSection({ selectedCivics, onCivicToggle, onCivicIn
       <div className="traits-container">
         {civics.map((civic, index) => {
           const isSelected = selectedCivics.some(c => c.name === civic.Civic);
-          // Let's assume a hard limit of 3 for now, 
-          // though generally starting is 2.
-          const maxReached = selectedCivics.length >= 3 && !isSelected;
+          // Hard limit of 2 during empire creation.
+          const maxReached = selectedCivics.length >= 2 && !isSelected;
           const classNames = `selectable-card ${isSelected ? 'selected' : ''} ${maxReached ? 'opacity-50' : ''}`;
 
           return (

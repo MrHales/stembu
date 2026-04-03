@@ -169,7 +169,7 @@ function App() {
       if (isSelected) {
         return prev.filter(c => c.name !== civic.name)
       } else {
-        if (prev.length >= 3) return prev; // max 3
+        if (prev.length >= 2) return prev; // max 2 during creation
         return [...prev, civic]
       }
     })
