@@ -222,34 +222,21 @@ function App() {
           )}
         </p>
         <p>
-          <strong className="text-accent">Civics:</strong> 
-          {selectedCivics.length > 0 ? (
-            selectedCivics.map(c => (
-              <span 
-                key={c.name} 
-                className="summary-trait-tag"
-                onClick={() => setActivePopupTrait(c)}
-              >
-                {c.name}
-              </span>
-            ))
-          ) : (
-            <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
-          )}
+          <strong className="text-accent">Homeworld:</strong>{' '}
+          {homeworldName}{getEffectiveHomeworldType() ? ` (${getEffectiveHomeworldType()})` : ''}
         </p>
         <p>
-          <strong className="text-accent">Authority:</strong> 
-          {selectedAuthority ? (
+          <strong className="text-accent">Origin:</strong>{' '}
+          {selectedOrigin ? (
             <span 
               className="summary-trait-tag"
               onClick={() => setActivePopupTrait({
-                name: selectedAuthority.name,
-                description: selectedAuthority.Description,
-                effects: selectedAuthority['Empire effects'],
-                requirements: selectedAuthority.Requirements
+                name: selectedOrigin.name,
+                description: null,
+                effects: `Empire Effects:\n${selectedOrigin['Empire effects']}\n\nHomeworld Effects:\n${selectedOrigin['Homeworld effects']}`
               })}
             >
-              {selectedAuthority.name}
+              {selectedOrigin.name}
             </span>
           ) : (
             <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
@@ -276,25 +263,38 @@ function App() {
           )}
         </p>
         <p>
-          <strong className="text-accent">Origin:</strong>{' '}
-          {selectedOrigin ? (
+          <strong className="text-accent">Authority:</strong> 
+          {selectedAuthority ? (
             <span 
               className="summary-trait-tag"
               onClick={() => setActivePopupTrait({
-                name: selectedOrigin.name,
-                description: 'Empire effects: ' + selectedOrigin['Empire effects'],
-                effects: 'Homeworld effects: ' + selectedOrigin['Homeworld effects']
+                name: selectedAuthority.name,
+                description: selectedAuthority.Description,
+                effects: selectedAuthority['Empire effects'],
+                requirements: selectedAuthority.Requirements
               })}
             >
-              {selectedOrigin.name}
+              {selectedAuthority.name}
             </span>
           ) : (
             <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
           )}
         </p>
         <p>
-          <strong className="text-accent">Homeworld:</strong>{' '}
-          {homeworldName}{getEffectiveHomeworldType() ? ` (${getEffectiveHomeworldType()})` : ''}
+          <strong className="text-accent">Civics:</strong> 
+          {selectedCivics.length > 0 ? (
+            selectedCivics.map(c => (
+              <span 
+                key={c.name} 
+                className="summary-trait-tag"
+                onClick={() => setActivePopupTrait(c)}
+              >
+                {c.name}
+              </span>
+            ))
+          ) : (
+            <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
+          )}
         </p>
       </div>
 
@@ -337,10 +337,6 @@ function App() {
         </SectionPanel>
         
         <SectionPanel 
-          title="Name Lists & Flag" 
-          description="Designate your cultural nomenclature and cosmic heraldry." 
-        />
-        <SectionPanel 
           title="Origin" 
           description="How did your civilization reach the stars?" 
         >
@@ -352,6 +348,11 @@ function App() {
             selectedEthics={selectedEthics}
           />
         </SectionPanel>
+
+        <SectionPanel 
+          title="Name Lists & Flag" 
+          description="Designate your cultural nomenclature and cosmic heraldry." 
+        />
       </main>
 
       <h2 style={{ marginTop: '3rem', borderBottom: '1px solid var(--color-border)', paddingBottom: '0.5rem' }}>Government Structure</h2>
