@@ -41,6 +41,49 @@ function App() {
   // Origin State
   const [selectedOrigin, setSelectedOrigin] = useState(null)
 
+  const handleOriginSelect = (origin) => {
+    const originName = origin ? origin.name : null;
+    const oldOriginName = selectedOrigin ? selectedOrigin.name : null;
+    
+    if (originName === oldOriginName) return;
+
+    setSelectedOrigin(origin);
+    
+    let traitsToAdd = [];
+    let traitsToRemove = [];
+    
+    if (oldOriginName === "Void Dwellers") traitsToRemove.push("Void Dweller");
+    if (oldOriginName === "Post-Apocalyptic") {
+       traitsToRemove.push("Survivor");
+    }
+    if (oldOriginName === "Necrophage") traitsToRemove.push("Necrophage");
+    
+    if (originName === "Void Dwellers") traitsToAdd.push("Void Dweller");
+    if (originName === "Post-Apocalyptic") {
+       traitsToAdd.push("Survivor");
+    }
+    if (originName === "Necrophage") traitsToAdd.push("Necrophage");
+
+    if (traitsToAdd.length > 0 || traitsToRemove.length > 0) {
+      setSelectedTraits(prev => {
+        let newTraits = prev.filter(t => !traitsToRemove.includes(t.name));
+        
+        traitsToAdd.forEach(traitName => {
+           if (!newTraits.some(t => t.name === traitName)) {
+               newTraits.push({ 
+                 name: traitName, 
+                 points: 0, 
+                 description: "Auto-assigned by Origin",
+                 effects: "See Origin details for more information."
+               });
+           }
+        });
+        
+        return newTraits;
+      });
+    }
+  }
+
   const getEffectiveHomeworldType = () => {
     if (!selectedOrigin) return selectedPlanet?.name || ""
     switch (selectedOrigin.name) {
@@ -303,7 +346,7 @@ function App() {
         >
           <OriginSection 
             selectedOrigin={selectedOrigin}
-            onOriginSelect={setSelectedOrigin}
+            onOriginSelect={handleOriginSelect}
             onOriginInfoClick={setActivePopupTrait}
           />
         </SectionPanel>

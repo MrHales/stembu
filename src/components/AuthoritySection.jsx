@@ -68,8 +68,7 @@ export default function AuthoritySection({ selectedAuthority, onSelectAuthority,
                            name: auth.Authority,
                            description: auth.Description,
                            effects: auth['Empire effects'],
-                           requirements: auth.Requirements,
-                           points: 0
+                           requirements: auth.Requirements
                          });
                        }
                      }}

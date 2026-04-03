@@ -64,8 +64,7 @@ export default function OriginSection({ selectedOrigin, onOriginSelect, onOrigin
                          name: origin.Name,
                          description: 'Empire effects: ' + origin['Empire effects'],
                          effects: 'Homeworld effects: ' + origin['Homeworld effects'],
-                         requirements: origin.Requirements,
-                         points: 0
+                         requirements: origin.Requirements
                        });
                      }}
                    >

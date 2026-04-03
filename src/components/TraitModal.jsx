@@ -9,11 +9,13 @@ export default function TraitModal({ trait, onClose }) {
         <button className="modal-close" onClick={onClose}>×</button>
         <h2 style={{ color: 'var(--color-accent)', marginBottom: '0.5rem' }}>{trait.name}</h2>
         
-        <div style={{ marginBottom: '1rem' }}>
-          <span className={`trait-cost ${trait.points < 0 ? 'negative' : 'positive'}`}>
-            {trait.points > 0 ? `-${trait.points}` : `+${Math.abs(trait.points)}`} point(s)
-          </span>
-        </div>
+        {trait.points !== undefined && (
+          <div style={{ marginBottom: '1rem' }}>
+            <span className={`trait-cost ${trait.points < 0 ? 'negative' : 'positive'}`}>
+              {trait.points > 0 ? `-${trait.points}` : `+${Math.abs(trait.points)}`} point(s)
+            </span>
+          </div>
+        )}
         
         <p style={{ fontStyle: 'italic', marginBottom: '1rem', color: 'var(--color-text-muted)' }}>
           "{trait.description}"

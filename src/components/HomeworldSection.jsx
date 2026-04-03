@@ -111,8 +111,7 @@ export default function HomeworldSection({ homeworldName, setHomeworldName, sele
                       onPlanetInfoClick({
                         name: planet.Type,
                         description: planet.Description,
-                        effects: `Favored features: ${planet['Favored features'] || 'None'}`,
-                        points: 0
+                        effects: `Favored features: ${planet['Favored features'] || 'None'}`
                       });
                     }}
                   >

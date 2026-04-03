@@ -74,8 +74,7 @@ export default function CivicsSection({ selectedCivics, onCivicToggle, onCivicIn
                          name: civic.Civic,
                          description: civic.Description,
                          effects: civic.Effects,
-                         requirements: civic.Requirements,
-                         points: 0 // Mock point system to not break TraitModal
+                         requirements: civic.Requirements
                        });
                      }}
                    >
