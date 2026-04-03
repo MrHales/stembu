@@ -50,41 +50,36 @@ export default function CivicsSection({ selectedCivics, onCivicToggle, onCivicIn
               key={`${civic.Civic}-${index}`}
               className={classNames}
               style={{ marginBottom: '0.8rem' }}
-              onClick={() => onCivicInfoClick({
-                 name: civic.Civic,
-                 description: civic.Description,
-                 effects: civic.Effects,
-                 requirements: civic.Requirements,
-                 points: 0 // Mock point system to not break TraitModal
-              })}
+              onClick={(e) => {
+                 if (!maxReached || isSelected) {
+                   onCivicToggle({ name: civic.Civic, ...civic });
+                 }
+              }}
             >
-              <div className="traits-header">
+              <div className="traits-header" style={{ alignItems: 'flex-start' }}>
                 <div>
-                  <h4 style={{ margin: 0 }}>{civic.Civic}</h4>
+                  <h4 style={{ margin: 0, marginBottom: '0.2rem' }}>{civic.Civic}</h4>
                   {civic.Requirements && (
-                    <span style={{ fontSize: '0.7rem', color: 'var(--color-danger)' }}>
+                    <span style={{ fontSize: '0.7rem', color: 'var(--color-danger)', display: 'block' }}>
                       Requisite constraints apply
                     </span>
                   )}
                 </div>
                 <div className="trait-stats">
                    <button 
+                     style={{ padding: '0.2rem 0.5rem', fontSize: '0.75rem', zIndex: 10, position: 'relative' }}
                      onClick={(e) => {
-                       if (!maxReached || isSelected) {
-                         handleToggle({ name: civic.Civic, ...civic }, e);
-                       } else {
-                         e.stopPropagation();
-                       }
-                     }}
-                     style={{ 
-                       padding: '0.2rem 0.6rem', 
-                       fontSize: '0.7rem',
-                       backgroundColor: isSelected ? 'var(--color-danger)' : 'var(--color-bg-dark)',
-                       borderColor: isSelected ? 'var(--color-danger)' : 'var(--color-border)',
-                       color: isSelected ? '#fff' : 'var(--color-text-main)'
+                       e.stopPropagation();
+                       onCivicInfoClick({
+                         name: civic.Civic,
+                         description: civic.Description,
+                         effects: civic.Effects,
+                         requirements: civic.Requirements,
+                         points: 0 // Mock point system to not break TraitModal
+                       });
                      }}
                    >
-                     {isSelected ? 'REMOVE' : 'ADD'}
+                     ?
                    </button>
                 </div>
               </div>

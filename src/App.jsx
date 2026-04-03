@@ -334,6 +334,7 @@ function App() {
             onSelectAuthority={setSelectedAuthority}
             speciesType={speciesType}
             selectedEthics={selectedEthics}
+            onAuthorityInfoClick={setActivePopupTrait}
           />
         </SectionPanel>
 

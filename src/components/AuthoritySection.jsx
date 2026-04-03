@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
 
-export default function AuthoritySection({ selectedAuthority, onSelectAuthority, speciesType, selectedEthics }) {
+export default function AuthoritySection({ selectedAuthority, onSelectAuthority, speciesType, selectedEthics, onAuthorityInfoClick }) {
   const [authorities, setAuthorities] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -50,10 +50,34 @@ export default function AuthoritySection({ selectedAuthority, onSelectAuthority,
             <div 
               key={auth.Authority} 
               className={`selectable-card ${isSelected ? 'selected' : ''}`}
+              style={{ marginBottom: '0.8rem' }}
               onClick={() => onSelectAuthority({ name: auth.Authority, ...auth })}
             >
-              <h4>{auth.Authority}</h4>
-              <span className="trait-effects">{auth.Election || 'No Elections'}</span>
+              <div className="traits-header" style={{ alignItems: 'flex-start', borderBottom: 'none', marginBottom: 0, paddingBottom: 0 }}>
+                <div>
+                  <h4 style={{ margin: 0, marginBottom: '0.2rem' }}>{auth.Authority}</h4>
+                  <span className="trait-effects">{auth.Election || 'No Elections'}</span>
+                </div>
+                <div className="trait-stats">
+                   <button 
+                     style={{ padding: '0.2rem 0.5rem', fontSize: '0.75rem', zIndex: 10, position: 'relative' }}
+                     onClick={(e) => {
+                       e.stopPropagation();
+                       if (onAuthorityInfoClick) {
+                         onAuthorityInfoClick({
+                           name: auth.Authority,
+                           description: auth.Description,
+                           effects: auth['Empire effects'],
+                           requirements: auth.Requirements,
+                           points: 0
+                         });
+                       }
+                     }}
+                   >
+                     ?
+                   </button>
+                </div>
+              </div>
             </div>
           )
         })}

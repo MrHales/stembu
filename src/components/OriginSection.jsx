@@ -42,38 +42,34 @@ export default function OriginSection({ selectedOrigin, onOriginSelect, onOrigin
               key={`${origin.Name}-${index}`}
               className={classNames}
               style={{ marginBottom: '0.8rem' }}
-              onClick={() => onOriginInfoClick({
-                 name: origin.Name,
-                 description: 'Empire effects: ' + origin['Empire effects'],
-                 effects: 'Homeworld effects: ' + origin['Homeworld effects'],
-                 requirements: origin.Requirements,
-                 points: 0
-              })}
+              onClick={(e) => {
+                 onOriginSelect(isSelected ? null : { name: origin.Name, ...origin });
+              }}
             >
-              <div className="traits-header">
+              <div className="traits-header" style={{ alignItems: 'flex-start' }}>
                 <div>
-                  <h4 style={{ margin: 0 }}>{origin.Name}</h4>
+                  <h4 style={{ margin: 0, marginBottom: '0.2rem' }}>{origin.Name}</h4>
                   {origin.Requirements && origin.Requirements.trim() && (
-                    <span style={{ fontSize: '0.7rem', color: 'var(--color-danger)' }}>
+                    <span style={{ fontSize: '0.7rem', color: 'var(--color-danger)', display: 'block' }}>
                       Requisite constraints apply
                     </span>
                   )}
                 </div>
                 <div className="trait-stats">
                    <button 
+                     style={{ padding: '0.2rem 0.5rem', fontSize: '0.75rem', zIndex: 10, position: 'relative' }}
                      onClick={(e) => {
                        e.stopPropagation();
-                       onOriginSelect(isSelected ? null : { name: origin.Name, ...origin });
-                     }}
-                     style={{ 
-                       padding: '0.2rem 0.6rem', 
-                       fontSize: '0.7rem',
-                       backgroundColor: isSelected ? 'var(--color-danger)' : 'var(--color-bg-dark)',
-                       borderColor: isSelected ? 'var(--color-danger)' : 'var(--color-border)',
-                       color: isSelected ? '#fff' : 'var(--color-text-main)'
+                       onOriginInfoClick({
+                         name: origin.Name,
+                         description: 'Empire effects: ' + origin['Empire effects'],
+                         effects: 'Homeworld effects: ' + origin['Homeworld effects'],
+                         requirements: origin.Requirements,
+                         points: 0
+                       });
                      }}
                    >
-                     {isSelected ? 'REMOVE' : 'SELECT'}
+                     ?
                    </button>
                 </div>
               </div>

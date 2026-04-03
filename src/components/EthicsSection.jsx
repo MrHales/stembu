@@ -87,35 +87,33 @@ export default function EthicsSection({ selectedEthics, onEthicToggle, onEthicIn
               key={`${ethic.Name}-${index}`}
               className={classNames}
               style={{ marginBottom: '0.8rem', cursor: conflict && !isSelected ? 'not-allowed' : 'pointer' }}
-              onClick={() => onEthicInfoClick({
-                 name: ethic.Name,
-                 description: ethic.Description,
-                 effects: ethic.Effects,
-                 points: cost
-              })}
+              onClick={(e) => {
+                 if (isSelected || !conflict) {
+                   handleToggle({ name: ethic.Name, ...ethic });
+                 }
+              }}
             >
-              <div className="traits-header">
+              <div className="traits-header" style={{ alignItems: 'flex-start' }}>
                 <div>
-                  <h4 style={{ margin: 0 }}>{ethic.Name}</h4>
+                  <h4 style={{ margin: 0, marginBottom: '0.2rem' }}>{ethic.Name}</h4>
                 </div>
                 <div className="trait-stats">
+                   {conflict && !isSelected ? (
+                     <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.3)', marginRight: '0.5rem' }}>CONFLICT</span>
+                   ) : null}
                    <button 
+                     style={{ padding: '0.2rem 0.5rem', fontSize: '0.75rem', zIndex: 10, position: 'relative' }}
                      onClick={(e) => {
                        e.stopPropagation();
-                       if (isSelected || !conflict) {
-                         handleToggle({ name: ethic.Name, ...ethic });
-                       }
-                     }}
-                     disabled={conflict && !isSelected}
-                     style={{ 
-                       padding: '0.2rem 0.6rem', 
-                       fontSize: '0.7rem',
-                       backgroundColor: isSelected ? 'var(--color-danger)' : (conflict ? 'transparent' : 'var(--color-bg-dark)'),
-                       borderColor: isSelected ? 'var(--color-danger)' : (conflict ? 'rgba(255,255,255,0.1)' : 'var(--color-border)'),
-                       color: isSelected ? '#fff' : (conflict ? 'rgba(255,255,255,0.3)' : 'var(--color-text-main)')
+                       onEthicInfoClick({
+                         name: ethic.Name,
+                         description: ethic.Description,
+                         effects: ethic.Effects,
+                         points: cost
+                       });
                      }}
                    >
-                     {isSelected ? 'REMOVE' : (conflict ? 'CONFLICT' : 'ADD')}
+                     ?
                    </button>
                 </div>
               </div>
