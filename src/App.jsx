@@ -348,6 +348,8 @@ function App() {
             selectedOrigin={selectedOrigin}
             onOriginSelect={handleOriginSelect}
             onOriginInfoClick={setActivePopupTrait}
+            speciesType={speciesType}
+            selectedEthics={selectedEthics}
           />
         </SectionPanel>
       </main>

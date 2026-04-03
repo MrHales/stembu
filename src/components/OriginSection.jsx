@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
 
-export default function OriginSection({ selectedOrigin, onOriginSelect, onOriginInfoClick }) {
+export default function OriginSection({ selectedOrigin, onOriginSelect, onOriginInfoClick, speciesType, selectedEthics }) {
   const [origins, setOrigins] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -35,7 +35,30 @@ export default function OriginSection({ selectedOrigin, onOriginSelect, onOrigin
       <div className="traits-container">
         {origins.map((origin, index) => {
           const isSelected = selectedOrigin?.name === origin.Name;
-          const classNames = `selectable-card ${isSelected ? 'selected' : ''}`;
+          
+          const isGestaltEthic = selectedEthics ? selectedEthics.some(e => e.name === 'Gestalt Consciousness') : false;
+          const isHiveMind = isGestaltEthic && speciesType !== 'Machine';
+          const isMachineIntell = isGestaltEthic && speciesType === 'Machine';
+          
+          let hasGovernmentConflict = false;
+          if (isHiveMind && origin['Gestalt consciousness'] !== 'x') {
+             hasGovernmentConflict = true;
+          }
+          if (isMachineIntell && origin['Machine intelligence'] !== 'x') {
+             hasGovernmentConflict = true;
+          }
+          
+          let meetReqs = true;
+          if (origin.Requirements) {
+              const reqsLower = origin.Requirements.toLowerCase();
+              if (reqsLower.includes('machine species') && speciesType !== 'Machine') meetReqs = false;
+              if (reqsLower.includes('lithoid species') && speciesType !== 'Lithoid') meetReqs = false;
+              if (reqsLower.includes('plantoid or fungoid species') && speciesType !== 'Plantoid' && speciesType !== 'Fungoid') meetReqs = false;
+              if (reqsLower.includes('not aquatic founder species') && speciesType === 'Aquatic') meetReqs = false;
+          }
+
+          const hasConflict = hasGovernmentConflict || !meetReqs;
+          const classNames = `selectable-card ${isSelected ? 'selected' : ''} ${hasConflict ? 'conflict opacity-50' : ''}`;
 
           return (
             <div 
@@ -43,7 +66,9 @@ export default function OriginSection({ selectedOrigin, onOriginSelect, onOrigin
               className={classNames}
               style={{ marginBottom: '0.8rem' }}
               onClick={(e) => {
-                 onOriginSelect(isSelected ? null : { name: origin.Name, ...origin });
+                 if (!hasConflict) {
+                     onOriginSelect(isSelected ? null : { name: origin.Name, ...origin });
+                 }
               }}
             >
               <div className="traits-header" style={{ alignItems: 'flex-start' }}>
@@ -62,8 +87,8 @@ export default function OriginSection({ selectedOrigin, onOriginSelect, onOrigin
                        e.stopPropagation();
                        onOriginInfoClick({
                          name: origin.Name,
-                         description: 'Empire effects: ' + origin['Empire effects'],
-                         effects: 'Homeworld effects: ' + origin['Homeworld effects'],
+                         description: null,
+                         effects: `Empire Effects:\n${origin['Empire effects']}\n\nHomeworld Effects:\n${origin['Homeworld effects']}`,
                          requirements: origin.Requirements
                        });
                      }}
@@ -80,6 +105,8 @@ export default function OriginSection({ selectedOrigin, onOriginSelect, onOrigin
               }}>
                 {origin['Empire effects']}
               </p>
+              {hasGovernmentConflict && <small className="text-danger" style={{display: 'block', marginTop: '10px'}}>Incompatible with current Government</small>}
+              {!meetReqs && !hasGovernmentConflict && <small className="text-danger" style={{display: 'block', marginTop: '10px'}}>Requirements not met</small>}
             </div>
           )
         })}
