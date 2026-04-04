@@ -1,11 +1,11 @@
 Name,Empire effects,Homeworld effects,Requirements,Gestalt consciousness,Machine intelligence
 Prosperous Unification,Planetary Unification technology starts as a permanent research option,"+400 Starting pops
-+1 Generator District
-+1 Agriculture District if Organic
-+1 Mining District if Machine or Lithoid
-+15% Happiness for 20 years
-+25% Amenities for 20 years
-+10% Resources from Jobs for 20 years",,x,x
+Generator District +1 Generator District
+Agriculture District +1 Agriculture District if Organic
+Mining District +1 Mining District if Machine or Lithoid
+Happiness.png +15% Happiness for 20 years
+Amenities.png +25% Amenities for 20 years
+Mod pop resource output.png +10% Resources from Jobs for 20 years",,x,x
 Galactic Doorstep,"−25% Gateway Build Cost
 +5% Megastructure Build Speed
 Start with a dormant Gateway which will bring the following in the first years:
@@ -21,15 +21,16 @@ Fleet action button focus on.png Homeworld of the advanced empire can be found v
 If species portrait is Human, the advanced empire will use the Sol starting system
 Multiple empires with the origin will not share the parent empire
 AI empires with this origin won't generate advanced empires if those were turned off","Start with a positive homeworld modifier depending on authority
-Homeworld does not get the +30% Habitability bonus",,x,x
+Mod habitability.png Homeworld does not get the +30% Habitability bonus",,x,x
 Remnants,"Guaranteed Habitable Worlds gain the Colonial Remains modifier when colonized
 Archaeostudies Start with the Archaeostudies technology researched (if Ancient Relics)
 
 Head of Research starts with the Expertise: Archaeostudies trait (if Ancient Relics)","Homeworld is a size 22 Relic World
+D city ruins.png
 Ruined Arcology
-Start with 6 Ruined Arcology blockers
-The Ruined Arcology blockers unlock random techs when cleared
-Start with a Faculty of Archaeostudies building (if Ancient Relics)","Not Planetscapers
+ Start with 6 Ruined Arcology blockers
+Menu icon technology.png The Ruined Arcology blockers unlock random techs when cleared
+Faculty of Archaeostudies Start with a Faculty of Archaeostudies building (if Ancient Relics.png)","Not Planetscapers
 Not Agrarian Idyll",x,x
 Mechanist,"Start with the Powered Exoskeletons technology researched
 Start with the Robotic Workers technology researched
@@ -38,7 +39,7 @@ Machine Template System technology starts as a permanent research option
 +2 Mechanical modification points
 +1 Mechanical species trait picks
 −1 Adaptive Frames trait points cost","Start with a Robot Assembly Plants building
-Start with 800 robot pops with the Adaptive Frames trait","Materialist
+Adaptive Frames Start with 800 robot pops with the Adaptive Frames trait","Materialist
 Not Permanent Employment",,
 Syncretic Evolution,Can create a second species with the Serviles trait,Start with 1200 Pops of the second species,"Not Genocidal
 Not Genesis Guides
@@ -54,44 +55,64 @@ The Opus Sentinel guardian will be present a few hyperlanes away
 Factions will form after 1 year
 Starts the Embodied Identity situation in 10 years if not started earlier
 Can only follow cybernetic ascension unless the species removes its starting traits","Start with 10 assault armies
-−50% Pop Amenities Usage for 10 years
-Cannot change the starting system except for a special version of Sol","Materialist
+Amenities.png −50% Pop Amenities Usage for 10 years
+No.png Cannot change the starting system except for a special version of Sol","Materialist
 Not any of the following:
 Fanatic Spiritualist
-Fanatic Xenophile
-Pleasure Seekers
-Eager Explorers
+No.pngFanatic xenophile.png Fanatic Xenophile
+No.pngPleasure Seekers Pleasure Seekers
+No.pngEager Explorers Eager Explorers
+No.png
 Hyperspace Specialty
+Hyperspace Trade
+ Hyperspace Specialty
+No.png
 Dark Consortium
 Shadow Corporation
+ Dark Consortium
+No.png
 Genesis Guides
+Astrogenesis Technologies
+ Genesis Guides
+No.png
 Planetscapers
 Geo-Engineering Inc.
+ Planetscapers
+No.png
 Storm Devotion
 Storm Influencers
+ Storm Devotion
+No.png
 Chosen
 Chosen Executives
+ Chosen
+No.png
 Entropy Drinkers
 Corporate Vampires
+ Entropy Drinkers
+No.png
 Secret Societies
 Influential Cartel
+ Secret Societies
+No.png
 Tankbound
 Corporate Thinktank
-Aristocratic Elite
-Parliamentary System
-Idyllic Bloom
-Heroic Past
-Natural Design
-Criminal Heritage
-Media Conglomerate
-Trading Posts
-Biological shipset",,
+ Tankbound
+No.pngAristocratic Elite Aristocratic Elite
+No.pngParliamentary System Parliamentary System
+No.pngIdyllic Bloom Idyllic Bloom
+No.pngHeroic Past Heroic Past
+No.pngCivic natural design.png Natural Design
+No.pngCriminal Heritage Criminal Heritage
+No.pngCivic media conglomerate.png Media Conglomerate
+No.pngTrading Posts Trading Posts
+No.pngBioGenesis.png Biological shipset",,
 Life-Seeded,"Species has Gaia World Preference
 Machine species require Machine Template System technology to modify
 No guaranteed habitable planets will spawn near the home system","Homeworld is a size 30 Gaia World
-Start with 1 Dust Desert planetary feature
-Start with 1 Fuming Bog planetary feature
-Start with 1 Crystal Forest planetary feature","Not Relentless Industrialists
+D dust desert.png Start with 1 Dust Desert planetary feature
+D fuming bog.png Start with 1 Fuming Bog planetary feature
+D crystal forest.png Start with 1 Crystal Forest planetary feature","Not Relentless Industrialists
 Not Mutagenic Spas
 Not Genesis Guides
 Not Planet Forgers",x,x
@@ -104,8 +125,8 @@ Species has the Clone Soldier trait
 Commanders have the Clone Army Commander trait
 Start with the Cloning technology researched
 Start with the Gene Banks technology researched","Start with two Ancient Clone Vat buildings
-After 3-5 years, the Homeworld Excavation archaeological site appears
-Excavating the archaeological site starts the Genetic Crossroads event chain","Not Tankbound
+Archaeology map icon.png After 3-5 years, the Homeworld Excavation archaeological site appears
+Feature Excavating the archaeological site starts the Genetic Crossroads event chain","Not Tankbound
 Not Natural Design
 Not Permanent Employment",,
 Common Ground,"Start with the Federation Code technology researched
@@ -140,9 +161,10 @@ Enables the Evacuation Protocols edict
 +30% Happiness for 5 years after the first colony if not Gestalt consciousness.png Gestalt Consciousness
 +30% Stability for 5 years after the first colony if Gestalt Consciousness
 Gain the Memorial to Homeworld specimen when the homeworld explodes (if Grand Archive)","Homeworld will become a Shattered World in 35 to 45 years
-Start with 10 Devastation
+Devastation.png Start with 10 Devastation
+Pm exploding planet.png
 Doomsday
-Start with the Doomsday homeworld modifier which worsens every decade",,x,x
+ Start with the Doomsday homeworld modifier which worsens every decade",,x,x
 On the Shoulders of Giants,"A random home system planet has the Ex Gravitas archaeological site
 Can get the On the Shoulders of Giants mid-game event chain
 Cannot discover precursor anomalies or sites before completing their story
@@ -164,7 +186,7 @@ Start with a section with a deposit of 5 Engineering
 Start with a Shattered World with a deposit of 10 Minerals
 Capital star has a deposit of 10 Energy
 Shattered Ring World segments in home system will replace guaranteed habitable worlds","Homeworld is a Shattered Ring World
-Cannot change the starting system","Not Anglers
+No.png Cannot change the starting system","Not Anglers
 Not Planetscapers
 Not Agrarian Idyll",x,x
 Void Dwellers,"Includes all effects of the Voidborne ascension perk
@@ -176,10 +198,10 @@ Several Tradition trees have alternative bonuses to improve Habitats
 Guaranteed habitable worlds are replaced by resource-rich systems
 Machine species require Machine Template System technology to modify
 1% chance to spawn the Crystalline Empire enclave during mid-game (player only)","Start on a habitat
-Reactor Districts start with the Solar Farming Bays specialization if Organic
-Start with a Hydroponics Farms building if Organic
-Crew Quarters building is replaced by a Hydroponics Bay building on starbase if Organic
-Cannot change the starting system except for a special version of Sol","Not Idyllic Bloom
+District specialization hydroponics.png Reactor Districts start with the Solar Farming Bays specialization if Organic
+Hydroponics Farms Start with a Hydroponics Farms building if Organic
+Sb hydroponics bay.png Crew Quarters building is replaced by a Hydroponics Bay building on starbase if Organic
+No.png Cannot change the starting system except for a special version of Sol","Not Idyllic Bloom
 Not Anglers
 Not Planetscapers
 Not Agrarian Idyll",x,x
@@ -190,7 +212,7 @@ Can use the Necrophage purge type
 Can create a second species
 With Glandular Acclimation, converting Pops changes habitability to their current planet's
 Guaranteed Habitable Worlds contain pre-FTL civilizations advanced up to Iron Age","Start with half of the Pops of the prepatent species
-Start with a Chamber of Elevation building if not Genocidal","Not Xenophile
+Chamber of Elevation Start with a Chamber of Elevation building if not Genocidal","Not Xenophile
 Not Fanatic Egalitarian
 Not Death Cult
 Not Permanent Employment
@@ -204,14 +226,15 @@ Species has the Waterproof trait if mechanical
 Start inside a nebula
 Start with 4 Frozen worlds and 10 Ice Asteroids
 Guaranteed habitable worlds are Frozen worlds","Homeworld is a size 30 Ocean World
+Pm ocean paradise.png
 Ocean Paradise
-Start with the Ocean Paradise homeworld modifier
-Start with a Crystal Reef planetary feature
-Start with 3 Submerged Ore Veins planetary features
-Start with 3 Underwater Vents planetary features
-Start with 8 Teeming Reef planetary features
-Uses a unique appearance
-Cannot change the starting system","Not Planet Forgers
+ Start with the Ocean Paradise homeworld modifier
+D crystal reef.png Start with a Crystal Reef planetary feature
+D submerged ore veins.png Start with 3 Submerged Ore Veins planetary features
+D underwater vent.png Start with 3 Underwater Vents planetary features
+D teeming reef.png Start with 8 Teeming Reef planetary features
+Planet ocean.png Uses a unique appearance
+No.png Cannot change the starting system","Not Planet Forgers
 Not Fire Cult
 Not Scorched World Heralds",x,x
 Knights of the Toxic God,"Enables the Knightly Duties policy
@@ -219,16 +242,16 @@ Can construct Order's Commandery holdings
 Start with the Quest for the Toxic God situation
 Orbital Habitats technology starts unlocked and can be researched
 Can remove the origin effects for a reward if the situation isn't completed in 100 years","Start with an A Blight Upon the Land planetary feature
-Start with an Envenomed Seas planetary feature
-Start with a Pestilential Wasteland planetary feature
-Start with a Pools Most Venomous planetary feature
-Start with a Swarms of the Deity planetary feature
-Start with a colonized habitat orbiting the homeworld
-Habitat starts with the Order's Hall specialization
-Habitat starts with the Order's Keep building
-Habitat starts with an Order's X-Calibrator planetary feature
-800 pops are moved from the homeworld to the habitat
-Cannot change the starting system except for a special version of Sol","Not Genocidal
+Envenomed Seas Start with an Envenomed Seas planetary feature
+Pestilential Wasteland Start with a Pestilential Wasteland planetary feature
+Pools Most Venomous Start with a Pools Most Venomous planetary feature
+Swarms of the Deity Start with a Swarms of the Deity planetary feature
+Planet habitat.png Start with a colonized habitat orbiting the homeworld
+Lord Commander Habitat starts with the Order's Hall specialization
+Order's Keep Habitat starts with the Order's Keep building
+Order's X-Calibrator Habitat starts with an Order's X-Calibrator planetary feature
+Icon pop.png 800 pops are moved from the homeworld to the habitat
+No.png Cannot change the starting system except for a special version of Sol","Not Gencidal
 Not Tankbound
 Not Oppressive Autocracy",,
 Overtuned,"Allows the selection of Overtuned traits
@@ -294,27 +317,33 @@ Gain a bonus for 5 years whenever a starting species' homeworld is surveyed
 One year after surveying a starting species' homeworld, the Homesick event chain will start
 Can get the The Cost of Freedom mid-game event chain
 Xeno-Linguistics technology starts as a permanent research option (if Galactic Paragons)","Start without any resource districts
-Start with pops from 3-22 pre-FTL species
-Urban districts are replaced by 6 Scavenger Site districts
-Start with a Command Center as planet capital
-Start with an Administrative Hub building
-Start with a Laboratory Complex building
-Start with a Makeshift Farms building
-Start with a Power Plant building
-Start with a Scrap Refinery building
-Replaces regular homeworld blockers with Natural blockers
-Start with a Crashed Slaver Ship planetary feature
+Icon pop.png Start with pops from 3-22 pre-FTL species
+District crashed slaver ship.png Urban districts are replaced by 6 Scavenger Site districts
+Command Center Start with a Command Center as planet capital
+Administrative Hub Start with an Administrative Hub building
+Laboratory Complex Start with a Laboratory Complex building
+Makeshift Farms Start with a Makeshift Farms building
+Power Plant Start with a Power Plant building
+Scrap Refinery Start with a Scrap Refinery building
+Tile Blocker.png Replaces regular homeworld blockers with Natural blockers
+D crashed ship.png Start with a Crashed Slaver Ship planetary feature
+D crashed ship.png
+Ship Debris
+
 Start with 5 Ship Debris blockers
-Homeworld does not get the +30 Habitability bonus
+Mod habitability.png Homeworld does not get the +30 Habitability bonus
+Pm engineering research.png
+Stellar Culture Shock
+
 Starts with special Stellar Culture Shock modifier for 10 years
-Building a science ship reveals the Crashed Slaver Ship archaeological site
-+20% Citizen Pop Happiness for 20 years
-−50% Pop Amenities Usage for 20 years
-+100% Unity from Jobs for 20 years
-−25% Pop Housing Usage for 20 years
-−50% Pop Consumer Goods Upkeep for 20 years
-+50% Egalitarian Ethics Attraction for 20 years
-Can only select randomized starting systems","Not Authoritarian
+Archaeology map icon.png Building a science ship reveals the Crashed Slaver Ship archaeological site
+Happiness.png +20% Citizen Pop Happiness for 20 years
+Amenities.png −50% Pop Amenities Usage for 20 years
+Unity.png +100% Unity from Jobs for 20 years
+Mod pop housing usage.png −25% Pop Housing Usage for 20 years
+Consumer goods.png −50% Pop Consumer Goods Upkeep for 20 years
+Egalitarian.png +50% Egalitarian Ethics Attraction for 20 years
+Unknown.png Can only select randomized starting systems","Not Authoritarian
 Not Xenophobe
 Not Eager Explorers
 Not Sovereign Guardianship
@@ -335,21 +364,25 @@ Pre-FTL civilization will exist regardless of game settings
 In 6 months, gain a special project to remove the Debris Field homeworld modifier
 Cannot set First Contact Protocol policy to Proactive
 Xeno-Linguistics technology starts as a permanent research option (if Galactic Paragons)","Archives specialization is replaced by Uplift Center
-Start with a Gene Clinics building
-Start with an Energy Grid building
-Start with an Mineral Purification Plants building
-Start with 1000 fewer pops
-Start with 33% Devastation
-Start with 6 Ship Debris blockers
-The Ship Debris blockers unlock random techs or resources when cleared
-The Ship Debris blockers grant unity when cleared
-Start with a Debris Field homeworld modifier
-Removing the modifier uncovers the Aftermath of Battle site
-+15% Happiness for 20 years
-+25% Amenities for 20 years
-+10% Resources from Jobs for 20 years
-+200 Unification Officer Jobs for 20 years
-50% chance each decade the Gene Clinics building becomes ruined","Not Genocidal
+Gene Clinics Start with a Gene Clinics building
+Energy Grid Start with an Energy Grid building
+Mineral Purification Plants Start with an Mineral Purification Plants building
+Icon pop.png Start with 1000 fewer pops
+Devastation.png Start with 33% Devastation
+D crashed ship.png
+Ship Debris
+ Start with 6 Ship Debris blockers
+Menu icon technology.png The Ship Debris blockers unlock random techs or resources when cleared
+Unity.png The Ship Debris blockers grant unity when cleared
+Pm asteroid belt.png
+Debris Field
+ Start with a Debris Field homeworld modifier
+Archaeology map icon.png Removing the modifier uncovers the Aftermath of Battle site
+Happiness.png +15% Happiness for 20 years
+Amenities.png +25% Amenities for 20 years
+Mod pop resource output.png +10% Resources from Jobs for 20 years
+Job overlord propagandist.png +200 Unification Officer Jobs for 20 years
+Unknown.png 50% chance each decade the Gene Clinics building becomes ruined","Not Genocidal
 Not Slaver Guilds
 Not Eager Explorers
 Not Sovereign Guardianship
@@ -364,7 +397,7 @@ Fear of the Dark,"Start with a pre-FTL civilization of the same species in the h
 −1 Recruitable Leaders per Class
 Unique interactions with the pre-FTL civilization
 Can get the The Fear of the Dark mid-game event chain","−800 Starting pops
-Cannot change the starting system except for a special version of Sol","Not Genocidal
+No.png Cannot change the starting system except for a special version of Sol","Not Genocidal
 Not Eager Explorers
 Not Sovereign Guardianship
 Not Inward Perfection
@@ -389,7 +422,7 @@ Riftworld,"+25% Astral Rift Exploration Speed
 +100% Chance for Astral Rifts to appear in owned systems
 Astral Harvesting Start with the Astral Harvesting technology researched
 Ruined Planet Start with the Ruined Planet astral rift","Start with the Ancient Crater archaeological site
-Can only use trinary starting systems and Sol",,x,x
+Unknown.png Can only use trinary starting systems and Sol",,x,x
 Storm Chasers,"Leaders have the Storm Rider trait
 Stormfall Start with the Stormfall situation
 Start with the Cosmic Weather Models technology researched
@@ -419,8 +452,8 @@ After first contact with 3 space fauna, issue a special project to gain a specim
 After first contact with all space fauna, gain a specimen
 After first contact with all space fauna, gain a Renowned Paragon if not Genocidal
 Can get the Frenzied Voidworms mid-game situation","Start with the Untamed Wilds homeworld modifier
-Starbase starts with a Vivarium Tank module instead of the default secondary module
-Starbase starts with a Voidlure building instead of the default buildings","Not Tankbound
+Vivarium Tank Starbase starts with a Vivarium Tank module instead of the default secondary module
+Voidlure Starbase starts with a Voidlure building instead of the default buildings","Not Tankbound
 Not Volcanic homeworld",x,x
 Treasure Hunters,"Leaders have the Adventurous Spirit III trait
 Ruler.png Can select unique ruler traits:
@@ -461,7 +494,13 @@ Start with a Deep Space Citadel next to the wormhole
 In 1-2 years a hostile fleet of 6 Maulers and 2 Weavers will attack through the wormhole
 Defeating the attacking fleet starts a special project to unlock Wormhole Stabilization
 Can salvage Specialized Combat Computers, Plasma Throwers and Autocannons from the fleet","Start with a Citadel Uplink building
+D bioship remains.png
+Biological Ship Remains
+
 Start with a Biological Ship Remains blockers
+D city ruins.png
+Invasion Site
+
 Start with 2 Invasion Site blockers",Not Biological shipset,x,x
 Mindwardens,"+2 Encryption
 +25% Damage vs psionic empires
@@ -482,10 +521,10 @@ Conquering the last planet gives a choice between a permanent modifier and a rel
 The second conquered planet in the cluster gains the Ruined Sanctum of the Dreamer blocker
 Defeating the hostile empire unlocks the creation of Mindwarden enclaves in 2 years","Start with the Ancient Ward building
 Starhold Starbase is a Starhold
-Starbase starts with 2 Gun Battery modules
-Starbase starts with a Resource Silos building
-Starting location will be at the edge of the galaxy
-Cannot change the starting system except for a special version of Sol","Not Pacifist
+Sb gun battery.png Starbase starts with 2 Gun Battery modules
+Spaceport module resource silo.png Starbase starts with a Resource Silos building
+Yes.png Starting location will be at the edge of the galaxy
+No.png Cannot change the starting system except for a special version of Sol","Not Pacifist
 Not Genocidal
 Not Entropy Drinkers",,x
 Red Giant,"+20% Volcanic world habitability
@@ -497,6 +536,9 @@ In 45 days choose to gain scaled Unity or Physics Research
 In 45 days start the Red Giant Expansion situation
 In 5-20 months receive the Subspace Triangulation event chain
 Cannot change the starting system","Homeworld is a size 20 Volcanic World
+Pm star red.png
+Doomsday
+
 In 45 days gain the Red Star homeworld modifier","Not Aquatic founder species
 Not Catalytic Processing
 Not Anglers
@@ -528,13 +570,16 @@ Start with the Arc Furnace technology researched
 Constructing a second Arc Furnace unlocks the Mega-Engineering technology for research
 Gain a small amount of Unity when constructing a second Arc Furnace
 Gain a large amount of Engineering Research when constructing a second Arc Furnace","−300 Starting pops
-Homeworld is always size 15
-Mining Districts are replaced by Generator Districts",Machine species,,
+Planet Size.png Homeworld is always size 15
+Generator District Mining Districts are replaced by Generator Districts",Machine species,,
 Cosmic Dawn,"Start with the Drilling the Crust special project
 Finishing the special project gives 100 pops and starts the Deep Excavation situation
 Can get the Interstellar Refugia event chain
 Cannot change the starting system","−600 Starting pops
-Homeworld is a size 14 Volcanic World
+Planet molten.png Homeworld is a size 14 Volcanic World
+D ancient vault.png
+Ancient Stasis Pods
+
 Start with 5 Ancient Stasis Pods blockers","Thermophile species
 Not Hive Mind
 Not Anglers
@@ -565,9 +610,9 @@ Cybernetic Creed factions will form shortly after game start
 For the first few years, gain events to influence faction approval and gain empire modifiers
 Cannot have Traditionalist factions
 Cannot have regular factions until stage 2 of the The Conclave of Fusion situation","Start with a Amphitheater of the Mind building
-Start with a Battlements of Steel building
-Start with a Forge of the Fellowship building
-Start with a Sanctuary of Toil building","Spiritualist
+Battlements of Steel Start with a Battlements of Steel building
+Forge of the Fellowship Start with a Forge of the Fellowship building
+Sanctuary of Toil Start with a Sanctuary of Toil building","Spiritualist
 Not Chosen
 Not Entropy Drinkers
 Not Secret Societies
@@ -591,15 +636,17 @@ Synthetization situation skips the first 2 stages
 Completing Synthetization situation grants the Synthetic Salvation trait
 Completing Synthetization situation grants the Synthetic Dawn empire modifier
 If founder species is extinct, leaders will gain the Robotic Surrogate trait","+900 Starting pops
-+2 Starting districts
-Homeworld is always size 20
-Start with an Identity Repository building
-Start with an Abandoned Gene Clinic building
-Start with 2 Abandoned Cities blockers
-Researching Artificial Workforce triggers the following effects:
-* Abandoned Gene Clinic is replaced with Robot Assembly Plants
-* Gain 300 Mechanical pops
-* During Synthetization, choose between Identity Repository or additional pops","Not Spiritualist
+District city.png +2 Starting districts
+Planet Size.png Homeworld is always size 20
+Identity Repository Start with an Identity Repository building
+Abandoned Gene Clinic Start with an Abandoned Gene Clinic building
+D city ruins.png
+Abandoned Cities
+ Start with 2 Abandoned Cities blockers
+Artificial Workforce Researching Artificial Workforce triggers the following effects:
+Abandoned Gene Clinic Abandoned Gene Clinic is replaced with Robot Assembly Plants Robot Assembly Plants
+Mechanical Gain 300 Mechanical pops
+Navbar icons situation.png During Synthetization, choose between Identity Repository or additional pops","Not Spiritualist
 Not Gestalt Consciousness
 Not Reanimators
 Not Eager Explorers
@@ -656,12 +703,12 @@ Fleets and starbases without an offspring ship in system have the following pena
 * −50% Evasion
 * −50% Ship fire rate
 * −50% Sublight speed","Start with an Offspring Nest building
-Start with a Progenitor Nest planetary feature
-If the home planet is conquered or destroyed gain the following empire-wide penalties:
-−10% Menial drone output
-−30% Sublight speed
-−10 Stability
-Enables the Grow a New Progenitor decision","Hive Mind
+Progenitor Nest Start with a Progenitor Nest planetary feature
+Unknown.png If the home planet is conquered or destroyed gain the following empire-wide penalties:
+Mod pop resource output.png −10% Menial drone output
+Mod ship speed mult.png −30% Sublight speed
+Mod planet stability.png −10 Stability
+Decision progenitor empty.png Enables the Grow a New Progenitor decision","Hive Mind
 Not Wild Swarm",x,
 Wilderness,"+5 Planetary build queue capacity
 Hive Mind authority is replaced by Mutualistic Intelligence
@@ -680,9 +727,12 @@ Biological ascension only allows the Purity path
 Prepare Sleeper Cells espionage operation is replaced by Embed Planetary Roots
 Can take the World Shaper ascension perk
 Cannot take player crisis ascension perks except Behemoth Fury","−2800 Starting pops
-Homeworld is always size 18
+Planet Size.png Homeworld is always size 18
+D quicksand basin.png
+Scorched Plains
+
 Replaces regular homeworld blockers with 2 Scorched Plains blockers
-System uses a unique appearance for a year","Hive Mind
+Unknown.png System uses a unique appearance for a year","Hive Mind
 Biological shipset
 Not Organic Reprocessing
 Not Memorialist
@@ -698,10 +748,14 @@ Resource Consolidation,"Capital star has a deposit of 10 Energy
 Other home system planets are broken or molten worlds with no resource deposits
 Machine Worlds ascension perk has no technology requirements
 Cyborg species has Machine World preference if Driven Assimilator","Homeworld is a Machine World
-Start with a Consolidated Resources planetary feature
-Start with a Prototype Machinery blocker
-Start with 2 Unfinished Construction blockers
-Start with an Organic Slurry planetary feature if Driven Assimilator","Machine Intelligence
+D veiny cliffs.png Start with a Consolidated Resources planetary feature
+D mining tunnels.png
+Prototype Machinery
+ Start with a Prototype Machinery blocker
+D station junk.png
+Unfinished Construction
+ Start with 2 Unfinished Construction blockers
+D bubbling swamp.png Start with an Organic Slurry planetary feature if Driven Assimilator","Machine Intelligence
 Not Rogue Servitor
 Not Organic Retrofitting
 Not Astro-Mining Drones
@@ -719,8 +773,8 @@ Unlocks the Shroud Observation edict
 In a few days gain the option to give the starting scientist the Guided trait
 Completing Psionic Ascension starts in contact with Animator of Clay
 Completing Psionic Ascension starts a special project to contact Composer of Strands","Start with 4 Shroud-Touched Region planetary features
-1000 Pops have the Shroud-Forged trait
-Start with a Shroud Observation Tower building","Machine Intelligence
+Trait shroud forged.png 1000 Pops have the Shroud-Forged trait
+Building shroud observatory 1.png Start with a Shroud Observation Tower building","Machine Intelligence
 Not Determined Exterminator
 Not Driven Assimilator
 Not Rogue Servitor
