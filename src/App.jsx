@@ -10,7 +10,7 @@ import GovernmentTypeSection from './components/GovernmentTypeSection'
 import EthicsSection from './components/EthicsSection'
 import HomeworldSection from './components/HomeworldSection'
 import OriginSection from './components/OriginSection'
-import { checkCivicRequirements } from './utils/requirements'
+import { checkRequirements } from './utils/requirements'
 import { aggregateEffects } from './utils/aggregator'
 
 function SectionPanel({ title, description, children }) {
@@ -34,6 +34,10 @@ function App() {
   const [selectedCivics, setSelectedCivics] = useState([])
   const [selectedAuthority, setSelectedAuthority] = useState(null)
   const [selectedEthics, setSelectedEthics] = useState([])
+  
+  // Secondary Species State
+  const [secondarySpeciesType, setSecondarySpeciesType] = useState(null)
+  const [secondarySelectedTraits, setSecondarySelectedTraits] = useState([])
   
   // Homeworld State
   const [homeworldName, setHomeworldName] = useState("Earth")
@@ -84,7 +88,14 @@ function App() {
         return newTraits;
       });
     }
+
+    if (originName !== "Necrophage" && originName !== "Mechanist" && originName !== "Syncretic Evolution") {
+      setSecondarySpeciesType(null);
+      setSecondarySelectedTraits([]);
+    }
   }
+
+  const showSecondarySpecies = selectedOrigin && ['Necrophage', 'Mechanist', 'Syncretic Evolution'].includes(selectedOrigin.name);
 
   const getEffectiveHomeworldType = () => {
     if (!selectedOrigin) return selectedPlanet?.name || ""
@@ -136,6 +147,8 @@ function App() {
     setSelectedClimate(null)
     setSelectedPlanet(null)
     setSelectedOrigin(null)
+    setSecondarySpeciesType(null)
+    setSecondarySelectedTraits([])
   }
 
   // Auto-deselection of invalid Civics
@@ -144,11 +157,13 @@ function App() {
     
     setSelectedCivics(prev => {
       const validCivics = prev.filter(civic => 
-        checkCivicRequirements(civic.Requirements, {
+        checkRequirements(civic.Requirements, {
           authority: selectedAuthority,
           ethics: selectedEthics,
           origin: selectedOrigin,
-          speciesType: speciesType
+          speciesType: speciesType,
+          civics: prev.filter(c => c.name !== civic.name),
+          homeworldType: getEffectiveHomeworldType()
         })
       );
       
@@ -175,8 +190,31 @@ function App() {
     }
   }
 
+  const handleSecondarySpeciesTypeSelect = (type) => {
+    if (type !== secondarySpeciesType) {
+      if (
+        (secondarySpeciesType === 'Machine' && type !== 'Machine') ||
+        (secondarySpeciesType !== 'Machine' && type === 'Machine')
+      ) {
+        setSecondarySelectedTraits([])
+      }
+      setSecondarySpeciesType(type)
+    }
+  }
+
   const handleTraitToggle = (trait) => {
     setSelectedTraits(prev => {
+      const isSelected = prev.some(t => t.name === trait.name)
+      if (isSelected) {
+        return prev.filter(t => t.name !== trait.name)
+      } else {
+        return [...prev, trait]
+      }
+    })
+  }
+
+  const handleSecondaryTraitToggle = (trait) => {
+    setSecondarySelectedTraits(prev => {
       const isSelected = prev.some(t => t.name === trait.name)
       if (isSelected) {
         return prev.filter(t => t.name !== trait.name)
@@ -245,6 +283,29 @@ function App() {
               <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
             )}
           </p>
+          {showSecondarySpecies && (
+            <>
+              <p>
+                <strong className="text-accent">Secondary Species:</strong> {secondarySpeciesType || 'Not Selected'}
+              </p>
+              <p>
+                <strong className="text-accent">Sec. Traits:</strong>{' '}
+                {secondarySelectedTraits.length > 0 ? (
+                  secondarySelectedTraits.map(t => (
+                    <span 
+                      key={t.name} 
+                      className={`summary-trait-tag ${t.points < 0 ? 'negative' : ''}`}
+                      onClick={() => setActivePopupTrait(t)}
+                    >
+                      {t.name}
+                    </span>
+                  ))
+                ) : (
+                  <span style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>None</span>
+                )}
+              </p>
+            </>
+          )}
           <p>
             <strong className="text-accent">Homeworld:</strong>{' '}
             {homeworldName}{getEffectiveHomeworldType() ? ` (${getEffectiveHomeworldType()})` : ''}
@@ -327,6 +388,7 @@ function App() {
            {(() => {
               const empireEffectsStrings = [
                 ...selectedTraits.map(t => t.effects),
+                ...(showSecondarySpecies ? secondarySelectedTraits.map(t => t.effects) : []),
                 ...selectedEthics.map(e => e.Effects),
                 selectedAuthority ? selectedAuthority['Empire effects'] : '',
                 ...selectedCivics.map(c => c.Effects),
@@ -411,6 +473,32 @@ function App() {
            />
         </SectionPanel>
 
+        {showSecondarySpecies && (
+          <SectionPanel 
+            title="Secondary Species Type" 
+            description="Select the genetic or mechanical lineage of your subordinate or pre-patent species." 
+          >
+            <SpeciesTypeSection 
+              selectedType={secondarySpeciesType} 
+              onSelectType={handleSecondarySpeciesTypeSelect} 
+            />
+          </SectionPanel>
+        )}
+
+        {showSecondarySpecies && (
+          <SectionPanel 
+             title="Secondary Species Traits" 
+             description="Allocate traits for your subordinate species." 
+          >
+             <SpeciesTraitsSection 
+               speciesType={secondarySpeciesType} 
+               selectedTraits={secondarySelectedTraits} 
+               onTraitToggle={handleSecondaryTraitToggle} 
+               onTraitInfoClick={setActivePopupTrait}
+             />
+          </SectionPanel>
+        )}
+
         <SectionPanel 
           title="Homeworld & System" 
           description="Choose your planetary preference and starting star system flavor." 
@@ -436,6 +524,8 @@ function App() {
             onOriginInfoClick={setActivePopupTrait}
             speciesType={speciesType}
             selectedEthics={selectedEthics}
+            homeworldType={getEffectiveHomeworldType()}
+            civics={selectedCivics}
           />
         </SectionPanel>
 
@@ -471,6 +561,8 @@ function App() {
             speciesType={speciesType}
             selectedEthics={selectedEthics}
             onAuthorityInfoClick={setActivePopupTrait}
+            homeworldType={getEffectiveHomeworldType()}
+            civics={selectedCivics}
           />
         </SectionPanel>
 
@@ -486,6 +578,7 @@ function App() {
             selectedEthics={selectedEthics}
             selectedOrigin={selectedOrigin}
             speciesType={speciesType}
+            homeworldType={getEffectiveHomeworldType()}
           />
         </SectionPanel>
 

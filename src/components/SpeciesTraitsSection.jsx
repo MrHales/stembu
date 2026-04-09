@@ -79,8 +79,8 @@ export default function SpeciesTraitsSection({ speciesType, selectedTraits, onTr
           {traits.map(trait => {
             const isSelected = selectedTraits.some(t => t.name === trait.name);
             const hasConflict = !isSelected && selectedTraits.some(st => 
-              (st.conflicts && st.conflicts.includes(trait.name)) || 
-              (trait.conflicts && trait.conflicts.includes(st.name))
+              (st.conflicts && st.conflicts.split('\n').map(c=>c.trim()).includes(trait.name)) || 
+              (trait.conflicts && trait.conflicts.split('\n').map(c=>c.trim()).includes(st.name))
             );
             
             const reqs = trait.requirements ? trait.requirements.split('\n').map(r => r.trim()).filter(Boolean) : [];

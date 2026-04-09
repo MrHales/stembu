@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
-import { checkCivicRequirements } from '../utils/requirements';
+import { checkRequirements } from '../utils/requirements';
 
 export default function CivicsSection({ 
     selectedCivics, 
@@ -9,7 +9,8 @@ export default function CivicsSection({
     selectedAuthority,
     selectedEthics,
     selectedOrigin,
-    speciesType
+    speciesType,
+    homeworldType
 }) {
   const [civics, setCivics] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -49,11 +50,13 @@ export default function CivicsSection({
       <div className="traits-container">
         {civics.map((civic, index) => {
           const isSelected = selectedCivics.some(c => c.name === civic.Civic);
-          const meetReqs = checkCivicRequirements(civic.Requirements, {
+          const meetReqs = checkRequirements(civic.Requirements, {
              authority: selectedAuthority,
              ethics: selectedEthics,
              origin: selectedOrigin,
-             speciesType: speciesType
+             speciesType: speciesType,
+             homeworldType: homeworldType,
+             civics: selectedCivics.filter(c => c.name !== civic.Civic)
           });
           
           const maxReached = selectedCivics.length >= 2 && !isSelected;

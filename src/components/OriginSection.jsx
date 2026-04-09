@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
+import { checkRequirements } from '../utils/requirements';
 
-export default function OriginSection({ selectedOrigin, onOriginSelect, onOriginInfoClick, speciesType, selectedEthics }) {
+export default function OriginSection({ selectedOrigin, onOriginSelect, onOriginInfoClick, speciesType, selectedEthics, civics, homeworldType }) {
   const [origins, setOrigins] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -48,14 +49,14 @@ export default function OriginSection({ selectedOrigin, onOriginSelect, onOrigin
              hasGovernmentConflict = true;
           }
           
-          let meetReqs = true;
-          if (origin.Requirements) {
-              const reqsLower = origin.Requirements.toLowerCase();
-              if (reqsLower.includes('machine species') && speciesType !== 'Machine') meetReqs = false;
-              if (reqsLower.includes('lithoid species') && speciesType !== 'Lithoid') meetReqs = false;
-              if (reqsLower.includes('plantoid or fungoid species') && speciesType !== 'Plantoid' && speciesType !== 'Fungoid') meetReqs = false;
-              if (reqsLower.includes('not aquatic founder species') && speciesType === 'Aquatic') meetReqs = false;
-          }
+          let meetReqs = checkRequirements(origin.Requirements, {
+             authority: null,
+             ethics: selectedEthics,
+             origin: null,
+             speciesType: speciesType,
+             civics: civics,
+             homeworldType: homeworldType
+          });
 
           const hasConflict = hasGovernmentConflict || !meetReqs;
           const classNames = `selectable-card ${isSelected ? 'selected' : ''} ${hasConflict ? 'conflict opacity-50' : ''}`;

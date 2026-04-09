@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
+import { checkRequirements } from '../utils/requirements';
 
-export default function AuthoritySection({ selectedAuthority, onSelectAuthority, speciesType, selectedEthics, onAuthorityInfoClick }) {
+export default function AuthoritySection({ 
+    selectedAuthority, 
+    onSelectAuthority, 
+    speciesType, 
+    selectedEthics, 
+    onAuthorityInfoClick,
+    civics,
+    homeworldType
+}) {
   const [authorities, setAuthorities] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -16,17 +25,18 @@ export default function AuthoritySection({ selectedAuthority, onSelectAuthority,
           skipEmptyLines: true,
           complete: (results) => {
             let data = results.data.filter(row => row.Authority && row.Authority.trim() !== '');
+            // We load all of them and let checkRequirements handle the disabling.
+            // But we might still want to fully exclude Gestalt ones if they aren't Gestalt to prevent clutter.
+            // Let's keep the Gestalt logic for basic filtering, but use checkRequirements for the rest
+            
             let isGestalt = (selectedEthics || []).some(e => e.name === 'Gestalt Consciousness');
 
             if (isGestalt) {
               data = data.filter(row => row.Authority.includes('Intelligence') || row.Authority === 'Hive Mind');
             } else {
               data = data.filter(row => !row.Authority.includes('Intelligence') && row.Authority !== 'Hive Mind');
-              // Machine type might be restricted from regular authorities without certain civics or traits but we'll apply basic filters
-              if (speciesType === 'Machine') {
-                data = data.filter(row => row.Authority === 'Corporate' || row.Authority === 'Dictatorial' || row.Authority === 'Democratic' || row.Authority === 'Oligarchic' || row.Authority === 'Imperial');
-              }
             }
+            
             setAuthorities(data);
             setLoading(false);
           }
@@ -37,7 +47,7 @@ export default function AuthoritySection({ selectedAuthority, onSelectAuthority,
       }
     }
     loadData();
-  }, [speciesType, selectedEthics]);
+  }, [selectedEthics]);
 
   if (loading) return <div className="placeholder-content">Loading central data cores...</div>;
 
@@ -46,17 +56,34 @@ export default function AuthoritySection({ selectedAuthority, onSelectAuthority,
       <div className="card-grid">
         {authorities.map(auth => {
           const isSelected = selectedAuthority?.name === auth.Authority;
+          
+          let meetReqs = checkRequirements(auth.Requirements, {
+             authority: { name: auth.Authority },
+             ethics: selectedEthics,
+             origin: null,
+             speciesType: speciesType,
+             civics: civics,
+             homeworldType: homeworldType
+          });
+          
+          const hasConflict = !meetReqs;
+
           return (
             <div 
               key={auth.Authority} 
-              className={`selectable-card ${isSelected ? 'selected' : ''}`}
+              className={`selectable-card ${isSelected ? 'selected' : ''} ${hasConflict ? 'conflict opacity-50' : ''}`}
               style={{ marginBottom: '0.8rem' }}
-              onClick={() => onSelectAuthority({ name: auth.Authority, ...auth })}
+              onClick={() => {
+                if (!hasConflict) {
+                  onSelectAuthority({ name: auth.Authority, ...auth });
+                }
+              }}
             >
               <div className="traits-header" style={{ alignItems: 'flex-start', borderBottom: 'none', marginBottom: 0, paddingBottom: 0 }}>
                 <div>
                   <h4 style={{ margin: 0, marginBottom: '0.2rem' }}>{auth.Authority}</h4>
                   <span className="trait-effects">{auth.Election || 'No Elections'}</span>
+                  {hasConflict && <span style={{ fontSize: '0.7rem', color: 'var(--color-danger)', display: 'block', marginTop: '0.4rem' }}>Requirements not met</span>}
                 </div>
                 <div className="trait-stats">
                    <button 
