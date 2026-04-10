@@ -73,6 +73,19 @@ button.primary:hover {
   box-shadow: 0 0 20px var(--color-accent-hover);
 }
 
+button.secondary {
+  border-color: var(--color-text-muted);
+  color: var(--color-text-muted);
+  background: transparent;
+}
+
+button.secondary:hover {
+  border-color: #fff;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
 button.danger {
   border-color: var(--color-danger);
   color: var(--color-danger);
@@ -326,6 +339,27 @@ button.danger:hover {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  transition: all var(--transition-speed) ease;
+  overflow: hidden;
+}
+
+.totals-category.collapsed .totals-content {
+  max-height: 0;
+  gap: 0;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.totals-category.collapsible h4:hover {
+  color: var(--color-accent) !important;
+  border-bottom-color: var(--color-accent) !important;
+}
+
+.collapse-icon {
+  font-family: monospace;
+  font-size: 1.2rem;
+  line-height: 1;
 }
 
 .totals-group {

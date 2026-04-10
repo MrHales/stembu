@@ -38,6 +38,7 @@ function App() {
   // Secondary Species State
   const [secondarySpeciesType, setSecondarySpeciesType] = useState(null)
   const [secondarySelectedTraits, setSecondarySelectedTraits] = useState([])
+  const [secondaryBonusesExpanded, setSecondaryBonusesExpanded] = useState(false)
   
   // Homeworld State
   const [homeworldName, setHomeworldName] = useState("Earth")
@@ -46,6 +47,53 @@ function App() {
   
   // Origin State
   const [selectedOrigin, setSelectedOrigin] = useState(null)
+
+  const [isSessionLoaded, setIsSessionLoaded] = useState(false)
+
+  // Auto-Restore logic
+  useEffect(() => {
+    const saved = localStorage.getItem('stembu-last-empire');
+    if (saved) {
+      try {
+        const data = JSON.parse(saved);
+        if (data.empireName) setEmpireName(data.empireName);
+        if (data.speciesType) setSpeciesType(data.speciesType);
+        if (data.selectedTraits) setSelectedTraits(data.selectedTraits);
+        if (data.selectedCivics) setSelectedCivics(data.selectedCivics);
+        if (data.selectedAuthority) setSelectedAuthority(data.selectedAuthority);
+        if (data.selectedEthics) setSelectedEthics(data.selectedEthics);
+        if (data.secondarySpeciesType) setSecondarySpeciesType(data.secondarySpeciesType);
+        if (data.secondarySelectedTraits) setSecondarySelectedTraits(data.secondarySelectedTraits);
+        if (data.homeworldName) setHomeworldName(data.homeworldName);
+        if (data.selectedClimate) setSelectedClimate(data.selectedClimate);
+        if (data.selectedPlanet) setSelectedPlanet(data.selectedPlanet);
+        if (data.selectedOrigin) setSelectedOrigin(data.selectedOrigin);
+      } catch (e) {
+        console.error("Failed to restore session:", e);
+      }
+    }
+    setIsSessionLoaded(true);
+  }, []);
+
+  // Auto-Save logic
+  useEffect(() => {
+    if (!isSessionLoaded) return;
+    const empireData = {
+      empireName,
+      speciesType,
+      selectedTraits,
+      selectedCivics,
+      selectedAuthority,
+      selectedEthics,
+      secondarySpeciesType,
+      secondarySelectedTraits,
+      homeworldName,
+      selectedClimate,
+      selectedPlanet,
+      selectedOrigin
+    };
+    localStorage.setItem('stembu-last-empire', JSON.stringify(empireData));
+  }, [isSessionLoaded, empireName, speciesType, selectedTraits, selectedCivics, selectedAuthority, selectedEthics, secondarySpeciesType, secondarySelectedTraits, homeworldName, selectedClimate, selectedPlanet, selectedOrigin]);
 
   const handleOriginSelect = (origin) => {
     const originName = origin ? origin.name : null;
@@ -174,8 +222,56 @@ function App() {
     });
   }, [selectedAuthority, selectedEthics, selectedOrigin, speciesType]);
 
-  const handleSave = () => {
-    alert(`Saving matrix for [${empireName}]...`)
+  const handleExport = () => {
+    const empireData = {
+      empireName,
+      speciesType,
+      selectedTraits,
+      selectedCivics,
+      selectedAuthority,
+      selectedEthics,
+      secondarySpeciesType,
+      secondarySelectedTraits,
+      homeworldName,
+      selectedClimate,
+      selectedPlanet,
+      selectedOrigin,
+      timestamp: new Date().toISOString()
+    };
+    const blob = new Blob([JSON.stringify(empireData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${empireName.replace(/\s+/g, '_')}_empire.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  const handleImport = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      try {
+        const data = JSON.parse(event.target.result);
+        if (data.empireName) setEmpireName(data.empireName);
+        if (data.speciesType) setSpeciesType(data.speciesType);
+        if (data.selectedTraits) setSelectedTraits(data.selectedTraits);
+        if (data.selectedCivics) setSelectedCivics(data.selectedCivics);
+        if (data.selectedAuthority) setSelectedAuthority(data.selectedAuthority);
+        if (data.selectedEthics) setSelectedEthics(data.selectedEthics);
+        if (data.secondarySpeciesType) setSecondarySpeciesType(data.secondarySpeciesType);
+        if (data.secondarySelectedTraits) setSecondarySelectedTraits(data.secondarySelectedTraits);
+        if (data.homeworldName) setHomeworldName(data.homeworldName);
+        if (data.selectedClimate) setSelectedClimate(data.selectedClimate);
+        if (data.selectedPlanet) setSelectedPlanet(data.selectedPlanet);
+        if (data.selectedOrigin) setSelectedOrigin(data.selectedOrigin);
+        alert(`Empire [${data.empireName}] successfully integrated.`);
+      } catch (err) {
+        alert("Failed to parse empire file. Ensure it is a valid .json exported from stembu.");
+      }
+    };
+    reader.readAsText(file);
   }
 
   const handleSpeciesTypeSelect = (type) => {
@@ -255,8 +351,16 @@ function App() {
           <p style={{ color: 'var(--color-text-muted)', margin: 0 }}>STellaris EMpire BUilder</p>
         </div>
         <div className="header-actions">
-          <button className="primary" onClick={handleNew}>New Empire</button>
-          <button className="danger" onClick={handleSave}>Save Empire</button>
+          <input 
+            type="file" 
+            id="import-input" 
+            style={{ display: 'none' }} 
+            accept=".json"
+            onChange={handleImport}
+          />
+          <button className="secondary" onClick={() => document.getElementById('import-input').click()}>Import</button>
+          <button className="primary" onClick={handleExport}>Export</button>
+          <button className="danger" onClick={handleNew}>New</button>
         </div>
       </header>
 
@@ -385,14 +489,17 @@ function App() {
 
         <div className="summary-column totals-column">
            <h3>Total Empire Effects</h3>
-           {(() => {
+            {(() => {
               const empireEffectsStrings = [
                 ...selectedTraits.map(t => t.effects),
-                ...(showSecondarySpecies ? secondarySelectedTraits.map(t => t.effects) : []),
                 ...selectedEthics.map(e => e.Effects),
                 selectedAuthority ? selectedAuthority['Empire effects'] : '',
                 ...selectedCivics.map(c => c.Effects),
                 selectedOrigin ? selectedOrigin['Empire effects'] : ''
+              ];
+
+              const secondaryEffectsStrings = [
+                ...(showSecondarySpecies ? secondarySelectedTraits.map(t => t.effects) : [])
               ];
               
               const homeworldEffectsStrings = [
@@ -400,19 +507,37 @@ function App() {
               ];
 
               const empireTotals = aggregateEffects(empireEffectsStrings);
+              const secondaryTotals = aggregateEffects(secondaryEffectsStrings);
               const homeworldTotals = aggregateEffects(homeworldEffectsStrings);
               
               const hasEmpire = empireTotals.numeric.length > 0 || empireTotals.features.length > 0;
+              const hasSecondary = secondaryTotals.numeric.length > 0 || secondaryTotals.features.length > 0;
               const hasHomeworld = homeworldTotals.numeric.length > 0 || homeworldTotals.features.length > 0;
 
-              if (!hasEmpire && !hasHomeworld) {
+              if (!hasEmpire && !hasHomeworld && !hasSecondary) {
                  return <p style={{ fontStyle: 'italic', color: 'var(--color-text-muted)' }}>No effects active yet.</p>;
               }
 
-              const renderTotalsGroup = (totals, title) => (
-                 <div className="totals-category" style={{ marginBottom: '1.5rem' }}>
-                    <h4 style={{ fontSize: '0.8rem', textTransform: 'uppercase', color: 'var(--color-text-muted)', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '0.3rem' }}>
+              const renderTotalsGroup = (totals, title, isCollapsible = false, isExpanded = true, onToggle = null) => (
+                 <div className={`totals-category ${isCollapsible ? 'collapsible' : ''} ${isCollapsible && !isExpanded ? 'collapsed' : ''}`} style={{ marginBottom: '1.5rem' }}>
+                    <h4 
+                      style={{ 
+                        fontSize: '0.8rem', 
+                        textTransform: 'uppercase', 
+                        color: 'var(--color-text-muted)', 
+                        borderBottom: '1px solid rgba(255,255,255,0.05)', 
+                        paddingBottom: '0.3rem',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        cursor: isCollapsible ? 'pointer' : 'default'
+                      }}
+                      onClick={onToggle}
+                    >
                        {title}
+                       {isCollapsible && (
+                         <span className="collapse-icon">{isExpanded ? '−' : '+'}</span>
+                       )}
                     </h4>
                     <div className="totals-content">
                        {totals.numeric.length > 0 && (
@@ -423,7 +548,7 @@ function App() {
                                      {item.value > 0 ? '+' : ''}{item.value}{item.isPercent ? '%' : ''}
                                   </span>
                                   <span className="total-desc">{item.description}</span>
-                               </div>
+                                </div>
                             ))}
                          </div>
                        )}
@@ -443,10 +568,11 @@ function App() {
               return (
                  <>
                     {hasEmpire && renderTotalsGroup(empireTotals, "Empire Bonuses")}
+                    {hasSecondary && renderTotalsGroup(secondaryTotals, "Secondary Species Bonuses", true, secondaryBonusesExpanded, () => setSecondaryBonusesExpanded(!secondaryBonusesExpanded))}
                     {hasHomeworld && renderTotalsGroup(homeworldTotals, "Homeworld Bonuses")}
                  </>
               );
-           })()}
+            })()}
         </div>
       </div>
 
