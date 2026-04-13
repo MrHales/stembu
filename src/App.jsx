@@ -140,6 +140,8 @@ function App() {
     if (originName !== "Necrophage" && originName !== "Mechanist" && originName !== "Syncretic Evolution") {
       setSecondarySpeciesType(null);
       setSecondarySelectedTraits([]);
+    } else if (originName === "Mechanist") {
+      setSecondarySpeciesType('Machine');
     }
   }
 
@@ -287,6 +289,8 @@ function App() {
   }
 
   const handleSecondarySpeciesTypeSelect = (type) => {
+    if (selectedOrigin && selectedOrigin.name === 'Mechanist') return;
+    
     if (type !== secondarySpeciesType) {
       if (
         (secondarySpeciesType === 'Machine' && type !== 'Machine') ||
@@ -607,6 +611,7 @@ function App() {
             <SpeciesTypeSection 
               selectedType={secondarySpeciesType} 
               onSelectType={handleSecondarySpeciesTypeSelect} 
+              locked={selectedOrigin && selectedOrigin.name === 'Mechanist'}
             />
           </SectionPanel>
         )}
@@ -621,6 +626,8 @@ function App() {
                selectedTraits={secondarySelectedTraits} 
                onTraitToggle={handleSecondaryTraitToggle} 
                onTraitInfoClick={setActivePopupTrait}
+               isSecondary={true}
+               selectedOrigin={selectedOrigin}
              />
           </SectionPanel>
         )}

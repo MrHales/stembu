@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
 
-export default function SpeciesTypeSection({ onSelectType, selectedType }) {
+export default function SpeciesTypeSection({ onSelectType, selectedType, locked }) {
   const [speciesTypes, setSpeciesTypes] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -37,10 +37,14 @@ export default function SpeciesTypeSection({ onSelectType, selectedType }) {
         {speciesTypes.map(type => (
           <div 
             key={type} 
-            className={`selectable-card ${selectedType === type ? 'selected' : ''}`}
-            onClick={() => onSelectType(type)}
+            className={`selectable-card ${selectedType === type ? 'selected' : ''} ${locked && selectedType !== type ? 'opacity-50' : ''}`}
+            onClick={() => {
+              if (!locked) onSelectType(type);
+            }}
+            style={{ cursor: locked ? 'not-allowed' : 'pointer' }}
           >
             <h4>{type}</h4>
+            {locked && selectedType === type && <small className="text-accent" style={{display: 'block', marginTop: '5px'}}>Locked by Origin</small>}
           </div>
         ))}
       </div>

@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
 
-export default function SpeciesTraitsSection({ speciesType, selectedTraits, onTraitToggle, onTraitInfoClick }) {
+export default function SpeciesTraitsSection({ speciesType, selectedTraits, onTraitToggle, onTraitInfoClick, isSecondary, selectedOrigin }) {
   const [traits, setTraits] = useState([]);
   const [loading, setLoading] = useState(false);
 
   // Stellaris defaults
   const maxPicks = 5;
-  const startingPoints = 2; // Can adjust based on species or origin later
+  let startingPoints = 2; // Can adjust based on species or origin later
+
+  if (isSecondary && selectedOrigin?.name === 'Mechanist') {
+    startingPoints += 1;
+  }
 
   useEffect(() => {
     if (!speciesType) {
@@ -34,14 +38,23 @@ export default function SpeciesTraitsSection({ speciesType, selectedTraits, onTr
             // Filter and clean results
             const cleanTraits = results.data
               .filter(row => row.Trait && row.Trait.trim() !== '')
-              .map(row => ({
-                 name: row.Trait.trim(),
-                 effects: row.Effects === '#ERROR!' ? 'Various implicit effects' : row.Effects,
-                 points: parseInt(row['Trait Points']?.toString().replace(/[−–—]/g, '-')) || 0,
-                 description: row.Description || '',
-                 conflicts: row.Conflicts || '',
-                 requirements: row.Requirements || ''
-              }));
+              .map(row => {
+                 const name = row.Trait.trim();
+                 let points = parseInt(row['Trait Points']?.toString().replace(/[−–—]/g, '-')) || 0;
+                 
+                 if (isSecondary && selectedOrigin?.name === 'Mechanist' && name === 'Adaptive Frames') {
+                   points -= 1;
+                 }
+                 
+                 return {
+                   name: name,
+                   effects: row.Effects === '#ERROR!' ? 'Various implicit effects' : row.Effects,
+                   points: points,
+                   description: row.Description || '',
+                   conflicts: row.Conflicts || '',
+                   requirements: row.Requirements || ''
+                 };
+              });
             setTraits(cleanTraits);
             setLoading(false);
           }
