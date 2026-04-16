@@ -1,6 +1,6 @@
 # stembu: STellaris EMpire BUilder
 
-A vibe-coded collaboration between the creator, Mr.Hales, and Gemini inside Google Antigravity.
+A vibe coded collaboration between the creator, Mr.Hales, and Gemini inside Google Antigravity.
 
 **stembu** is a Progressive Web App (PWA) designed to provide a comprehensive and deeply customizable empire builder for Stellaris, continuing the legacy of tools like MoMaker but tailored for a much deeper and richer galactic scale.
 
