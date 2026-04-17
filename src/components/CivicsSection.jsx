@@ -101,14 +101,6 @@ export default function CivicsSection({
                    </button>
                 </div>
               </div>
-              <p className="trait-description" style={{
-                display: '-webkit-box',
-                WebkitLineClamp: 2,
-                WebkitBoxOrient: 'vertical',
-                overflow: 'hidden'
-              }}>
-                {civic.Description}
-              </p>
               {hasConflict && (
                 <span style={{ fontSize: '0.7rem', color: 'var(--color-danger)', display: 'block', marginTop: '0.4rem' }}>
                   Requirements not met

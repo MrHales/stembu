@@ -82,7 +82,6 @@ export default function AuthoritySection({
               <div className="traits-header" style={{ alignItems: 'flex-start', borderBottom: 'none', marginBottom: 0, paddingBottom: 0 }}>
                 <div>
                   <h4 style={{ margin: 0, marginBottom: '0.2rem' }}>{auth.Authority}</h4>
-                  <span className="trait-effects">{auth.Election || 'No Elections'}</span>
                   {hasConflict && <span style={{ fontSize: '0.7rem', color: 'var(--color-danger)', display: 'block', marginTop: '0.4rem' }}>Requirements not met</span>}
                 </div>
                 <div className="trait-stats">
@@ -94,7 +93,7 @@ export default function AuthoritySection({
                          onAuthorityInfoClick({
                            name: auth.Authority,
                            description: auth.Description,
-                           effects: `Empire Effects:\n${auth['Empire effects']}\n\nRuler Effects per Level:\n${auth['Ruler effects per skill level']}`,
+                           effects: `Election: ${auth.Election || 'No Elections'}\n\nEmpire Effects:\n${auth['Empire effects']}\n\nRuler Effects per Level:\n${auth['Ruler effects per skill level']}`,
                            requirements: auth.Requirements
                          });
                        }

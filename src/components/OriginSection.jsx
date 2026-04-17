@@ -98,14 +98,6 @@ export default function OriginSection({ selectedOrigin, onOriginSelect, onOrigin
                    </button>
                 </div>
               </div>
-              <p className="trait-description" style={{
-                display: '-webkit-box',
-                WebkitLineClamp: 2,
-                WebkitBoxOrient: 'vertical',
-                overflow: 'hidden'
-              }}>
-                {origin['Empire effects']}
-              </p>
               {hasGovernmentConflict && <small className="text-danger" style={{display: 'block', marginTop: '10px'}}>Incompatible with current Government</small>}
               {!meetReqs && !hasGovernmentConflict && <small className="text-danger" style={{display: 'block', marginTop: '10px'}}>Requirements not met</small>}
             </div>

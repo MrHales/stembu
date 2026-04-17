@@ -117,14 +117,6 @@ export default function EthicsSection({ selectedEthics, onEthicToggle, onEthicIn
                    </button>
                 </div>
               </div>
-              <p className="trait-description" style={{
-                display: '-webkit-box',
-                WebkitLineClamp: 2,
-                WebkitBoxOrient: 'vertical',
-                overflow: 'hidden'
-              }}>
-                {ethic.Description}
-              </p>
             </div>
           )
         })}
