@@ -40,7 +40,14 @@ export default function TraitModal({ trait, onClose }) {
         {trait.requirements && (
            <div style={{ marginTop: '1rem' }}>
              <h4 style={{ margin: '0 0 0.5rem 0', color: 'var(--color-accent)' }}>Requirements</h4>
-             <p style={{ margin: 0, fontSize: '0.85rem' }}>{trait.requirements}</p>
+             <p style={{ margin: 0, fontSize: '0.85rem' }}>
+               {trait.requirements
+                 .split('\n')
+                 .map(r => r.trim())
+                 .filter(Boolean)
+                 .map(r => r.charAt(0).toUpperCase() + r.slice(1))
+                 .join('; ')}
+             </p>
            </div>
         )}
       </div>
