@@ -342,7 +342,10 @@ function App() {
       if (isSelected) {
         return prev.filter(e => e.name !== ethic.name)
       } else {
-        return [...prev, ethic]
+        if (ethic.name === 'Gestalt Consciousness') {
+          return [ethic]
+        }
+        return [...prev.filter(e => e.name !== 'Gestalt Consciousness'), ethic]
       }
     })
   }
