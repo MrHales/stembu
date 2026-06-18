@@ -1,4 +1,6 @@
 # stembu: STellaris EMpire BUilder
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FMrHales%2Fstembu.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FMrHales%2Fstembu?ref=badge_shield)
+
 
 A vibe coded collaboration between the creator, Mr.Hales, and Gemini inside Google Antigravity.
 
@@ -25,3 +27,7 @@ The initial foundation includes placeholders and structure for:
 3. Run `npm run dev` to start the local web development server.
 
 > Let's build a better galaxy together.
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FMrHales%2Fstembu.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FMrHales%2Fstembu?ref=badge_large)
