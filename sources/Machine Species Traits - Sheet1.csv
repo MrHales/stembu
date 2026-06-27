@@ -28,6 +28,20 @@ Sociology Core,+15% Biologist job efficiency,,1,,750,Artificial Specialists,,
 Integrated Weaponry,"+100% Army damage
 +20% Enforcer job efficiency",Delicate Chassis,2,,1000,Artificial Specialists,,
 Assembly Slag,+0.005 Living metal per 100 pops,,2,,500,,,
+Solar Celled,"+10 Years leader lifespan
++15% Physicist jobs in systems with a black hole
++15% Engineer jobs in systems with a class M star
+Worker and Menial Drone job efficiency scale with star class",,2,,1000,,"This species developed specialized solar cells to absorb different kinds of stellar radiation in unique ways, resulting in a variety of benefits adapted to each star type.",Nomads
+Combat-Synced,"+7% Engineer job efficiency artificial colonies
++5% Pop energy upkeep artificial colonies
++0.1 Stability per 100 pops with this trait during war and crisis",,1,,500,,"Each unit is both engineer and combatant. In wartime, their synchronized protocols stabilize the whole and keep critical systems repaired and optimized.",Nomads
+Structural Awareness,+1.25% Job efficiency per district depending on arkship,,1,,500,,"Designed to live within the Arkship, these machines continuously map its internal stresses, flows, and routines. Different arkship designs produce different patterns, and they iteratively optimize their behavior to match the vessel they inhabit.",Nomads
+Interconnected,"−1% Pop amenities usage for every 1000 pops with the same trait on the arkship
+−1% Robot upkeep for every 400 pops with the same trait on the arkship",,2,,500,,"Over generations, the boundary between Arkship and occupant has dissolved. The vessel became an extension of their senses and limbs; they, in turn, became a functional component of its design.",Nomads
+Terraphobic,"−35% Army damage
+−15% Job efficiency on planets
++15% Pop amenities usage on planets",,−1,"Arkship Preference
+Habitat Preference",−250,,"Having adapted to life aboard artificial environments, this species finds planetary environments oppressive. Gravity, atmosphere, and terrain pose constant challenges to their frail physiology.",Nomads
 Bulky,+10% Pop housing usage,Double-Jointed,−1,,−150,,,
 Custom-Made,−15% Pop assembly speed,Mass Produced,−1,,−200,,,
 High Bandwidth,+10% Empire size from pops,Streamlined Protocols,−2,,−150,,,
@@ -54,11 +68,11 @@ Dry and Cold planets: −20% Habitability
 +30% Pop housing usage
 
 Hydrocentric ascension perk boosts this trait's effects by 50%",Molebots,2,,0,"Wet Preference
- Ocean homeworld (in empire creation)
- Can be selected in empire creation
- Can be added or removed through machine modification
- Cannot be removed if has the  Hydrocentric ascension perk
- Cannot change climate preference without removing the trait",,
+Ocean homeworld (in empire creation)
+Can be selected in empire creation
+Can be added or removed through machine modification
+Cannot be removed if has the  Hydrocentric ascension perk
+Cannot change climate preference without removing the trait",,
 Exotic Fuel Consumption,"+10% Specialist job efficiency
 +10% Complex Drone job efficiency",+0.05 Exotic gases,1,,750,,,
 Rare Crystal Exterior,+30% Habitability,+0.05 Rare crystals,1,,750,,,

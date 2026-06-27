@@ -197,6 +197,17 @@ Crystallization
 Egg Laying
 Polymelic",1,Thermophile,500,,"Shaped by the relentless fury of volcanic worlds, this species does not fear pyroclastic forces - they channel and manipulate them, transforming devastation into a vital source of sustenance and power.",
 Shell Slag,+0.005 Living metal per 100 pops,Drake-Scaled,2,Thermophile,500,,"An intricate symbiosis with Living Metal allows this species to grow not in the traditional sense, but through the accretion and self-assembly of bio-ferrous structures.",
+Photoadaptive,"+10 Years leader lifespan
++15% Physicist jobs in systems with a black hole
++15% Engineer jobs in systems with a class M star
+Worker and Menial Drone job efficiency scale with star class",,2,,1000,,This species resonates with starlight. Variations in stellar luminosity subtly reshape their biology as they journey between stars.,Nomads
+Reaver,"+5% Trader job efficiency
+Commanders gain the Plunderer trait",,2,,500,,"Cunning, not camaraderie, shaped this species' evolution. Every interaction is a contest of will, and survival belongs to the most ruthless.",Nomads
+Recursive Learners,+1.25% Job efficiency per district depending on arkship,,1,,500,,"Born to the Arkship, this species refines its knowledge in generational cycles, each cohort improving upon the last to meet their vessel's unique demands.",Nomads
+Terraphobic,"−35% Army damage
+15% Job efficiency on planets
++15% Pop amenities usage on planets",,−1,"Arkship Preference
+Habitat Preference",−250,,"Having adapted to life aboard artificial environments, this species finds planetary environments oppressive. Gravity, atmosphere, and terrain pose constant challenges to their frail physiology.",Nomads
 Decadent,"−10% Worker happiness
 −10% Slave happiness",Hive-Minded,−1,,−200,,"This species believes that whenever there is hard work that needs doing, that work is always best done by somebody else.",
 Deviants,−15% Governing ethics attraction,"Conformists
